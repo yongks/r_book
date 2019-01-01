@@ -11819,7 +11819,7 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Built-In-Data-Types">Built-In Data Types<a class="anchor-link" href="#Built-In-Data-Types">&#182;</a></h1>
+<h1 id="Basic-Data-Types">Basic Data Types<a class="anchor-link" href="#Basic-Data-Types">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11833,7 +11833,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[213]:</div>
+<div class="prompt input_prompt">In&nbsp;[228]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>stringr<span class="p">)</span>
@@ -11855,34 +11855,18 @@ $( document ).ready(function(){
 
 <span class="kn">library</span><span class="p">(</span>tidyverse<span class="p">)</span>
 <span class="c1"># count</span>
+
+
+<span class="kn">library</span><span class="p">(</span>lubridate<span class="p">)</span>
+<span class="c1"># year</span>
+<span class="c1"># month</span>
+<span class="c1"># day</span>
+<span class="c1"># ddays            (integer)</span>
+<span class="c1"># dhours           (integer)</span>
+<span class="c1"># ceiling_date     ( x, unit)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>-- Attaching packages --------------------------------------- tidyverse 1.2.1 --
-v ggplot2 3.0.0     v readr   1.1.1
-v tibble  1.4.2     v purrr   0.2.5
-v tidyr   0.8.1     v forcats 0.3.0
--- Conflicts ------------------------------------------ tidyverse_conflicts() --
-x dplyr::filter()  masks stats::filter()
-x purrr::flatten() masks jsonlite::flatten()
-x dplyr::lag()     masks stats::lag()
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -11976,6 +11960,307 @@ x dplyr::lag()     masks stats::lag()
 [1] TRUE
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Operations">Operations<a class="anchor-link" href="#Operations">&#182;</a></h3><h4 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[152]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.num <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">10</span><span class="o">/</span><span class="m">3</span><span class="p">,</span><span class="m">14</span><span class="o">/</span><span class="m">3</span><span class="p">,</span><span class="m">20</span><span class="o">/</span><span class="m">3</span><span class="p">)</span>
+my.num2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">7</span><span class="o">/</span><span class="m">3</span><span class="p">,</span> <span class="m">16</span><span class="o">/</span><span class="m">3</span><span class="p">,</span> <span class="m">26</span><span class="o">/</span><span class="m">3</span><span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span>my.num<span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span>my.num2<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 3.333333 4.666667 6.666667
+[1] 2.333333 5.333333 8.666667
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Additon-/-Substraction">Additon / Substraction<a class="anchor-link" href="#Additon-/-Substraction">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[153]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> my.num <span class="o">+</span> my.num2 <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> my.num <span class="o">-</span> my.num2 <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1]  5.666667 10.000000 15.333333
+[1]  1.0000000 -0.6666667 -2.0000000
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Division">Division<a class="anchor-link" href="#Division">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[194]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">15</span> <span class="o">/</span>   <span class="m">4</span> <span class="p">)</span>  <span class="c1"># floting division</span>
+<span class="kp">print</span><span class="p">(</span> <span class="m">15</span> <span class="o">%/%</span> <span class="m">4</span> <span class="p">)</span>  <span class="c1"># integer division (quotiant)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="m">21</span> <span class="o">%%</span>  <span class="m">4</span> <span class="p">)</span>  <span class="c1"># remainder</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 3.75
+[1] 3
+[1] 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Rounding">Rounding<a class="anchor-link" href="#Rounding">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Round To 0 decimal</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[160]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">round</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">4.49</span><span class="p">,</span> <span class="m">4.50</span><span class="p">,</span> <span class="m">4.51</span><span class="p">)</span> <span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 4 4 5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Round To X decimals</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[166]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">round</span><span class="p">(</span> <span class="kt">c</span><span class="p">(</span><span class="m">3.844</span><span class="p">,</span> <span class="m">3.845</span><span class="p">,</span> <span class="m">3.846</span><span class="p">),</span> <span class="m">2</span> <span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 3.84 3.85 3.85
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Celing-and-Floor">Celing and Floor<a class="anchor-link" href="#Celing-and-Floor">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">ceiling</span><span class="p">(</span>my.num<span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">floor</span><span class="p">(</span>my.num<span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 4 5 7
+[1] 3 4 6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Absolute-(positive)">Absolute (positive)<a class="anchor-link" href="#Absolute-(positive)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[148]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">abs</span><span class="p">(</span><span class="m">0</span><span class="o">-</span>my.num<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>3.33333333333333</li>
+	<li>4.66666666666667</li>
+	<li>6.66666666666667</li>
+</ol>
+
+</div>
+
 </div>
 
 </div>
@@ -13640,16 +13925,8 @@ Levels: apple banana durian rambutan mango
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Date-and-Time">Date and Time<a class="anchor-link" href="#Date-and-Time">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Date">Date<a class="anchor-link" href="#Date">&#182;</a></h3><ul>
-<li>Date is in fact <strong>double</strong></li>
+<h2 id="Date">Date<a class="anchor-link" href="#Date">&#182;</a></h2><ul>
+<li>Date is in fact type of <strong>double</strong></li>
 <li>There is <strong>no is.date()</strong> function</li>
 </ul>
 
@@ -13658,7 +13935,7 @@ Levels: apple banana durian rambutan mango
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>d <span class="o">=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">&#39;2019-01-03&#39;</span><span class="p">)</span>
@@ -13684,6 +13961,903 @@ Levels: apple banana durian rambutan mango
 <pre>[1] &#34;2019-01-03&#34;
 [1] &#34;double&#34;
 [1] TRUE
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating-Date">Creating Date<a class="anchor-link" href="#Creating-Date">&#182;</a></h3><h4 id="Base-R">Base R<a class="anchor-link" href="#Base-R">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>System Date</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[210]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">Sys.Date</span><span class="p">()</span>  <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;2019-01-01&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Create From String</strong><br>
+Default string format is "yyyy-mm-dd" or "yyyy/mm/dd", customizable</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>birthdays <span class="o">=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;1971-07-11&#39;</span><span class="p">,</span><span class="s">&#39;1980-12-11&#39;</span><span class="p">,</span><span class="s">&#39;1981-11-20&#39;</span><span class="p">))</span>
+birthdays <span class="o">=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;1971/7/11&#39;</span><span class="p">,</span><span class="s">&#39;1980/12/11&#39;</span><span class="p">,</span><span class="s">&#39;1981/11/20&#39;</span><span class="p">))</span>
+str<span class="p">(</span>birthdays<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> Date[1:3], format: &#34;1971-07-11&#34; &#34;1980-12-11&#34; &#34;1981-11-20&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>birthdays<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> Date[1:3], format: &#34;1971-07-11&#34; &#34;1980-12-11&#34; &#34;1981-11-20&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="lubridate">lubridate<a class="anchor-link" href="#lubridate">&#182;</a></h4><p><strong>System Date</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[211]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> today<span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;2019-01-01&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Create From String</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>birthdays <span class="o">=</span> ymd<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;1971-07-11&#39;</span><span class="p">,</span><span class="s">&#39;1980-12-11&#39;</span><span class="p">,</span><span class="s">&#39;1981-11-20&#39;</span><span class="p">))</span>
+birthdays <span class="o">=</span> dmy<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;11-07-1973&#39;</span><span class="p">,</span><span class="s">&#39;11-12-1980&#39;</span><span class="p">,</span><span class="s">&#39;20-11-1981&#39;</span><span class="p">))</span>
+birthdays <span class="o">=</span> dmy<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;11/7/1973&#39;</span><span class="p">,</span><span class="s">&#39;11/12/1980&#39;</span><span class="p">,</span><span class="s">&#39;20/11/1981&#39;</span><span class="p">))</span>
+str<span class="p">(</span>birthdays<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> Date[1:3], format: &#34;1973-07-11&#34; &#34;1980-12-11&#34; &#34;1981-11-20&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Create From Number Vectors</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[233]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> make_date<span class="p">(</span>year <span class="o">=</span> <span class="m">2018</span><span class="p">,</span> month<span class="o">=</span><span class="m">11</span><span class="p">,</span> day<span class="o">=</span><span class="m">30</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;2018-11-30&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Date-Formating">Date Formating<a class="anchor-link" href="#Date-Formating">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">format</span><span class="p">(</span>today<span class="p">,</span> format<span class="o">=</span><span class="s">&quot;%m %d %y&quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">format</span><span class="p">(</span>today<span class="p">,</span> format<span class="o">=</span><span class="s">&quot;%b %d %y&quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">format</span><span class="p">(</span>today<span class="p">,</span> format<span class="o">=</span><span class="s">&quot;%B %d %Y&quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">format</span><span class="p">(</span>today<span class="p">,</span> format<span class="o">=</span><span class="s">&quot;%a %B %d %Y&quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">format</span><span class="p">(</span>today<span class="p">,</span> format<span class="o">=</span><span class="s">&quot;%A %B %d %Y&quot;</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;01 01 19&#34;
+[1] &#34;Jan 01 19&#34;
+[1] &#34;January 01 2019&#34;
+[1] &#34;Tue January 01 2019&#34;
+[1] &#34;Tuesday January 01 2019&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Year,-Month,-Day,-Weekday">Year, Month, Day, Weekday<a class="anchor-link" href="#Year,-Month,-Day,-Weekday">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Base-R">Base R<a class="anchor-link" href="#Base-R">&#182;</a></h4><p>All functions below return string</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">strftime</span><span class="p">(</span>birthdays<span class="p">,</span><span class="s">&#39;%Y&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">strftime</span><span class="p">(</span>birthdays<span class="p">,</span><span class="s">&#39;%m&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">strftime</span><span class="p">(</span>birthdays<span class="p">,</span><span class="s">&#39;%d&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span>  <span class="kp">weekdays</span><span class="p">(</span> birthdays <span class="p">)</span>  <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;1973&#34; &#34;1980&#34; &#34;1981&#34;
+[1] &#34;07&#34; &#34;12&#34; &#34;11&#34;
+[1] &#34;11&#34; &#34;11&#34; &#34;20&#34;
+[1] &#34;Wednesday&#34; &#34;Thursday&#34;  &#34;Friday&#34;   
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="lubridate">lubridate<a class="anchor-link" href="#lubridate">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[220]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> year<span class="p">(</span>birthdays<span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> month<span class="p">(</span>birthdays<span class="p">))</span>
+<span class="kp">print</span><span class="p">(</span> day<span class="p">(</span>birthdays<span class="p">)</span>  <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 1973 1980 1981
+[1]  7 12 11
+[1] 11 11 20
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Weekday</strong><br>
+label=T, return factor of Weekday</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> wday<span class="p">(</span>birthdays<span class="p">)</span> <span class="p">)</span>   <span class="c1"># 1:Sunday, 7:Saturday</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 4 5 6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>wd <span class="o">=</span> wday<span class="p">(</span> birthdays<span class="p">,</span> label <span class="o">=</span> <span class="bp">T</span> <span class="p">)</span>
+str<span class="p">(</span>wd<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> Ord.factor w/ 7 levels &#34;Sun&#34;&lt;&#34;Mon&#34;&lt;&#34;Tue&#34;&lt;..: 4 5 6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Date-Arithmetic-(lubridate)">Date Arithmetic (lubridate)<a class="anchor-link" href="#Date-Arithmetic-(lubridate)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="First-Day-Of-Next-Month">First Day Of Next Month<a class="anchor-link" href="#First-Day-Of-Next-Month">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[235]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>first_day_of_next_month <span class="o">=</span> ceiling_date<span class="p">(</span>today<span class="p">()</span> <span class="p">,</span>unit <span class="o">=</span> <span class="s">&#39;month&#39;</span><span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> first_day_of_next_month <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;2019-02-01&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Last-Day-Of-This-Month">Last Day Of This Month<a class="anchor-link" href="#Last-Day-Of-This-Month">&#182;</a></h4><p>Use <strong>-days(1)</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[236]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>last_day_of_this_month <span class="o">=</span> first_day_of_next_month <span class="o">-</span> days<span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> last_day_of_this_month <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;2019-01-31&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="First-Day-of-Next-year">First Day of Next year<a class="anchor-link" href="#First-Day-of-Next-year">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[226]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> ceiling_date<span class="p">(</span> today<span class="p">()</span> <span class="p">,</span>unit <span class="o">=</span> <span class="s">&#39;year&#39;</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;2020-01-01&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Date-Span">Date Span<a class="anchor-link" href="#Date-Span">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="lubridate">lubridate<a class="anchor-link" href="#lubridate">&#182;</a></h4><p><strong>Today Date</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[234]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>today<span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<time datetime="2019-01-01">2019-01-01</time>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Tomorrow Date</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>tomorrow <span class="o">=</span> today<span class="p">()</span> <span class="o">+</span> ddays<span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> tomorrow <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;2019-01-02&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>One year ago date</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>last_year <span class="o">=</span> today<span class="p">()</span> <span class="o">-</span> dyears<span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> last_year <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;2018-01-01&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>One year and 12 weeks from Today</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>future <span class="o">=</span> today<span class="p">()</span> <span class="o">+</span> dyears<span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="o">+</span> dweeks<span class="p">(</span><span class="m">12</span><span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> future <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;2020-03-25&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Duration (difftime Object)</strong></p>
+<ul>
+<li>Difference between two dates object is duration (difftime object)</li>
+<li>units can only be <strong>auto, days, weeks, secs, hours, mins</strong></li>
+<li>units cannot be year or month, because their length is conistent</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[209]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>date1 <span class="o">=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">&#39;2019-01-01&#39;</span><span class="p">)</span>
+date2 <span class="o">=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">&#39;1973-07-26&#39;</span><span class="p">)</span>
+d.diff  <span class="o">=</span> difftime <span class="p">(</span>date1<span class="p">,</span> date2<span class="p">,</span> units <span class="o">=</span> <span class="s">&#39;days&#39;</span><span class="p">)</span>
+w.diff  <span class="o">=</span> difftime <span class="p">(</span>date1<span class="p">,</span> date2<span class="p">,</span> units <span class="o">=</span> <span class="s">&#39;auto&#39;</span><span class="p">)</span>
+str<span class="p">(</span>d.diff<span class="p">)</span>
+str<span class="p">(</span>y.diff<span class="p">)</span>
+str<span class="p">(</span>date2<span class="o">-</span>date1<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> &#39;difftime&#39; num 16595
+ - attr(*, &#34;units&#34;)= chr &#34;days&#34;
+ &#39;difftime&#39; num 2370.71428571429
+ - attr(*, &#34;units&#34;)= chr &#34;weeks&#34;
+ &#39;difftime&#39; num -16595
+ - attr(*, &#34;units&#34;)= chr &#34;days&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[176]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> my.duration <span class="o">/</span> ddays<span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> my.duration <span class="o">/</span> dyears<span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> my.duration <span class="o">/</span> dhours<span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> my.duration <span class="o">/</span> dminutes<span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> my.duration <span class="o">/</span> dseconds<span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 16595
+[1] 45.46575
+[1] 398280
+[1] 23896800
+[1] 1433808000
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Age</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[126]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="p">(</span>today<span class="p">()</span><span class="o">-</span><span class="kp">as.Date</span><span class="p">(</span><span class="s">&#39;1973-07-26&#39;</span><span class="p">))</span><span class="o">/</span>dyears<span class="p">(</span><span class="m">1</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 45.46575
 </pre>
 </div>
 </div>
@@ -13878,22 +15052,6 @@ Levels: apple banana durian rambutan mango
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Time">Time<a class="anchor-link" href="#Time">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Date-and-Time">Date and Time<a class="anchor-link" href="#Date-and-Time">&#182;</a></h3>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -17100,13 +18258,13 @@ Levels: Aaa &lt; Bbb &lt; Ccc
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[180]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">set.seed</span><span class="p">(</span><span class="m">1234</span><span class="p">)</span>
 my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p">(</span>
   com  <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> <span class="m">50</span><span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
-  dept <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;D&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="p">,</span> <span class="m">50</span><span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+  dept <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;D&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span> <span class="m">50</span><span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
   x1 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span> mean <span class="o">=</span> <span class="m">50</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">5</span><span class="p">),</span>
   x2 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span> mean <span class="o">=</span> <span class="m">20</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">3</span><span class="p">),</span>
   x3 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span> mean <span class="o">=</span>  <span class="m">5</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">1</span><span class="p">),</span>
@@ -17655,7 +18813,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[216]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>t1 <span class="o">=</span> <span class="kp">table</span><span class="p">(</span>my.df<span class="o">$</span>com<span class="p">)</span>
@@ -17699,7 +18857,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[218]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> count<span class="p">(</span>com<span class="p">)</span> <span class="o">%&gt;%</span>
@@ -17750,13 +18908,14 @@ C1 C2 C3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="prop.table">prop.table<a class="anchor-link" href="#prop.table">&#182;</a></h4>
+<h4 id="prop.table">prop.table<a class="anchor-link" href="#prop.table">&#182;</a></h4><p>Table-wise proportion</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[221]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>t2 <span class="o">=</span> <span class="kp">table</span><span class="p">(</span>my.df<span class="o">$</span>com<span class="p">,</span> my.df<span class="o">$</span>dep<span class="p">)</span>
@@ -17780,10 +18939,10 @@ C1 C2 C3
 
 <div class="output_text output_subarea ">
 <pre>    
-       D1   D2   D3   D4   D5   D6   D7
-  C1 0.16 0.04 0.10 0.08 0.02 0.04 0.02
-  C2 0.06 0.04 0.04 0.08 0.00 0.04 0.04
-  C3 0.04 0.04 0.04 0.02 0.02 0.02 0.06</pre>
+       D1   D2   D3   D4   D5
+  C1 0.18 0.12 0.08 0.06 0.02
+  C2 0.10 0.04 0.08 0.02 0.06
+  C3 0.08 0.04 0.02 0.04 0.06</pre>
 </div>
 
 </div>
@@ -17791,16 +18950,119 @@ C1 C2 C3
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Row-wise proportion (margin=1)</strong></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[224]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> group_by<span class="p">(</span>com<span class="p">,</span> dept<span class="p">)</span> <span class="o">%&gt;%</span>
-    summarize <span class="p">()</span>
-    mutate<span class="p">(</span>pct<span class="o">=</span>n<span class="o">/</span><span class="kp">sum</span><span class="p">(</span>n<span class="p">))</span>
-<span class="c1">#  spread(key=dept, value=pct)</span>
+<div class=" highlight hl-r"><pre><span></span>t2 <span class="o">=</span> <span class="kp">table</span><span class="p">(</span>my.df<span class="o">$</span>com<span class="p">,</span> my.df<span class="o">$</span>dep<span class="p">)</span>
+<span class="kp">prop.table</span><span class="p">(</span>t2<span class="p">,</span>margin <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>    
+             D1         D2         D3         D4         D5
+  C1 0.39130435 0.26086957 0.17391304 0.13043478 0.04347826
+  C2 0.33333333 0.13333333 0.26666667 0.06666667 0.20000000
+  C3 0.33333333 0.16666667 0.08333333 0.16666667 0.25000000</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Column-wise proportion (margin=2)</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>t2 <span class="o">=</span> <span class="kp">table</span><span class="p">(</span>my.df<span class="o">$</span>com<span class="p">,</span> my.df<span class="o">$</span>dep<span class="p">)</span>
+<span class="kp">prop.table</span><span class="p">(</span>t2<span class="p">,</span>margin <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>    
+            D1        D2        D3        D4        D5
+  C1 0.5000000 0.6000000 0.4444444 0.5000000 0.1428571
+  C2 0.2777778 0.2000000 0.4444444 0.1666667 0.4285714
+  C3 0.2222222 0.2000000 0.1111111 0.3333333 0.4285714</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="dplyr">dplyr<a class="anchor-link" href="#dplyr">&#182;</a></h4><p><strong>Table-Wise Proportion</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> count<span class="p">(</span>com<span class="p">,</span>dept<span class="p">)</span> <span class="o">%&gt;%</span>
+    mutate<span class="p">(</span>pct<span class="o">=</span>n<span class="o">/</span><span class="kp">sum</span><span class="p">(</span>n<span class="p">))</span> <span class="o">%&gt;%</span>
+    select<span class="p">(</span>com<span class="p">,</span> dept<span class="p">,</span> pct<span class="p">)</span> <span class="o">%&gt;%</span>
+    spread<span class="p">(</span>key<span class="o">=</span>dept<span class="p">,</span> value<span class="o">=</span>pct<span class="p">)</span>
 </pre></div>
 
 </div>
@@ -17819,28 +19081,117 @@ C1 C2 C3
 
 <div class="output_html rendered_html output_subarea ">
 <table>
-<thead><tr><th scope=col>com</th><th scope=col>dept</th><th scope=col>n</th><th scope=col>pct</th></tr></thead>
+<thead><tr><th scope=col>com</th><th scope=col>D1</th><th scope=col>D2</th><th scope=col>D3</th><th scope=col>D4</th><th scope=col>D5</th></tr></thead>
 <tbody>
-	<tr><td>C1  </td><td>D1  </td><td>16  </td><td>0.16</td></tr>
-	<tr><td>C1  </td><td>D2  </td><td> 4  </td><td>0.04</td></tr>
-	<tr><td>C1  </td><td>D3  </td><td>10  </td><td>0.10</td></tr>
-	<tr><td>C1  </td><td>D4  </td><td> 8  </td><td>0.08</td></tr>
-	<tr><td>C1  </td><td>D5  </td><td> 2  </td><td>0.02</td></tr>
-	<tr><td>C1  </td><td>D6  </td><td> 4  </td><td>0.04</td></tr>
-	<tr><td>C1  </td><td>D7  </td><td> 2  </td><td>0.02</td></tr>
-	<tr><td>C2  </td><td>D1  </td><td> 6  </td><td>0.06</td></tr>
-	<tr><td>C2  </td><td>D2  </td><td> 4  </td><td>0.04</td></tr>
-	<tr><td>C2  </td><td>D3  </td><td> 4  </td><td>0.04</td></tr>
-	<tr><td>C2  </td><td>D4  </td><td> 8  </td><td>0.08</td></tr>
-	<tr><td>C2  </td><td>D6  </td><td> 4  </td><td>0.04</td></tr>
-	<tr><td>C2  </td><td>D7  </td><td> 4  </td><td>0.04</td></tr>
-	<tr><td>C3  </td><td>D1  </td><td> 4  </td><td>0.04</td></tr>
-	<tr><td>C3  </td><td>D2  </td><td> 4  </td><td>0.04</td></tr>
-	<tr><td>C3  </td><td>D3  </td><td> 4  </td><td>0.04</td></tr>
-	<tr><td>C3  </td><td>D4  </td><td> 2  </td><td>0.02</td></tr>
-	<tr><td>C3  </td><td>D5  </td><td> 2  </td><td>0.02</td></tr>
-	<tr><td>C3  </td><td>D6  </td><td> 2  </td><td>0.02</td></tr>
-	<tr><td>C3  </td><td>D7  </td><td> 6  </td><td>0.06</td></tr>
+	<tr><td>C1  </td><td>0.18</td><td>0.12</td><td>0.08</td><td>0.06</td><td>0.02</td></tr>
+	<tr><td>C2  </td><td>0.10</td><td>0.04</td><td>0.08</td><td>0.02</td><td>0.06</td></tr>
+	<tr><td>C3  </td><td>0.08</td><td>0.04</td><td>0.02</td><td>0.04</td><td>0.06</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Row-Wise Proportion</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> group_by<span class="p">(</span>com<span class="p">,</span> dept<span class="p">)</span> <span class="o">%&gt;%</span>
+    summarize <span class="p">(</span>n <span class="o">=</span> n<span class="p">())</span> <span class="o">%&gt;%</span>
+    mutate<span class="p">(</span>pct<span class="o">=</span>n<span class="o">/</span><span class="kp">sum</span><span class="p">(</span>n<span class="p">))</span> <span class="o">%&gt;%</span>
+    select<span class="p">(</span>com<span class="p">,</span> dept<span class="p">,</span> pct<span class="p">)</span> <span class="o">%&gt;%</span>
+    spread<span class="p">(</span>key<span class="o">=</span>dept<span class="p">,</span> value<span class="o">=</span>pct<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>com</th><th scope=col>D1</th><th scope=col>D2</th><th scope=col>D3</th><th scope=col>D4</th><th scope=col>D5</th></tr></thead>
+<tbody>
+	<tr><td>C1        </td><td>0.3913043 </td><td>0.2608696 </td><td>0.17391304</td><td>0.13043478</td><td>0.04347826</td></tr>
+	<tr><td>C2        </td><td>0.3333333 </td><td>0.1333333 </td><td>0.26666667</td><td>0.06666667</td><td>0.20000000</td></tr>
+	<tr><td>C3        </td><td>0.3333333 </td><td>0.1666667 </td><td>0.08333333</td><td>0.16666667</td><td>0.25000000</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Column-Wise Proportion</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> group_by<span class="p">(</span>dept<span class="p">,</span>com<span class="p">)</span> <span class="o">%&gt;%</span>
+    summarize<span class="p">(</span>n<span class="o">=</span>n<span class="p">())</span> <span class="o">%&gt;%</span>
+    mutate<span class="p">(</span>pct<span class="o">=</span>n<span class="o">/</span><span class="kp">sum</span><span class="p">(</span>n<span class="p">))</span> <span class="o">%&gt;%</span>
+    select<span class="p">(</span>com<span class="p">,</span>dept<span class="p">,</span> pct<span class="p">)</span> <span class="o">%&gt;%</span>
+    spread<span class="p">(</span>key<span class="o">=</span>dept<span class="p">,</span>value<span class="o">=</span>pct<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>com</th><th scope=col>D1</th><th scope=col>D2</th><th scope=col>D3</th><th scope=col>D4</th><th scope=col>D5</th></tr></thead>
+<tbody>
+	<tr><td>C1       </td><td>0.5000000</td><td>0.6      </td><td>0.4444444</td><td>0.5000000</td><td>0.1428571</td></tr>
+	<tr><td>C2       </td><td>0.2777778</td><td>0.2      </td><td>0.4444444</td><td>0.1666667</td><td>0.4285714</td></tr>
+	<tr><td>C3       </td><td>0.2222222</td><td>0.2      </td><td>0.1111111</td><td>0.3333333</td><td>0.4285714</td></tr>
 </tbody>
 </table>
 
@@ -56366,7 +57717,7 @@ hist<span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_293_1.png"
+<img src="index_files/index_357_1.png"
 >
 </div>
 
@@ -56400,7 +57751,7 @@ hist<span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_294_0.png"
+<img src="index_files/index_358_0.png"
 >
 </div>
 
