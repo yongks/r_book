@@ -11827,6 +11827,81 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Library-Used">Library Used<a class="anchor-link" href="#Library-Used">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>stringr<span class="p">)</span>
+<span class="c1"># str_detect       (x, pattern)</span>
+<span class="c1"># str_subset       (x, pattern)</span>
+<span class="c1"># str_count        (x, pattern)</span>
+<span class="c1"># str_replace      (x, pattern, replacment)</span>
+<span class="c1"># str_replace_all  (x, pattern, replacement)</span>
+<span class="c1"># str_length       (x)</span>
+<span class="c1"># str_c            (..., sep), (...,collapse)</span>
+<span class="c1"># str_sub          (string, start, end )</span>
+<span class="c1"># str_split        (string, pattern)</span>
+
+<span class="c1">## remark</span>
+<span class="c1"># x      = multiple elements vector</span>
+<span class="c1"># string = single element vector</span>
+<span class="c1"># ...    = vectorized exectution of multiple vectors</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1">## objective of Collapse is to return single string</span>
+<span class="kp">print</span><span class="p">(</span> str_c<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;aaa&#39;</span><span class="p">,</span><span class="s">&#39;bbb&#39;</span><span class="p">),</span> collapse <span class="o">=</span> <span class="s">&#39;-&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> str_c<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;aaa&#39;</span><span class="p">,</span><span class="s">&#39;bbb&#39;</span><span class="p">),</span>  <span class="kt">c</span><span class="p">(</span><span class="s">&#39;$$$&#39;</span><span class="p">,</span><span class="s">&#39;###&#39;</span><span class="p">),</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;111&#39;</span><span class="p">,</span><span class="s">&#39;222&#39;</span><span class="p">),</span>collapse<span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="c1">## objective of Sep is to return vectorized combine</span>
+<span class="kp">print</span><span class="p">(</span> str_c<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;aaa&#39;</span><span class="p">,</span><span class="s">&#39;bbb&#39;</span><span class="p">),</span> sep <span class="o">=</span> <span class="s">&#39;-&#39;</span><span class="p">)</span> <span class="p">)</span>   <span class="c1"># single input vector, no effect on vectorization</span>
+<span class="kp">print</span><span class="p">(</span> str_c<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;aaa&#39;</span><span class="p">,</span><span class="s">&#39;bbb&#39;</span><span class="p">),</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;111&#39;</span><span class="p">,</span><span class="s">&#39;222&#39;</span><span class="p">),</span> sep<span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;aaa-bbb&#34;
+[1] &#34;aaa$$$111-bbb###222&#34;
+[1] &#34;aaa&#34; &#34;bbb&#34;
+[1] &#34;aaa-111&#34; &#34;bbb-222&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Number">Number<a class="anchor-link" href="#Number">&#182;</a></h2>
 </div>
 </div>
@@ -12112,7 +12187,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;One&#39;</span><span class="p">,</span><span class="s">&#39;Two&#39;</span><span class="p">,</span><span class="s">&#39;Three&#39;</span><span class="p">,</span><span class="s">&#39;Four&#39;</span><span class="p">)</span>
@@ -12138,49 +12213,9 @@ $( document ).ready(function(){
 	<li>3</li>
 	<li>3</li>
 	<li>5</li>
+	<li>4</li>
 </ol>
 
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Stripping">Stripping<a class="anchor-link" href="#Stripping">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>x <span class="o">=</span> <span class="s">&#39;hello, my name is james bond&#39;</span>
-<span class="kp">nchar</span><span class="p">(</span>x<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-28
 </div>
 
 </div>
@@ -12290,44 +12325,9 @@ s <span class="o">=</span>  <span class="kp">strsplit</span><span class="p">(</s
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Combine-two-Strings">Combine two Strings<a class="anchor-link" href="#Combine-two-Strings">&#182;</a></h4>
+<h4 id="Combine-Chars">Combine Chars<a class="anchor-link" href="#Combine-Chars">&#182;</a></h4>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[150]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>s1 <span class="o">=</span> <span class="s">&#39;This is sentence one&#39;</span>
-s2 <span class="o">=</span> <span class="s">&#39;This is another sentence&#39;</span>
-s3 <span class="o">=</span> <span class="s">&#39;This is last sentence&#39;</span>
-<span class="kp">paste</span><span class="p">(</span>s1<span class="p">,</span>s2<span class="p">,</span>s3<span class="p">,</span> sep<span class="o">=</span><span class="s">&#39;.&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-'This is sentence one.This is another sentence.This is last sentence'
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -12504,6 +12504,349 @@ z <span class="o">=</span> <span class="kp">seq</span><span class="p">(</span><s
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[1] &#34;filenumber1&#34; &#34;filenumber2&#34; &#34;filenumber3&#34; &#34;filenumber4&#34; &#34;filenumber5&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="stringr"><strong>stringr</strong><a class="anchor-link" href="#stringr">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1">## objective of Collapse is to return single string</span>
+<span class="kp">print</span><span class="p">(</span> str_c<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;aaa&#39;</span><span class="p">,</span><span class="s">&#39;bbb&#39;</span><span class="p">),</span> collapse <span class="o">=</span> <span class="s">&#39;-&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> str_c<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;aaa&#39;</span><span class="p">,</span><span class="s">&#39;bbb&#39;</span><span class="p">),</span>  <span class="kt">c</span><span class="p">(</span><span class="s">&#39;$$$&#39;</span><span class="p">,</span><span class="s">&#39;###&#39;</span><span class="p">),</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;111&#39;</span><span class="p">,</span><span class="s">&#39;222&#39;</span><span class="p">),</span>collapse<span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="c1">## objective of Sep is to return vectorized combine</span>
+<span class="kp">print</span><span class="p">(</span> str_c<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;aaa&#39;</span><span class="p">,</span><span class="s">&#39;bbb&#39;</span><span class="p">),</span> sep <span class="o">=</span> <span class="s">&#39;-&#39;</span><span class="p">)</span> <span class="p">)</span>   <span class="c1"># single input vector, no effect on vectorization</span>
+<span class="kp">print</span><span class="p">(</span> str_c<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;aaa&#39;</span><span class="p">,</span><span class="s">&#39;bbb&#39;</span><span class="p">),</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;111&#39;</span><span class="p">,</span><span class="s">&#39;222&#39;</span><span class="p">),</span> sep<span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Matching">Matching<a class="anchor-link" href="#Matching">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>cars <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;Nissan serena&#39;</span><span class="p">,</span><span class="s">&#39;toyota camry&#39;</span><span class="p">,</span><span class="s">&#39;Toyota Estima&#39;</span><span class="p">,</span><span class="s">&#39;nissan sentra&#39;</span><span class="p">,</span><span class="s">&#39;TOYOTA vios&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Find">Find<a class="anchor-link" href="#Find">&#182;</a></h4><p><strong>grep( pattern=, x=, value=FALSE, ignore.case=FALSE)</strong><br>
+can return either indices or values</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Find (Return Indices) the Matching Pattern</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> cars <span class="p">)</span> 
+<span class="kp">print</span><span class="p">(</span> <span class="kp">grep</span><span class="p">(</span><span class="s">&#39;toyota&#39;</span><span class="p">,</span> cars<span class="p">)</span> <span class="p">)</span>                      <span class="c1"># case sensitive</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">grep</span><span class="p">(</span><span class="s">&#39;toyota&#39;</span><span class="p">,</span> cars<span class="p">,</span> ignore.case <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="p">)</span>  <span class="c1"># case insensitive</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;Nissan serena&#34; &#34;toyota camry&#34;  &#34;Toyota Estima&#34; &#34;nissan sentra&#34;
+[1] 2
+[1] 2 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Find The Matching Values</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1">## Return **value instead of indices**</span>
+<span class="kp">print</span><span class="p">(</span> cars <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">grep</span><span class="p">(</span><span class="s">&#39;toyota&#39;</span><span class="p">,</span> cars<span class="p">,</span> value<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">grep</span><span class="p">(</span><span class="s">&#39;toyota&#39;</span><span class="p">,</span> cars<span class="p">,</span> value<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> ignore.case <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;Nissan serena&#34; &#34;toyota camry&#34;  &#34;Toyota Estima&#34; &#34;nissan sentra&#34;
+[5] &#34;TOYOTA vios&#34;  
+[1] &#34;toyota camry&#34;
+[1] &#34;toyota camry&#34;  &#34;Toyota Estima&#34; &#34;TOYOTA vios&#34;  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>stringr</strong><br>
+<strong>str_detect</strong> (string, pattern)  - which element contain pattern<br>
+<strong>str_subset</strong> (string, pattern)  - return all elements that matches</p>
+<p>Default to case sensitive,
+use pattern=fixed( , ignore_case=TRUE) for case insensitive.</p>
+<p><strong>Detect (Return Logical Vector) The Matching Pattern</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span>cars<span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> str_detect<span class="p">(</span>cars<span class="p">,</span> <span class="s">&#39;toyota&#39;</span><span class="p">)</span> <span class="p">)</span>                           <span class="c1"># case sensitive</span>
+<span class="kp">print</span><span class="p">(</span> str_detect<span class="p">(</span>cars<span class="p">,</span> fixed<span class="p">(</span><span class="s">&#39;toyota&#39;</span><span class="p">,</span> ignore_case<span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span> <span class="p">)</span>  <span class="c1"># case insensitive</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;Nissan serena&#34; &#34;toyota camry&#34;  &#34;Toyota Estima&#34; &#34;nissan sentra&#34;
+[1] FALSE  TRUE FALSE FALSE
+[1] FALSE  TRUE  TRUE FALSE
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Find The Matching Values</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span>cars<span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> str_subset<span class="p">(</span>cars<span class="p">,</span> <span class="s">&#39;toyota&#39;</span><span class="p">)</span> <span class="p">)</span>                           <span class="c1"># case sensitive</span>
+<span class="kp">print</span><span class="p">(</span> str_subset<span class="p">(</span>cars<span class="p">,</span> fixed<span class="p">(</span><span class="s">&#39;toyota&#39;</span><span class="p">,</span> ignore_case<span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span> <span class="p">)</span>  <span class="c1"># case insensitive</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;Nissan serena&#34; &#34;toyota camry&#34;  &#34;Toyota Estima&#34; &#34;nissan sentra&#34;
+[5] &#34;TOYOTA vios&#34;  
+[1] &#34;toyota camry&#34;
+[1] &#34;toyota camry&#34;  &#34;Toyota Estima&#34; &#34;TOYOTA vios&#34;  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Find-and-Replace">Find and Replace<a class="anchor-link" href="#Find-and-Replace">&#182;</a></h4><p><strong>gsub( pattern=, replacement=, x=, ignore.case=TRUE)</strong><br>
+return a new string vector</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> cars <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">gsub</span><span class="p">(</span>pattern<span class="o">=</span><span class="s">&#39;toyota&#39;</span><span class="p">,</span> replacement<span class="o">=</span><span class="s">&#39;Toyota&#39;</span><span class="p">,</span> cars<span class="p">)</span> <span class="p">)</span> 
+<span class="kp">print</span><span class="p">(</span> <span class="kp">gsub</span><span class="p">(</span>pattern<span class="o">=</span><span class="s">&#39;toyota&#39;</span><span class="p">,</span>replacement<span class="o">=</span><span class="s">&#39;Toyota&#39;</span><span class="p">,</span>ignore.case <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> cars<span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;Nissan serena&#34; &#34;toyota camry&#34;  &#34;Toyota Estima&#34; &#34;nissan sentra&#34;
+[5] &#34;TOYOTA vios&#34;  
+[1] &#34;Nissan serena&#34; &#34;Toyota camry&#34;  &#34;Toyota Estima&#34; &#34;nissan sentra&#34;
+[5] &#34;TOYOTA vios&#34;  
+[1] &#34;Nissan serena&#34; &#34;Toyota camry&#34;  &#34;Toyota Estima&#34; &#34;nissan sentra&#34;
+[5] &#34;Toyota vios&#34;  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>stringr</strong><br>
+<strong>str_replace</strong> (x, pattern, replacement)      # replace first occurance for each elements<br>
+<strong>str_replace_all</strong> (x, pattern, replacement)  # replace all occurances on every elements</p>
+<p>Default to case sensitive,<br>
+use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> cars <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> str_replace     <span class="p">(</span>cars<span class="p">,</span> <span class="s">&#39;toyota&#39;</span><span class="p">,</span><span class="s">&#39;Toyota&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> str_replace_all <span class="p">(</span>cars<span class="p">,</span> 
+                        fixed<span class="p">(</span><span class="s">&#39;toyota&#39;</span><span class="p">,</span> ignore_case<span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>  <span class="c1"># case insensitive</span>
+                        <span class="s">&#39;Toyota&#39;</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;Nissan serena&#34; &#34;toyota camry&#34;  &#34;Toyota Estima&#34; &#34;nissan sentra&#34;
+[5] &#34;TOYOTA vios&#34;  
+[1] &#34;Nissan serena&#34; &#34;Toyota camry&#34;  &#34;Toyota Estima&#34; &#34;nissan sentra&#34;
+[5] &#34;TOYOTA vios&#34;  
+[1] &#34;Nissan serena&#34; &#34;Toyota camry&#34;  &#34;Toyota Estima&#34; &#34;nissan sentra&#34;
+[5] &#34;Toyota vios&#34;  
 </pre>
 </div>
 </div>
@@ -12923,6 +13266,262 @@ print <span class="p">(</span>nas<span class="p">)</span>
 logical(0)
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Factor">Factor<a class="anchor-link" href="#Factor">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating">Creating<a class="anchor-link" href="#Creating">&#182;</a></h3><p><strong>Non Ordered Factor</strong>
+There is no need to specify levels</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>X <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;apple&#39;</span><span class="p">,</span><span class="s">&#39;banana&#39;</span><span class="p">,</span><span class="s">&#39;apple&#39;</span><span class="p">,</span><span class="s">&#39;durian&#39;</span><span class="p">,</span><span class="s">&#39;rambutan&#39;</span><span class="p">,</span><span class="s">&#39;durian&#39;</span><span class="p">)</span>
+f1 <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>X<span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> f1 <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] apple    banana   apple    durian   rambutan durian  
+Levels: apple banana durian rambutan
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Ordered Factor</strong></p>
+<ul>
+<li>Specify ordered=T and its levels in order</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>y <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;slow&#39;</span><span class="p">,</span><span class="s">&#39;turbo&#39;</span><span class="p">,</span><span class="s">&#39;fast&#39;</span><span class="p">,</span><span class="s">&#39;slow&#39;</span><span class="p">,</span><span class="s">&#39;fast&#39;</span><span class="p">,</span><span class="s">&#39;slow&#39;</span><span class="p">)</span>
+f2 <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>y<span class="p">,</span> ordered<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> 
+               levels<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;slow&#39;</span><span class="p">,</span><span class="s">&#39;fast&#39;</span><span class="p">,</span><span class="s">&#39;turbo&#39;</span><span class="p">))</span>
+<span class="kp">print</span><span class="p">(</span> f2 <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] slow  turbo fast  slow  fast  slow 
+Levels: slow &lt; fast &lt; turbo
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Each element is comparible according to the order specified</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> f2<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;</span> f2<span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] TRUE
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Class,-Typeof,-is.factor(-)">Class, Typeof, is.factor( )<a class="anchor-link" href="#Class,-Typeof,-is.factor(-)">&#182;</a></h3><p>Observe that factor is type of integer</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">class</span><span class="p">(</span>f1<span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">typeof</span><span class="p">(</span>f1<span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">is.factor</span><span class="p">(</span>f1<span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;factor&#34;
+[1] &#34;integer&#34;
+[1] TRUE
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Properties">Properties<a class="anchor-link" href="#Properties">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">levels</span><span class="p">(</span>f2<span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;slow&#34;  &#34;fast&#34;  &#34;turbo&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+6
+</div>
+
 </div>
 
 </div>
@@ -15500,6 +16099,693 @@ Use <strong>break</strong> to exit</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Data-Generation">Data Generation<a class="anchor-link" href="#Data-Generation">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Numbers">Numbers<a class="anchor-link" href="#Numbers">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sequantial-Number">Sequantial Number<a class="anchor-link" href="#Sequantial-Number">&#182;</a></h3><h4 id="Incremental">Incremental<a class="anchor-link" href="#Incremental">&#182;</a></h4><p><strong>Incremental by 1 Step</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">3</span><span class="o">:</span><span class="m">12</span><span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> seq <span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">12</span><span class="p">)</span> <span class="p">)</span>        <span class="c1"># integer increment, default by=1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> [1]  3  4  5  6  7  8  9 10 11 12
+ [1]  3  4  5  6  7  8  9 10 11 12
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">3.3</span><span class="o">:</span><span class="m">12.5</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> seq <span class="p">(</span><span class="m">3.3</span><span class="p">,</span> <span class="m">12.5</span><span class="p">)</span> <span class="p">)</span>    <span class="c1"># double increment, default by 1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> [1]  3.3  4.3  5.3  6.3  7.3  8.3  9.3 10.3 11.3 12.3
+ [1]  3.3  4.3  5.3  6.3  7.3  8.3  9.3 10.3 11.3 12.3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Incrementaal by x Step</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> seq <span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">12</span><span class="p">,</span> by <span class="o">=</span> <span class="m">4</span><span class="p">)</span> <span class="p">)</span>           <span class="c1"># increment of integer</span>
+<span class="kp">print</span><span class="p">(</span> seq <span class="p">(</span><span class="m">3.25</span><span class="p">,</span> <span class="m">12.50</span><span class="p">,</span> by <span class="o">=</span> <span class="m">2.25</span><span class="p">))</span>   <span class="c1"># increment of decimal</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1]  3  7 11
+[1]  3.25  5.50  7.75 10.00 12.25
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">seq</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">17</span><span class="p">,</span> length.out<span class="o">=</span><span class="m">6</span><span class="p">)</span>   <span class="c1">#</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>3</li>
+	<li>5.8</li>
+	<li>8.6</li>
+	<li>11.4</li>
+	<li>14.2</li>
+	<li>17</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Incremental by Equal Spreading</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">seq</span><span class="p">(</span><span class="m">15</span><span class="p">,</span><span class="m">3</span><span class="p">,</span> length.out<span class="o">=</span><span class="m">6</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>15</li>
+	<li>12.6</li>
+	<li>10.2</li>
+	<li>7.8</li>
+	<li>5.4</li>
+	<li>3</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Decremental">Decremental<a class="anchor-link" href="#Decremental">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Decrement by 1 Step</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">12</span><span class="o">:</span><span class="m">3</span> <span class="p">)</span>   
+<span class="kp">print</span><span class="p">(</span> <span class="kp">seq</span><span class="p">(</span><span class="m">12</span><span class="p">,</span><span class="m">3</span><span class="p">)</span>  <span class="p">)</span>            <span class="c1"># default by -1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> [1] 12 11 10  9  8  7  6  5  4  3
+ [1] 12 11 10  9  8  7  6  5  4  3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Decrement by X Step</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">seq</span><span class="p">(</span><span class="m">12</span><span class="p">,</span><span class="m">3</span><span class="p">,</span> by <span class="o">=</span> <span class="m">-3</span><span class="p">)</span>  <span class="p">)</span>               <span class="c1"># integer</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">seq</span><span class="p">(</span><span class="m">12.50</span><span class="p">,</span> <span class="m">3.25</span><span class="p">,</span> by <span class="o">=</span> <span class="m">-1.25</span><span class="p">)</span>  <span class="p">)</span>     <span class="c1"># double</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 12  9  6  3
+[1] 12.50 11.25 10.00  8.75  7.50  6.25  5.00  3.75
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Decrement by Equal Spreading</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">seq</span><span class="p">(</span><span class="m">12.50</span><span class="p">,</span> <span class="m">3.25</span><span class="p">,</span> length.out<span class="o">=</span><span class="m">6</span><span class="p">)</span> <span class="p">)</span>    <span class="c1"># double</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 12.50 10.65  8.80  6.95  5.10  3.25
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Random-Numbers">Random Numbers<a class="anchor-link" href="#Random-Numbers">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Normal-Distribution">Normal Distribution<a class="anchor-link" href="#Normal-Distribution">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> rnorm<span class="p">(</span><span class="m">8</span><span class="p">,</span> mean<span class="o">=</span><span class="m">3</span><span class="p">,</span>sd<span class="o">=</span><span class="m">1.25</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 2.461450 1.433926 3.370971 1.940777 2.936089 1.569709 3.040864 4.871685
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Unified-Distribution">Unified Distribution<a class="anchor-link" href="#Unified-Distribution">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>print <span class="p">(</span>runif<span class="p">(</span><span class="m">8</span><span class="p">,</span>min <span class="o">=</span> <span class="m">3</span><span class="p">,</span> max<span class="o">=</span><span class="m">10</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 9.009766 8.394454 7.408255 4.586779 7.480465 5.259408 7.688593 6.852577
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Factor">Factor<a class="anchor-link" href="#Factor">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Random-Non-Ordered-Factor">Random Non Ordered Factor<a class="anchor-link" href="#Random-Non-Ordered-Factor">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>rf2 <span class="o">=</span> <span class="kp">gl</span><span class="p">(</span>n<span class="o">=</span><span class="m">2</span><span class="p">,</span> k<span class="o">=</span><span class="m">3</span><span class="p">,</span> length <span class="o">=</span> <span class="m">12</span><span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;Aaa&#39;</span><span class="p">,</span><span class="s">&#39;Bbb&#39;</span><span class="p">,</span><span class="s">&#39;Ccc&#39;</span><span class="p">,</span><span class="s">&#39;Ddd&#39;</span><span class="p">))</span>
+<span class="kp">print</span><span class="p">(</span> rf2 <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> [1] Aaa Aaa Aaa Bbb Bbb Bbb Aaa Aaa Aaa Bbb Bbb Bbb
+Levels: Aaa Bbb Ccc Ddd
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Random-Ordered-Factor">Random Ordered Factor<a class="anchor-link" href="#Random-Ordered-Factor">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>rf1 <span class="o">=</span> <span class="kp">gl</span><span class="p">(</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;Aaa&#39;</span><span class="p">,</span><span class="s">&#39;Bbb&#39;</span><span class="p">,</span><span class="s">&#39;Ccc&#39;</span><span class="p">),</span> ordered<span class="o">=</span><span class="kc">TRUE</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> rf1 <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] Aaa Aaa Aaa Aaa Aaa Bbb Bbb Bbb Bbb
+Levels: Aaa &lt; Bbb &lt; Ccc
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sampling">Sampling<a class="anchor-link" href="#Sampling">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Without-Replacement">Without Replacement<a class="anchor-link" href="#Without-Replacement">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sample size MUST not be larger than population**</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>X <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">sample</span><span class="p">(</span>X<span class="p">,</span> size <span class="o">=</span> <span class="m">5</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 1 7 4 6 2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sampling-With-Replacement">Sampling With Replacement<a class="anchor-link" href="#Sampling-With-Replacement">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">sample</span><span class="p">(</span>X<span class="p">,</span>size <span class="o">=</span> <span class="m">8</span><span class="p">,</span> replace<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 5 6 1 5 6 8 3 2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Statistics">Statistics<a class="anchor-link" href="#Statistics">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span> mtcars <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>      mpg             cyl             disp             hp       
+ Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
+ 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
+ Median :19.20   Median :6.000   Median :196.3   Median :123.0  
+ Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
+ 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
+ Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
+      drat             wt             qsec             vs        
+ Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
+ 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
+ Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
+ Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
+ 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
+ Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
+       am              gear            carb      
+ Min.   :0.0000   Min.   :3.000   Min.   :1.000  
+ 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
+ Median :0.0000   Median :4.000   Median :2.000  
+ Mean   :0.4062   Mean   :3.688   Mean   :2.812  
+ 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :1.0000   Max.   :5.000   Max.   :8.000  </pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Preprocessing">Preprocessing<a class="anchor-link" href="#Preprocessing">&#182;</a></h1>
 </div>
 </div>
@@ -15516,7 +16802,615 @@ Use <strong>break</strong> to exit</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Wrangling">Wrangling<a class="anchor-link" href="#Wrangling">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">set.seed</span><span class="p">(</span><span class="m">1234</span><span class="p">)</span>
+my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p">(</span>
+  com  <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+  dept <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;D&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+  team <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">15</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+  x1 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span> mean <span class="o">=</span> <span class="m">50</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">5</span><span class="p">),</span>
+  x2 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span> mean <span class="o">=</span> <span class="m">20</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">3</span><span class="p">),</span>
+  x3 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span> mean <span class="o">=</span>  <span class="m">5</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">1</span><span class="p">),</span>
+  stringsAsFactors <span class="o">=</span> <span class="bp">F</span>
+<span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span>my.df<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>com</th><th scope=col>dept</th><th scope=col>team</th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
+<tbody>
+	<tr><td>C1      </td><td>D1      </td><td>T10     </td><td>48.11381</td><td>21.31079</td><td>2.683964</td></tr>
+	<tr><td>C2      </td><td>D4      </td><td>T8      </td><td>50.48810</td><td>23.18037</td><td>5.562472</td></tr>
+	<tr><td>C2      </td><td>D2      </td><td>T5      </td><td>58.19372</td><td>21.35657</td><td>4.216225</td></tr>
+	<tr><td>C2      </td><td>D2      </td><td>T12     </td><td>45.62204</td><td>21.98960</td><td>4.773946</td></tr>
+	<tr><td>C3      </td><td>D1      </td><td>T8      </td><td>50.60880</td><td>16.59088</td><td>3.412897</td></tr>
+	<tr><td>C2      </td><td>D3      </td><td>T11     </td><td>56.81065</td><td>18.88851</td><td>5.547524</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="stringr">stringr<a class="anchor-link" href="#stringr">&#182;</a></h2><h3 id="Why-use-stringr-?">Why use stringr ?<a class="anchor-link" href="#Why-use-stringr-?">&#182;</a></h3><ul>
+<li>Consistent syntax, all functions start with 'str_'</li>
+<li>Compatible with %&gt;%</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>stringr<span class="p">)</span>
+words <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;why&quot;</span><span class="p">,</span> <span class="s">&quot;video&quot;</span><span class="p">,</span> <span class="s">&quot;cross&quot;</span><span class="p">,</span> <span class="s">&quot;extra&quot;</span><span class="p">,</span> <span class="s">&quot;deal&quot;</span><span class="p">,</span> <span class="s">&quot;authority&quot;</span><span class="p">)</span>
+fruits <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;banana&#39;</span><span class="p">,</span><span class="s">&#39;apple&#39;</span><span class="p">,</span><span class="s">&#39;banana&#39;</span><span class="p">,</span><span class="s">&#39;durian&#39;</span><span class="p">,</span><span class="s">&#39;apple&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Number-of-Chars">Number of Chars<a class="anchor-link" href="#Number-of-Chars">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> str_length<span class="p">(</span> words <span class="p">)</span> <span class="p">)</span>   <span class="c1"># stringr</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">nchar</span><span class="p">(</span>words<span class="p">)</span>  <span class="p">)</span>         <span class="c1"># similar to base R</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 3 5 5 5 4 9
+[1] 3 5 5 5 4 9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Combinning">Combinning<a class="anchor-link" href="#Combinning">&#182;</a></h3><p>This operation take single vector and combine all its elements to form a combined string</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> str_c<span class="p">(</span>fruits<span class="p">,</span> collapse <span class="o">=</span> <span class="s">&quot; , &quot;</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;banana , apple , banana , durian , apple&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Subset">Subset<a class="anchor-link" href="#Subset">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>str_sub<span class="p">(</span>fruits<span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>  <span class="c1"># substring position 1 to 3</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>'ban'</li>
+	<li>'app'</li>
+	<li>'ban'</li>
+	<li>'dur'</li>
+	<li>'app'</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Replace">Replace<a class="anchor-link" href="#Replace">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>str_replace<span class="p">(</span>words<span class="p">,</span> <span class="s">&quot;[aeiou]&quot;</span><span class="p">,</span> <span class="s">&quot;?&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>'why'</li>
+	<li>'v?deo'</li>
+	<li>'cr?ss'</li>
+	<li>'?xtra'</li>
+	<li>'d?al'</li>
+	<li>'?uthority'</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="String-Split">String Split<a class="anchor-link" href="#String-Split">&#182;</a></h3><p><strong>stringr::str_split</strong> has similar result as <strong>base::strplit</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>x <span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;banana, apple  , banana , durian  , apple&#39;</span><span class="p">,</span> 
+     <span class="s">&#39;avocado, water melon, pineapple&#39;</span><span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> str_split<span class="p">(</span>x<span class="p">,</span> <span class="s">&#39;, &#39;</span><span class="p">)</span>  <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[1]]
+[1] &#34;banana&#34;   &#34;apple  &#34;  &#34;banana &#34;  &#34;durian  &#34; &#34;apple&#34;   
+
+[[2]]
+[1] &#34;avocado&#34;     &#34;water melon&#34; &#34;pineapple&#34;  
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">strsplit</span><span class="p">(</span>x<span class="p">,</span><span class="s">&#39;,&#39;</span><span class="p">)</span>  <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[1]]
+[1] &#34;banana&#34;    &#34; apple  &#34;  &#34; banana &#34;  &#34; durian  &#34; &#34; apple&#34;   
+
+[[2]]
+[1] &#34;avocado&#34;      &#34; water melon&#34; &#34; pineapple&#34;  
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pattern-Match">Pattern Match<a class="anchor-link" href="#Pattern-Match">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> words <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> str_detect<span class="p">(</span>x<span class="p">,</span> <span class="s">&quot;[aeiou]&quot;</span><span class="p">)</span>  <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;why&#34;       &#34;video&#34;     &#34;cross&#34;     &#34;extra&#34;     &#34;deal&#34;      &#34;authority&#34;
+[1] TRUE TRUE
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="dplyr">dplyr<a class="anchor-link" href="#dplyr">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Filter">Filter<a class="anchor-link" href="#Filter">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sorting">Sorting<a class="anchor-link" href="#Sorting">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Visualization">Visualization<a class="anchor-link" href="#Visualization">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Base-R">Base R<a class="anchor-link" href="#Base-R">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Setup-Plot-Size">Setup Plot Size<a class="anchor-link" href="#Setup-Plot-Size">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span> mtcars <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&#39;data.frame&#39;:	32 obs. of  11 variables:
+ $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+ $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
+ $ disp: num  160 160 108 258 360 ...
+ $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+ $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+ $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+ $ qsec: num  16.5 17 18.6 19.4 17 ...
+ $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+ $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+ $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+ $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Histogram">Histogram<a class="anchor-link" href="#Histogram">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">min</span><span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">max</span><span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)</span> <span class="p">)</span>
+hist<span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 10.4
+[1] 33.9
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_253_1.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>hist<span class="p">(</span>iris<span class="o">$</span>Sepal.Length<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_254_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ggplot">ggplot<a class="anchor-link" href="#ggplot">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Machine-Learning">Machine Learning<a class="anchor-link" href="#Machine-Learning">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Clustering">Clustering<a class="anchor-link" href="#Clustering">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="H-Clustering">H Clustering<a class="anchor-link" href="#H-Clustering">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Kmeans">Kmeans<a class="anchor-link" href="#Kmeans">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15765,6 +17659,38 @@ F-statistic: 13.93 on 10 and 21 DF,  p-value: 3.793e-07
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Classification">Classification<a class="anchor-link" href="#Classification">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Decision-Tree">Decision Tree<a class="anchor-link" href="#Decision-Tree">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Naive-Bayes">Naive Bayes<a class="anchor-link" href="#Naive-Bayes">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h3>
+</div>
+</div>
 </div>
     </div>
   </div>
