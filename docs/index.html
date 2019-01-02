@@ -57634,25 +57634,46 @@ com  D1 D2 D3 D4 D5 D6 D7
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[156]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>dplyr<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>gridExtra<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[157]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1">## jupyter set plot size</span>
+<span class="kp">options</span><span class="p">(</span>repr.plot.width <span class="o">=</span><span class="m">8</span> <span class="p">,</span> repr.plot.height <span class="o">=</span> <span class="m">3.5</span><span class="p">,</span> repr.plot.res <span class="o">=</span> <span class="m">150</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Base-R">Base R<a class="anchor-link" href="#Base-R">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Setup-Plot-Size">Setup Plot Size<a class="anchor-link" href="#Setup-Plot-Size">&#182;</a></h3>
+<h2 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[158]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span> mtcars <span class="p">)</span>
@@ -57696,18 +57717,43 @@ com  D1 D2 D3 D4 D5 D6 D7
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Histogram">Histogram<a class="anchor-link" href="#Histogram">&#182;</a></h3>
+<h2 id="Base-R">Base R<a class="anchor-link" href="#Base-R">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Scatter-Plot">Scatter Plot<a class="anchor-link" href="#Scatter-Plot">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[163]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">min</span><span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)</span> <span class="p">)</span>
-<span class="kp">print</span><span class="p">(</span> <span class="kp">max</span><span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)</span> <span class="p">)</span>
-hist<span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span> mtcars<span class="o">$</span>hp<span class="p">,</span> 
+     mtcars<span class="o">$</span>mpg<span class="p">,</span>
+     col<span class="o">=</span><span class="s">&#39;black&#39;</span><span class="p">,</span> 
+     pch<span class="o">=</span><span class="m">12</span><span class="p">)</span>
+
+points<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">200</span><span class="p">,</span><span class="m">250</span><span class="p">),</span>           <span class="c1"># optional</span>
+       <span class="kt">c</span><span class="p">(</span><span class="m">15</span><span class="p">,</span><span class="m">25</span><span class="p">),</span> 
+       col<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;red&#39;</span><span class="p">,</span><span class="s">&#39;blue&#39;</span><span class="p">),</span> 
+       pch<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">15</span><span class="p">,</span><span class="m">17</span><span class="p">))</span>       
+
+text<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">200+10</span><span class="p">,</span><span class="m">250+10</span><span class="p">),</span>       <span class="c1"># optional</span>
+     <span class="kt">c</span><span class="p">(</span><span class="m">15</span><span class="p">,</span><span class="m">25</span><span class="p">),</span>  
+     <span class="kt">c</span><span class="p">(</span><span class="s">&#39;Xxx&#39;</span><span class="p">,</span><span class="s">&#39;Yyy&#39;</span><span class="p">))</span>
+
+abline<span class="p">(</span>h <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">15</span><span class="p">,</span><span class="m">30</span><span class="p">),</span>         <span class="c1"># optional</span>
+       v <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">150</span><span class="p">,</span><span class="m">250</span><span class="p">),</span> 
+       col <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;red&#39;</span><span class="p">,</span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="s">&#39;green&#39;</span><span class="p">,</span><span class="s">&#39;orange&#39;</span><span class="p">),</span> 
+       lty <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">))</span>
+
+title<span class="p">(</span><span class="s">&quot;Power Cars&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -57723,12 +57769,42 @@ hist<span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[1] 10.4
-[1] 33.9
-</pre>
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_359_0.png"
+>
+</div>
+
+</div>
+
 </div>
 </div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Histogram">Histogram<a class="anchor-link" href="#Histogram">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[155]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>hist<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;Power Cars&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
 
 <div class="output_area">
 
@@ -57738,7 +57814,49 @@ hist<span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_357_1.png"
+<img src="index_files/index_361_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Boxplot">Boxplot<a class="anchor-link" href="#Boxplot">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[146]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>boxplot <span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_363_0.png"
 >
 </div>
 
@@ -57750,10 +57868,12 @@ hist<span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[180]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>hist<span class="p">(</span>iris<span class="o">$</span>Sepal.Length<span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span>t <span class="o">=</span> <span class="kp">table</span><span class="p">(</span>mtcars<span class="o">$</span>cyl<span class="p">)</span>
+mids <span class="o">=</span> barplot<span class="p">(</span><span class="kp">t</span><span class="p">,</span> horiz <span class="o">=</span> <span class="bp">T</span><span class="p">)</span>
+text<span class="p">(</span><span class="kp">t</span><span class="m">-0.3</span><span class="p">,</span> mids<span class="p">,</span><span class="kp">t</span><span class="p">,</span> col<span class="o">=</span><span class="s">&#39;blue&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -57772,7 +57892,197 @@ hist<span class="p">(</span> mtcars<span class="o">$</span>mpg <span class="p">)
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_358_0.png"
+<img src="index_files/index_364_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Recommended-Color">Recommended Color<a class="anchor-link" href="#Recommended-Color">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[159]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Iliinsky and Steele color name vector</span>
+IScolors <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;green&quot;</span><span class="p">,</span> <span class="s">&quot;yellow&quot;</span><span class="p">,</span> <span class="s">&quot;blue&quot;</span><span class="p">,</span>
+              <span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="s">&quot;white&quot;</span><span class="p">,</span> <span class="s">&quot;pink&quot;</span><span class="p">,</span> <span class="s">&quot;cyan&quot;</span><span class="p">,</span>
+              <span class="s">&quot;gray&quot;</span><span class="p">,</span> <span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="s">&quot;brown&quot;</span><span class="p">,</span> <span class="s">&quot;purple&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create the data for the barplot</span>
+barWidths <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">6</span><span class="p">),</span> <span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">6</span><span class="p">))</span>
+
+<span class="c1"># Recreate the horizontal barplot with colored bars</span>
+barplot<span class="p">(</span>
+  <span class="kp">rev</span><span class="p">(</span>barWidths<span class="p">),</span> 
+  horiz <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
+  col <span class="o">=</span> <span class="kp">rev</span><span class="p">(</span>IScolors<span class="p">),</span> 
+  axes <span class="o">=</span> <span class="bp">F</span><span class="p">,</span>
+  names.arg <span class="o">=</span> <span class="kp">rev</span><span class="p">(</span>IScolors<span class="p">),</span> 
+  las <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_366_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ggplot">ggplot<a class="anchor-link" href="#ggplot">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Scatter-Plot">Scatter Plot<a class="anchor-link" href="#Scatter-Plot">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Two-Numeric-+-Color-+-Size-+-Shape">Two Numeric + Color + Size + Shape<a class="anchor-link" href="#Two-Numeric-+-Color-+-Size-+-Shape">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We shall demonstrate scatter plot with five variables:</p>
+<ul>
+<li>x axis: wt (numeric)</li>
+<li>y axis: mpg (numeric)</li>
+<li>color : disp (numeric) , optional</li>
+<li>size  : hp (numeric)   , optional</li>
+<li>shape : gears (convert to factor)  , optional</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">options</span><span class="p">(</span>repr.plot.width <span class="o">=</span> <span class="m">9</span><span class="p">,</span> repr.plot.height <span class="o">=</span> <span class="m">7</span><span class="p">,</span> repr.plot.res <span class="o">=</span> <span class="m">150</span><span class="p">)</span>
+p1 <span class="o">=</span> mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span class="p">(</span>x<span class="o">=</span>wt<span class="p">,</span> y<span class="o">=</span>mpg<span class="p">))</span> <span class="o">+</span> geom_point<span class="p">()</span>
+p2 <span class="o">=</span> mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span class="p">(</span>x<span class="o">=</span>wt<span class="p">,</span> y<span class="o">=</span>mpg<span class="p">,</span> col<span class="o">=</span>disp<span class="p">))</span> <span class="o">+</span> geom_point<span class="p">()</span>
+p3 <span class="o">=</span> mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span class="p">(</span>x<span class="o">=</span>wt<span class="p">,</span> y<span class="o">=</span>mpg<span class="p">,</span> size<span class="o">=</span>hp<span class="p">))</span> <span class="o">+</span> geom_point<span class="p">()</span>
+p4 <span class="o">=</span> mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span class="p">(</span>x<span class="o">=</span>wt<span class="p">,</span> y<span class="o">=</span>mpg<span class="p">,</span> col<span class="o">=</span>disp<span class="p">,</span> size<span class="o">=</span>hp<span class="p">))</span> <span class="o">+</span> geom_point<span class="p">()</span>
+grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">,</span>p3<span class="p">,</span>p4<span class="p">,</span> ncol<span class="o">=</span><span class="m">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_371_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>shape</strong> require non-continous number, hence we convert to factor in order to use <strong>shape</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">options</span><span class="p">(</span>repr.plot.width <span class="o">=</span> <span class="m">9</span><span class="p">,</span> repr.plot.height <span class="o">=</span> <span class="m">5</span><span class="p">,</span> repr.plot.res <span class="o">=</span> <span class="m">150</span><span class="p">)</span>
+mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span class="p">(</span>x<span class="o">=</span>wt<span class="p">,</span> y<span class="o">=</span>mpg<span class="p">,</span> col<span class="o">=</span>disp<span class="p">,</span> size<span class="o">=</span>hp<span class="p">,</span> shape<span class="o">=</span><span class="kp">as.factor</span><span class="p">(</span>gear<span class="p">)))</span> <span class="o">+</span> geom_point<span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_373_1.png"
 >
 </div>
 
