@@ -11767,50 +11767,6 @@ div#notebook {
     });
     </script>
     <!-- End of mathjax configuration --></head>
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/main.css">
-
-<style type="text/css">
-@font-face {
-    font-family: 'FontAwesome';
-    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.eot');
-    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.woff') format('woff'),
-         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.ttf') format('truetype'),
-         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-</style>
-
-<script src="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/toc2.js"></script>
-
-<script>
-$( document ).ready(function(){
-
-            var cfg={'threshold':3,     // depth of toc (number of levels)
-             'number_sections': true,  // sections numbering
-             'toc_cell': false,          // useless here
-             'toc_window_display': true, // display the toc window
-             "toc_section_display": "block", // display toc contents in the window
-             'markTocItemOnScroll': false, 
-             'sideBar':true,             // sidebar or floating window
-             'navigate_menu':false       // navigation menu (only in liveNotebook -- do not change)
-            }
-
-            var st={};                  // some variables used in the script
-            st.oldTocHeight = undefined
-
-            // fire the main function with these parameters
-            require(['nbextensions/toc2/toc2'], function (toc2) {
-                toc2.table_of_contents(cfg, st);
-            });
-    });
-</script>
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
@@ -11833,7 +11789,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>stringr<span class="p">)</span>
@@ -11870,6 +11826,38 @@ $( document ).ready(function(){
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>-- Attaching packages --------------------------------------- tidyverse 1.2.1 --
+v ggplot2 3.1.0     v readr   1.1.1
+v tibble  1.4.2     v purrr   0.2.5
+v tidyr   0.8.2     v dplyr   0.7.8
+v ggplot2 3.1.0     v forcats 0.3.0
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+
+Attaching package: &#39;lubridate&#39;
+
+The following object is masked from &#39;package:base&#39;:
+
+    date
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -11890,7 +11878,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">2L</span> <span class="p">)</span>
@@ -11933,7 +11921,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">2.3</span> <span class="p">)</span>
@@ -11976,7 +11964,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.num <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">10</span><span class="o">/</span><span class="m">3</span><span class="p">,</span><span class="m">14</span><span class="o">/</span><span class="m">3</span><span class="p">,</span><span class="m">20</span><span class="o">/</span><span class="m">3</span><span class="p">)</span>
@@ -12019,7 +12007,7 @@ my.num2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> my.num <span class="o">+</span> my.num2 <span class="p">)</span>
@@ -12060,7 +12048,7 @@ my.num2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">15</span> <span class="o">/</span>   <span class="m">4</span> <span class="p">)</span>  <span class="c1"># floting division</span>
@@ -12112,7 +12100,7 @@ my.num2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">round</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">4.49</span><span class="p">,</span> <span class="m">4.50</span><span class="p">,</span> <span class="m">4.51</span><span class="p">)</span> <span class="p">))</span>
@@ -12152,7 +12140,7 @@ my.num2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">round</span><span class="p">(</span> <span class="kt">c</span><span class="p">(</span><span class="m">3.844</span><span class="p">,</span> <span class="m">3.845</span><span class="p">,</span> <span class="m">3.846</span><span class="p">),</span> <span class="m">2</span> <span class="p">))</span>
@@ -12191,7 +12179,7 @@ my.num2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">ceiling</span><span class="p">(</span>my.num<span class="p">)</span> <span class="p">)</span>
@@ -12232,7 +12220,7 @@ my.num2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">abs</span><span class="p">(</span><span class="m">0</span><span class="o">-</span>my.num<span class="p">)</span>
@@ -12277,7 +12265,7 @@ my.num2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="s">&#39;abc&#39;</span> <span class="p">)</span>
@@ -12320,7 +12308,7 @@ my.num2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;One&#39;</span><span class="p">,</span><span class="s">&#39;Two&#39;</span><span class="p">,</span><span class="s">&#39;Three&#39;</span><span class="p">,</span><span class="s">&#39;Four&#39;</span><span class="p">)</span>
@@ -12367,7 +12355,7 @@ my.num2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>fruits_string <span class="o">=</span> <span class="s">&#39;apple, banana, durian&#39;</span>
@@ -12402,7 +12390,7 @@ cars_string   <span class="o">=</span> <span class="s">&#39;nissan, toyota, bmw&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">strsplit</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span>fruits_string<span class="p">,</span> cars_string<span class="p">),</span> <span class="s">&quot;,&quot;</span><span class="p">)</span> <span class="p">)</span>
@@ -12446,7 +12434,7 @@ cars_string   <span class="o">=</span> <span class="s">&#39;nissan, toyota, bmw&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> str_split<span class="p">(</span><span class="kt">c</span><span class="p">(</span>fruits_string<span class="p">,</span> cars_string<span class="p">),</span> pattern <span class="o">=</span> <span class="s">&#39;,&#39;</span><span class="p">)</span> <span class="p">)</span>
@@ -12490,7 +12478,7 @@ cars_string   <span class="o">=</span> <span class="s">&#39;nissan, toyota, bmw&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>fat_string <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39; toyota  &#39;</span><span class="p">,</span> <span class="s">&#39;bmw  &#39;</span><span class="p">,</span><span class="s">&#39;nissan&#39;</span><span class="p">)</span>
@@ -12512,7 +12500,7 @@ cars_string   <span class="o">=</span> <span class="s">&#39;nissan, toyota, bmw&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> trimws<span class="p">(</span>fat_string<span class="p">)</span> <span class="p">)</span>
@@ -12551,7 +12539,7 @@ cars_string   <span class="o">=</span> <span class="s">&#39;nissan, toyota, bmw&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> str_trim<span class="p">(</span>fat_string<span class="p">)</span> <span class="p">)</span>
@@ -12598,7 +12586,7 @@ cars_string   <span class="o">=</span> <span class="s">&#39;nissan, toyota, bmw&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>fruits <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;banana&#39;</span><span class="p">,</span><span class="s">&#39;mango&#39;</span><span class="p">,</span> <span class="s">&#39;durian&#39;</span><span class="p">)</span>
@@ -12643,7 +12631,7 @@ Vectorized operation</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">paste</span><span class="p">(</span>fruits<span class="p">,</span> cars<span class="p">,</span> sep <span class="o">=</span> <span class="s">&#39;-&#39;</span><span class="p">)</span> <span class="p">)</span>
@@ -12684,7 +12672,7 @@ Objective is have result as one single string</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">paste</span><span class="p">(</span>fruits<span class="p">,</span> collapse <span class="o">=</span> <span class="s">&#39;-&#39;</span><span class="p">)</span> <span class="p">)</span>
@@ -12725,7 +12713,7 @@ Combine both operation together</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">paste</span><span class="p">(</span>fruits<span class="p">,</span> cars<span class="p">,</span> sep<span class="o">=</span><span class="s">&#39;|&#39;</span><span class="p">,</span> collapse <span class="o">=</span> <span class="s">&#39;-&#39;</span><span class="p">))</span>
@@ -12766,7 +12754,7 @@ Combine both operation together</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">paste0</span><span class="p">(</span><span class="s">&quot;file&quot;</span><span class="p">,</span> <span class="s">&quot;number&quot;</span><span class="p">,</span> <span class="s">&quot;32&quot;</span><span class="p">)</span>  <span class="p">)</span>
@@ -12805,7 +12793,7 @@ Combine both operation together</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>stringr<span class="p">)</span>
@@ -12857,7 +12845,7 @@ Combine both operation together</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str_sub<span class="p">(</span>fruits<span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>  <span class="c1"># substring position 1 to 3</span>
@@ -12902,7 +12890,7 @@ Combine both operation together</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>cars <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;Nissan serena&#39;</span><span class="p">,</span><span class="s">&#39;toyota camry&#39;</span><span class="p">,</span><span class="s">&#39;Toyota Estima&#39;</span><span class="p">,</span><span class="s">&#39;nissan sentra&#39;</span><span class="p">,</span><span class="s">&#39;TOYOTA vios&#39;</span><span class="p">)</span>
@@ -12934,7 +12922,7 @@ can return either indices or values</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> cars <span class="p">)</span> 
@@ -12979,7 +12967,7 @@ can return either indices or values</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Return **value instead of indices**</span>
@@ -13029,7 +13017,7 @@ use pattern=fixed( , ignore_case=TRUE) for case insensitive.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span>cars<span class="p">)</span>
@@ -13074,7 +13062,7 @@ use pattern=fixed( , ignore_case=TRUE) for case insensitive.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span>cars<span class="p">)</span>
@@ -13120,7 +13108,7 @@ return a new string vector</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> cars <span class="p">)</span>
@@ -13170,7 +13158,7 @@ use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> cars <span class="p">)</span>
@@ -13218,7 +13206,7 @@ use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;One&#39;</span><span class="p">,</span><span class="s">&#39;Two&#39;</span><span class="p">,</span><span class="s">&#39;Three&#39;</span><span class="p">)</span>
@@ -13277,7 +13265,7 @@ use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">3</span> <span class="o">==</span> <span class="m">3</span> <span class="p">)</span>          <span class="c1"># compare two integers</span>
@@ -13324,7 +13312,7 @@ use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">3</span>     <span class="o">!=</span> <span class="m">3</span> <span class="p">)</span>        <span class="c1"># compare two integers</span>
@@ -13379,7 +13367,7 @@ use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="o">!</span><span class="p">(</span><span class="m">3L</span> <span class="o">==</span> <span class="m">3.0</span><span class="p">)</span>
@@ -13421,7 +13409,7 @@ FALSE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>z <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">8</span>
@@ -13465,7 +13453,7 @@ When will you use it ? No idea</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> z<span class="o">&gt;</span><span class="m">2</span>    <span class="o">&amp;&amp;</span> z<span class="o">&lt;</span><span class="m">6</span>     <span class="p">)</span>
@@ -13508,7 +13496,7 @@ When will you use it ? No idea</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>z <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span>
@@ -13550,7 +13538,7 @@ When will you use it ? No idea</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> z<span class="o">%%</span><span class="m">2</span><span class="o">==</span><span class="m">1</span> <span class="o">||</span> z<span class="o">&gt;</span><span class="m">5</span> <span class="p">)</span>
@@ -13592,7 +13580,7 @@ When will you use it ? No idea</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;ali&#39;</span><span class="p">,</span><span class="s">&#39;abu&#39;</span><span class="p">,</span><span class="s">&#39;ah kow&#39;</span><span class="p">,</span> <span class="kc">NULL</span><span class="p">,</span> <span class="kc">NA</span><span class="p">)</span>
@@ -13643,7 +13631,7 @@ When will you use it ? No idea</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">3</span><span class="p">,</span><span class="kc">NULL</span><span class="p">,</span><span class="kc">NA</span><span class="p">)</span>
@@ -13698,7 +13686,7 @@ When will you use it ? No idea</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>nas <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="kc">NA</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">)</span>
@@ -13742,7 +13730,7 @@ print <span class="p">(</span>nas<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">is.na</span><span class="p">(</span>nas<span class="p">)</span>
@@ -13799,7 +13787,7 @@ print <span class="p">(</span>nas<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kc">NULL</span><span class="o">==</span><span class="kc">TRUE</span> <span class="o">|</span> <span class="kc">NULL</span><span class="o">==</span><span class="kc">FALSE</span>
@@ -13843,7 +13831,7 @@ print <span class="p">(</span>nas<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>result <span class="o">=</span> <span class="p">(</span><span class="kc">NULL</span><span class="o">==</span><span class="s">&#39;abc&#39;</span><span class="p">)</span>
@@ -13896,7 +13884,7 @@ print <span class="p">(</span>nas<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;apple&#39;</span><span class="p">,</span><span class="s">&#39;banana&#39;</span><span class="p">,</span><span class="s">&#39;apple&#39;</span><span class="p">,</span><span class="s">&#39;durian&#39;</span><span class="p">,</span><span class="s">&#39;rambutan&#39;</span><span class="p">,</span><span class="s">&#39;durian&#39;</span><span class="p">)</span>
@@ -13941,7 +13929,7 @@ Levels: apple banana durian rambutan
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>y <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;slow&#39;</span><span class="p">,</span><span class="s">&#39;turbo&#39;</span><span class="p">,</span><span class="s">&#39;fast&#39;</span><span class="p">,</span><span class="s">&#39;slow&#39;</span><span class="p">,</span><span class="s">&#39;fast&#39;</span><span class="p">,</span><span class="s">&#39;slow&#39;</span><span class="p">)</span>
@@ -13987,7 +13975,7 @@ Levels: slow &lt; fast &lt; turbo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> f2<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;</span> f2<span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">)</span>
@@ -14026,7 +14014,7 @@ Levels: slow &lt; fast &lt; turbo
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;apple&#39;</span><span class="p">,</span><span class="s">&#39;banana&#39;</span><span class="p">,</span><span class="s">&#39;apple&#39;</span><span class="p">,</span><span class="s">&#39;durian&#39;</span><span class="p">,</span><span class="s">&#39;rambutan&#39;</span><span class="p">,</span><span class="s">&#39;durian&#39;</span><span class="p">)</span>
@@ -14068,7 +14056,7 @@ f1 <span class="o">=</span> <span class="kp">factor</span><span class="p">(</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> f1 <span class="p">)</span>
@@ -14100,7 +14088,7 @@ Levels: apple banana durian rambutan mango
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>f2 <span class="o">=</span> <span class="kp">droplevels</span><span class="p">(</span>f1<span class="p">)</span>
@@ -14142,7 +14130,7 @@ Levels: apple banana durian rambutan
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> f1 <span class="p">)</span>
@@ -14188,7 +14176,7 @@ Levels: apple banana durian rambutan mango
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>d <span class="o">=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">&#39;2019-01-03&#39;</span><span class="p">)</span>
@@ -14241,7 +14229,7 @@ Levels: apple banana durian rambutan mango
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">Sys.Date</span><span class="p">()</span>  <span class="p">)</span>
@@ -14282,7 +14270,7 @@ Default string format is "yyyy-mm-dd" or "yyyy/mm/dd", customizable</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>birthdays <span class="o">=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;1971-07-11&#39;</span><span class="p">,</span><span class="s">&#39;1980-12-11&#39;</span><span class="p">,</span><span class="s">&#39;1981-11-20&#39;</span><span class="p">))</span>
@@ -14315,7 +14303,7 @@ str<span class="p">(</span>birthdays<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>birthdays<span class="p">)</span>
@@ -14355,7 +14343,7 @@ str<span class="p">(</span>birthdays<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> today<span class="p">())</span>
@@ -14395,7 +14383,7 @@ str<span class="p">(</span>birthdays<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>birthdays <span class="o">=</span> ymd<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;1971-07-11&#39;</span><span class="p">,</span><span class="s">&#39;1980-12-11&#39;</span><span class="p">,</span><span class="s">&#39;1981-11-20&#39;</span><span class="p">))</span>
@@ -14438,7 +14426,7 @@ str<span class="p">(</span>birthdays<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> make_date<span class="p">(</span>year <span class="o">=</span> <span class="m">2018</span><span class="p">,</span> month<span class="o">=</span><span class="m">11</span><span class="p">,</span> day<span class="o">=</span><span class="m">30</span><span class="p">)</span> <span class="p">)</span>
@@ -14477,7 +14465,7 @@ str<span class="p">(</span>birthdays<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">format</span><span class="p">(</span>today<span class="p">,</span> format<span class="o">=</span><span class="s">&quot;%m %d %y&quot;</span><span class="p">)</span> <span class="p">)</span>
@@ -14538,7 +14526,7 @@ str<span class="p">(</span>birthdays<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">strftime</span><span class="p">(</span>birthdays<span class="p">,</span><span class="s">&#39;%Y&#39;</span><span class="p">)</span> <span class="p">)</span>
@@ -14583,7 +14571,7 @@ str<span class="p">(</span>birthdays<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> year<span class="p">(</span>birthdays<span class="p">)</span> <span class="p">)</span>
@@ -14628,7 +14616,7 @@ label=T, return factor of Weekday</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> wday<span class="p">(</span>birthdays<span class="p">)</span> <span class="p">)</span>   <span class="c1"># 1:Sunday, 7:Saturday</span>
@@ -14659,7 +14647,7 @@ label=T, return factor of Weekday</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>wd <span class="o">=</span> wday<span class="p">(</span> birthdays<span class="p">,</span> label <span class="o">=</span> <span class="bp">T</span> <span class="p">)</span>
@@ -14707,7 +14695,7 @@ str<span class="p">(</span>wd<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>first_day_of_next_month <span class="o">=</span> ceiling_date<span class="p">(</span>today<span class="p">()</span> <span class="p">,</span>unit <span class="o">=</span> <span class="s">&#39;month&#39;</span><span class="p">)</span>
@@ -14748,7 +14736,7 @@ str<span class="p">(</span>wd<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>last_day_of_this_month <span class="o">=</span> first_day_of_next_month <span class="o">-</span> days<span class="p">(</span><span class="m">1</span><span class="p">)</span>
@@ -14788,7 +14776,7 @@ str<span class="p">(</span>wd<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> ceiling_date<span class="p">(</span> today<span class="p">()</span> <span class="p">,</span>unit <span class="o">=</span> <span class="s">&#39;year&#39;</span><span class="p">)</span> <span class="p">)</span>
@@ -14836,7 +14824,7 @@ str<span class="p">(</span>wd<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>today<span class="p">()</span>
@@ -14877,7 +14865,7 @@ str<span class="p">(</span>wd<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>tomorrow <span class="o">=</span> today<span class="p">()</span> <span class="o">+</span> ddays<span class="p">(</span><span class="m">1</span><span class="p">)</span>
@@ -14918,7 +14906,7 @@ str<span class="p">(</span>wd<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>last_year <span class="o">=</span> today<span class="p">()</span> <span class="o">-</span> dyears<span class="p">(</span><span class="m">1</span><span class="p">)</span>
@@ -14959,7 +14947,7 @@ str<span class="p">(</span>wd<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>future <span class="o">=</span> today<span class="p">()</span> <span class="o">+</span> dyears<span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="o">+</span> dweeks<span class="p">(</span><span class="m">12</span><span class="p">)</span>
@@ -15005,7 +14993,7 @@ str<span class="p">(</span>wd<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>date1 <span class="o">=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">&#39;2019-01-01&#39;</span><span class="p">)</span>
@@ -15083,7 +15071,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="p">(</span>today<span class="p">()</span><span class="o">-</span><span class="kp">as.Date</span><span class="p">(</span><span class="s">&#39;1973-07-26&#39;</span><span class="p">))</span><span class="o">/</span>dyears<span class="p">(</span><span class="m">1</span><span class="p">))</span>
@@ -15122,7 +15110,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">class</span><span class="p">(</span><span class="m">2L</span><span class="p">)</span> <span class="p">)</span>
@@ -15171,7 +15159,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">typeof</span><span class="p">(</span><span class="m">2L</span><span class="p">)</span> <span class="p">)</span>
@@ -15220,7 +15208,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">is.integer</span><span class="p">(</span><span class="m">2L</span><span class="p">)</span> <span class="p">)</span>
@@ -15268,7 +15256,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">is.numeric</span><span class="p">(</span><span class="m">2L</span><span class="p">))</span>
@@ -15344,7 +15332,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>empty <span class="o">=</span> <span class="kt">c</span><span class="p">()</span>
@@ -15410,7 +15398,7 @@ TRUE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x1 <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>    
@@ -15467,7 +15455,7 @@ str <span class="p">(</span>x3<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>y        <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">10</span><span class="p">)</span>
@@ -15513,7 +15501,7 @@ str <span class="p">(</span>x3<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">names</span><span class="p">(</span>y<span class="p">)</span>
@@ -15568,7 +15556,7 @@ str <span class="p">(</span>x3<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>attributes <span class="p">(</span>y<span class="p">)</span>
@@ -15627,7 +15615,7 @@ Index number starts at 1.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>z <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;aaa&#39;</span><span class="p">,</span><span class="s">&#39;bbb&#39;</span><span class="p">,</span><span class="s">&#39;ccc&#39;</span><span class="p">,</span><span class="s">&#39;ddd&#39;</span><span class="p">,</span><span class="s">&#39;eee&#39;</span><span class="p">,</span><span class="s">&#39;fff&#39;</span><span class="p">,</span><span class="s">&#39;ggg&#39;</span><span class="p">,</span><span class="s">&#39;hhh&#39;</span><span class="p">,</span><span class="s">&#39;iii&#39;</span><span class="p">,</span><span class="s">&#39;jjj&#39;</span><span class="p">)</span>
@@ -15675,7 +15663,7 @@ Index number starts at 1.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> z<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span><span class="m">-4</span><span class="p">)]</span> <span class="p">)</span>  <span class="c1">## negate specific elements</span>
@@ -15717,7 +15705,7 @@ Index number starts at 1.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>z <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;aaa&#39;</span><span class="p">,</span><span class="s">&#39;bbb&#39;</span><span class="p">,</span><span class="s">&#39;ccc&#39;</span><span class="p">,</span><span class="s">&#39;ddd&#39;</span><span class="p">,</span><span class="s">&#39;eee&#39;</span><span class="p">,</span><span class="s">&#39;fff&#39;</span><span class="p">,</span><span class="s">&#39;ggg&#39;</span><span class="p">,</span><span class="s">&#39;hhh&#39;</span><span class="p">,</span><span class="s">&#39;iii&#39;</span><span class="p">,</span><span class="s">&#39;jjj&#39;</span><span class="p">)</span>
@@ -15764,7 +15752,7 @@ by first</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## create the logical vector</span>
@@ -15808,7 +15796,7 @@ criteria <span class="o">=</span> z <span class="o">%in%</span> <span class="kt"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## select every alternate element (odd position)</span>
@@ -15857,7 +15845,7 @@ z<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>z <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">9</span><span class="p">)</span>
@@ -15871,7 +15859,7 @@ z<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> z<span class="p">[</span><span class="s">&#39;seven&#39;</span><span class="p">]</span>  <span class="p">)</span>            <span class="c1"># does not require c() if single element</span>
@@ -15922,7 +15910,7 @@ seven  nine
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">is.atomic</span><span class="p">(</span>x2<span class="p">)</span>
@@ -15962,7 +15950,7 @@ TRUE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>z <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">9</span><span class="p">)</span>
@@ -16006,7 +15994,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">class</span><span class="p">(</span>iris<span class="p">)</span> <span class="p">)</span>
@@ -16067,7 +16055,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x1 <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
@@ -16116,7 +16104,7 @@ str<span class="p">(</span>X<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X <span class="o">=</span> <span class="kt">data.frame</span><span class="p">(</span>x1<span class="p">,</span>x2<span class="p">,</span>x3<span class="p">,</span> stringsAsFactors <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
@@ -16162,7 +16150,7 @@ str<span class="p">(</span> X <span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X <span class="o">=</span> <span class="kt">data.frame</span><span class="p">(</span>x1<span class="p">,</span>x2<span class="p">,</span> row.names <span class="o">=</span> x3<span class="p">)</span>
@@ -16215,7 +16203,7 @@ lima   5 firve
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x1 <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
@@ -16267,7 +16255,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">names</span><span class="p">(</span>X<span class="p">)</span> <span class="p">)</span>
@@ -16288,8 +16276,8 @@ _5_  5  five  lima
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[1] &#34;x1&#34; &#34;x2&#34; &#34;x3&#34; &#34;x4&#34; &#34;x5&#34; &#34;x6&#34;
-[1] &#34;x1&#34; &#34;x2&#34; &#34;x3&#34; &#34;x4&#34; &#34;x5&#34; &#34;x6&#34;
+<pre>[1] &#34;x1&#34; &#34;x2&#34; &#34;x3&#34;
+[1] &#34;x1&#34; &#34;x2&#34; &#34;x3&#34;
 </pre>
 </div>
 </div>
@@ -16317,7 +16305,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[287]:</div>
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> X<span class="p">[,</span><span class="m">2</span><span class="p">]</span> <span class="p">)</span>    <span class="c1"># column number</span>
@@ -16359,7 +16347,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[258]:</div>
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">subset</span><span class="p">(</span>X<span class="p">,</span> select<span class="o">=</span><span class="m">2</span><span class="p">)</span>  <span class="c1"># return Dataframe, not Vector, notice rownames maintained</span>
@@ -16401,7 +16389,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[259]:</div>
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">subset</span><span class="p">(</span>X<span class="p">,</span> select<span class="o">=</span><span class="s">&#39;x2&#39;</span><span class="p">)</span>
@@ -16452,7 +16440,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[284]:</div>
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> X<span class="p">[,</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;x1&#39;</span><span class="p">,</span><span class="s">&#39;x2&#39;</span><span class="p">,</span><span class="s">&#39;x3&#39;</span><span class="p">)]</span> <span class="p">)</span>   <span class="c1"># by column names</span>
@@ -16497,7 +16485,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[291]:</div>
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>subset <span class="p">(</span>X<span class="p">,</span> select <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;x1&#39;</span><span class="p">,</span><span class="s">&#39;x2&#39;</span><span class="p">,</span><span class="s">&#39;x3&#39;</span><span class="p">))</span>
@@ -16539,7 +16527,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[292]:</div>
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>subset <span class="p">(</span>X<span class="p">,</span> select <span class="o">=</span> <span class="o">-</span><span class="kt">c</span><span class="p">(</span>x5<span class="p">,</span>x6<span class="p">))</span>   <span class="c1"># use -</span>
@@ -16558,21 +16546,16 @@ _5_  5  five  lima
 <div class="prompt"></div>
 
 
+<div class="output_subarea output_text output_error">
+<pre>
+Error in eval(substitute(select), nl, parent.frame()): object &#39;x5&#39; not found
+Traceback:
 
-<div class="output_html rendered_html output_subarea ">
-<table>
-<thead><tr><th></th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
-<tbody>
-	<tr><th scope=row>_1_</th><td>1    </td><td>one  </td><td>satu </td></tr>
-	<tr><th scope=row>_2_</th><td>2    </td><td>two  </td><td>dua  </td></tr>
-	<tr><th scope=row>_3_</th><td>3    </td><td>three</td><td>tiga </td></tr>
-	<tr><th scope=row>_4_</th><td>4    </td><td>four </td><td>empat</td></tr>
-	<tr><th scope=row>_5_</th><td>5    </td><td>five </td><td>lima </td></tr>
-</tbody>
-</table>
-
+1. subset(X, select = -c(x5, x6))
+2. subset.data.frame(X, select = -c(x5, x6))
+3. eval(substitute(select), nl, parent.frame())
+4. eval(substitute(select), nl, parent.frame())</pre>
 </div>
-
 </div>
 
 </div>
@@ -16590,7 +16573,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[253]:</div>
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X<span class="p">[</span> <span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">)]</span>
@@ -16632,7 +16615,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[295]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X<span class="p">[,</span> <span class="o">-</span><span class="kt">c</span><span class="p">(</span><span class="m">4</span><span class="o">:</span><span class="m">6</span><span class="p">)]</span>    <span class="c1"># use -</span>
@@ -16683,7 +16666,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[273]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">subset</span><span class="p">(</span>X<span class="p">,</span> select<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">)</span>
@@ -16725,7 +16708,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[274]:</div>
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">subset</span><span class="p">(</span>X<span class="p">,</span> select<span class="o">=-</span><span class="p">(</span><span class="m">4</span><span class="o">:</span><span class="m">6</span><span class="p">))</span>  <span class="c1"># use -</span>
@@ -16776,7 +16759,7 @@ _5_  5  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[254]:</div>
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> X<span class="p">[,</span> <span class="kp">colnames</span><span class="p">(</span>X<span class="p">)</span> <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;x2&#39;</span><span class="p">,</span><span class="s">&#39;x3&#39;</span><span class="p">)]</span> <span class="p">)</span>  <span class="c1"># by column names</span>
@@ -16821,7 +16804,7 @@ _5_  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[300]:</div>
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">subset</span><span class="p">(</span> X<span class="p">,</span> select <span class="o">=</span> <span class="kp">colnames</span><span class="p">(</span>X<span class="p">)</span> <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;x1&#39;</span><span class="p">,</span><span class="s">&#39;x2&#39;</span><span class="p">,</span><span class="s">&#39;x3&#39;</span><span class="p">))</span>
@@ -16871,7 +16854,7 @@ _5_  five  lima
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X<span class="o">$</span>x4 <span class="o">=</span> X<span class="o">$</span>x3
@@ -16920,7 +16903,7 @@ str<span class="p">(</span>X<span class="p">)</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X<span class="o">$</span>x4 <span class="o">=</span> <span class="kc">NULL</span>
@@ -16941,10 +16924,12 @@ str<span class="p">(</span>X<span class="p">)</span>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&#39;data.frame&#39;:	5 obs. of  3 variables:
+<pre>&#39;data.frame&#39;:	5 obs. of  5 variables:
  $ x1: num  1 2 3 4 5
  $ x2: chr  &#34;one&#34; &#34;two&#34; &#34;three&#34; &#34;four&#34; ...
  $ x3: chr  &#34;satu&#34; &#34;dua&#34; &#34;tiga&#34; &#34;empat&#34; ...
+ $ x5: chr  &#34;one&#34; &#34;two&#34; &#34;three&#34; &#34;four&#34; ...
+ $ x6: num  1 2 3 4 5
 </pre>
 </div>
 </div>
@@ -16974,7 +16959,7 @@ There is no inplace method for column deletion. Use column selction method to de
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## create a new vector</span>
@@ -17000,13 +16985,13 @@ x6 <span class="o">=</span> X<span class="o">$</span>x2
 
 <div class="output_html rendered_html output_subarea ">
 <table>
-<thead><tr><th></th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th><th scope=col>x5</th><th scope=col>x6</th></tr></thead>
+<thead><tr><th></th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th><th scope=col>x5</th><th scope=col>x6</th><th scope=col>x5</th><th scope=col>x6</th></tr></thead>
 <tbody>
-	<tr><th scope=row>_1_</th><td>1    </td><td>one  </td><td>satu </td><td>1    </td><td>one  </td></tr>
-	<tr><th scope=row>_2_</th><td>2    </td><td>two  </td><td>dua  </td><td>2    </td><td>two  </td></tr>
-	<tr><th scope=row>_3_</th><td>3    </td><td>three</td><td>tiga </td><td>3    </td><td>three</td></tr>
-	<tr><th scope=row>_4_</th><td>4    </td><td>four </td><td>empat</td><td>4    </td><td>four </td></tr>
-	<tr><th scope=row>_5_</th><td>5    </td><td>five </td><td>lima </td><td>5    </td><td>five </td></tr>
+	<tr><th scope=row>_1_</th><td>1    </td><td>one  </td><td>satu </td><td>one  </td><td>1    </td><td>1    </td><td>one  </td></tr>
+	<tr><th scope=row>_2_</th><td>2    </td><td>two  </td><td>dua  </td><td>two  </td><td>2    </td><td>2    </td><td>two  </td></tr>
+	<tr><th scope=row>_3_</th><td>3    </td><td>three</td><td>tiga </td><td>three</td><td>3    </td><td>3    </td><td>three</td></tr>
+	<tr><th scope=row>_4_</th><td>4    </td><td>four </td><td>empat</td><td>four </td><td>4    </td><td>4    </td><td>four </td></tr>
+	<tr><th scope=row>_5_</th><td>5    </td><td>five </td><td>lima </td><td>five </td><td>5    </td><td>5    </td><td>five </td></tr>
 </tbody>
 </table>
 
@@ -17037,7 +17022,7 @@ x6 <span class="o">=</span> X<span class="o">$</span>x2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[304]:</div>
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> X<span class="p">[</span><span class="m">3</span><span class="p">,]</span> <span class="p">)</span>     <span class="c1"># by row number</span>
@@ -17069,7 +17054,7 @@ _3_  3 three tiga three  3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[305]:</div>
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> X<span class="p">[</span><span class="s">&#39;_3_&#39;</span><span class="p">,])</span>  <span class="c1"># by row names</span>
@@ -17109,7 +17094,7 @@ _3_  3 three tiga three  3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[302]:</div>
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> X<span class="p">[</span><span class="m">3</span><span class="o">:</span><span class="m">5</span><span class="p">,]</span> <span class="p">)</span>                  <span class="c1"># by row number</span>
@@ -17133,10 +17118,6 @@ _3_  3 three tiga three  3
 _3_  3 three  tiga three  3
 _4_  4  four empat  four  4
 _5_  5  five  lima  five  5
-    x1    x2    x3    x5 x6
-_3_  3 three  tiga three  3
-_4_  4  four empat  four  4
-_5_  5  five  lima  five  5
 </pre>
 </div>
 </div>
@@ -17147,7 +17128,7 @@ _5_  5  five  lima  five  5
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[303]:</div>
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> X<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;_3_&#39;</span><span class="p">,</span><span class="s">&#39;_4_&#39;</span><span class="p">,</span><span class="s">&#39;_5_&#39;</span><span class="p">),]</span> <span class="p">)</span> <span class="c1"># by row names</span>
@@ -17181,7 +17162,7 @@ _5_  5  five  lima  five  5
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[314]:</div>
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>criteria <span class="o">=</span> X<span class="o">$</span>x1<span class="o">&gt;=</span><span class="m">4</span> <span class="o">|</span> X<span class="o">$</span>x3<span class="o">==</span><span class="s">&#39;tiga&#39;</span>  <span class="c1"># construct a logical vector</span>
@@ -17231,7 +17212,7 @@ X<span class="p">[</span>criteria<span class="p">,</span> <span class="p">]</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[317]:</div>
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>criteria <span class="o">=</span> X<span class="o">$</span>x1<span class="o">&gt;=</span><span class="m">4</span> <span class="o">|</span> X<span class="o">$</span>x3<span class="o">==</span><span class="s">&#39;tiga&#39;</span>  <span class="c1"># construct a logical vector</span>
@@ -17289,7 +17270,7 @@ X<span class="p">[</span>criteria<span class="p">,</span> <span class="p">]</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[337]:</div>
+<div class="prompt input_prompt">In&nbsp;[121]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">dim</span><span class="p">(</span> iris <span class="p">)</span>  <span class="p">)</span>  <span class="c1"># vector of two elements</span>
@@ -17333,7 +17314,7 @@ X<span class="p">[</span>criteria<span class="p">,</span> <span class="p">]</spa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[338]:</div>
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">nrow</span><span class="p">(</span>iris<span class="p">)</span> <span class="p">)</span>
@@ -17374,7 +17355,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[339]:</div>
+<div class="prompt input_prompt">In&nbsp;[123]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">ncol</span><span class="p">(</span>iris<span class="p">)</span> <span class="p">)</span>
@@ -17416,7 +17397,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[340]:</div>
+<div class="prompt input_prompt">In&nbsp;[124]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">attributes</span><span class="p">(</span>iris<span class="p">)</span>
@@ -17624,7 +17605,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[341]:</div>
+<div class="prompt input_prompt">In&nbsp;[125]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">attr</span><span class="p">(</span>iris<span class="p">,</span><span class="s">&#39;names&#39;</span><span class="p">)</span>
@@ -17676,7 +17657,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[342]:</div>
+<div class="prompt input_prompt">In&nbsp;[126]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">names</span><span class="p">(</span>iris<span class="p">)</span> <span class="p">)</span>
@@ -17718,7 +17699,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[343]:</div>
+<div class="prompt input_prompt">In&nbsp;[127]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">rownames</span><span class="p">(</span>iris<span class="p">)</span>
@@ -17931,7 +17912,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[128]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X <span class="o">=</span> <span class="m">1</span>
@@ -17973,7 +17954,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[345]:</div>
+<div class="prompt input_prompt">In&nbsp;[129]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X <span class="o">=</span> <span class="m">1</span>
@@ -18018,7 +17999,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="prompt input_prompt">In&nbsp;[130]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>V <span class="o">=</span> <span class="m">0</span><span class="o">:</span><span class="m">5</span>
@@ -18061,7 +18042,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[131]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>V <span class="o">=</span> <span class="m">-2</span><span class="o">:</span><span class="m">4</span>
@@ -18143,7 +18124,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[346]:</div>
+<div class="prompt input_prompt">In&nbsp;[132]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">)</span>
@@ -18188,7 +18169,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[347]:</div>
+<div class="prompt input_prompt">In&nbsp;[133]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Create the Data vector</span>
@@ -18223,7 +18204,7 @@ students <span class="o">=</span> <span class="kt">c</span><span class="p">(</sp
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[348]:</div>
+<div class="prompt input_prompt">In&nbsp;[134]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Loop</span>
@@ -18270,7 +18251,7 @@ Student name:  david 	age:  20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[349]:</div>
+<div class="prompt input_prompt">In&nbsp;[135]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span> <span class="p">{</span>
@@ -18319,7 +18300,7 @@ Student name:  david 	age:  20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[350]:</div>
+<div class="prompt input_prompt">In&nbsp;[136]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span> <span class="p">{</span>
@@ -18375,7 +18356,7 @@ Student name:  david 	age:  20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[351]:</div>
+<div class="prompt input_prompt">In&nbsp;[137]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>i <span class="o">=</span> <span class="m">1</span>
@@ -18422,7 +18403,7 @@ Student name:  david 	age:  20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[352]:</div>
+<div class="prompt input_prompt">In&nbsp;[138]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>students <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">15</span><span class="p">,</span><span class="m">16</span><span class="p">,</span><span class="m">18</span><span class="p">,</span><span class="m">20</span><span class="p">)</span>
@@ -18456,7 +18437,7 @@ Student name:  david 	age:  20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[353]:</div>
+<div class="prompt input_prompt">In&nbsp;[139]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>i <span class="o">=</span> <span class="m">1</span>
@@ -18512,7 +18493,7 @@ Student name:  david 	age:  20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[354]:</div>
+<div class="prompt input_prompt">In&nbsp;[140]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>i <span class="o">=</span> <span class="m">0</span>
@@ -18561,7 +18542,7 @@ Student name:  david 	age:  20
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[355]:</div>
+<div class="prompt input_prompt">In&nbsp;[141]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>i <span class="o">=</span> <span class="m">0</span>
@@ -18610,7 +18591,7 @@ Ensure you program has a if condition to <strong>break</strong></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[356]:</div>
+<div class="prompt input_prompt">In&nbsp;[142]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>i <span class="o">=</span> <span class="m">0</span>
@@ -18672,7 +18653,7 @@ Ensure you program has a if condition to <strong>break</strong></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[143]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>vc <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span>
@@ -18730,7 +18711,7 @@ Use <strong>apply</strong> with <strong>MARGIN=2</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[144]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">apply</span><span class="p">(</span> mtcars<span class="p">,</span> MARGIN<span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="kp">mean</span><span class="p">)</span> <span class="p">)</span>
@@ -18773,7 +18754,7 @@ Use <strong>apply</strong> with <strong>MARGIN=2</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[145]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">apply</span><span class="p">(</span> mtcars<span class="p">,</span> MARGIN<span class="o">=</span><span class="m">2</span><span class="p">,</span>
@@ -18828,7 +18809,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[146]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">apply</span><span class="p">(</span> mtcars<span class="p">,</span> MARGIN<span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="kp">mean</span><span class="p">)</span> <span class="p">)</span>
@@ -18848,11 +18829,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>       mpg        cyl       disp         hp       drat         wt       qsec 
- 20.090625   6.187500 230.721875 146.687500   3.596563   3.217250  17.848750 
-        vs         am       gear       carb 
-  0.437500   0.406250   3.687500   2.812500 
-          Mazda RX4       Mazda RX4 Wag          Datsun 710      Hornet 4 Drive 
+<pre>          Mazda RX4       Mazda RX4 Wag          Datsun 710      Hornet 4 Drive 
            29.90727            29.98136            23.59818            38.73955 
   Hornet Sportabout             Valiant          Duster 360           Merc 240D 
            53.66455            35.04909            59.72000            24.63455 
@@ -18887,7 +18864,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">tapply</span><span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">,</span>mtcars<span class="o">$</span>cyl<span class="p">,</span> <span class="kp">mean</span><span class="p">,</span> na.rm<span class="o">=</span><span class="bp">T</span><span class="p">)</span> <span class="p">)</span>
@@ -18944,7 +18921,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[357]:</div>
+<div class="prompt input_prompt">In&nbsp;[148]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">3</span><span class="o">:</span><span class="m">12</span><span class="p">)</span>
@@ -18977,7 +18954,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[358]:</div>
+<div class="prompt input_prompt">In&nbsp;[149]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">3.3</span><span class="o">:</span><span class="m">12.5</span> <span class="p">)</span>
@@ -19019,7 +18996,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[359]:</div>
+<div class="prompt input_prompt">In&nbsp;[150]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> seq <span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">12</span><span class="p">,</span> by <span class="o">=</span> <span class="m">4</span><span class="p">)</span> <span class="p">)</span>           <span class="c1"># increment of integer</span>
@@ -19052,7 +19029,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[360]:</div>
+<div class="prompt input_prompt">In&nbsp;[151]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">seq</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">17</span><span class="p">,</span> length.out<span class="o">=</span><span class="m">6</span><span class="p">)</span>   <span class="c1">#</span>
@@ -19101,7 +19078,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[361]:</div>
+<div class="prompt input_prompt">In&nbsp;[152]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">seq</span><span class="p">(</span><span class="m">15</span><span class="p">,</span><span class="m">3</span><span class="p">,</span> length.out<span class="o">=</span><span class="m">6</span><span class="p">)</span>
@@ -19158,7 +19135,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[362]:</div>
+<div class="prompt input_prompt">In&nbsp;[153]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">12</span><span class="o">:</span><span class="m">3</span> <span class="p">)</span>   
@@ -19200,7 +19177,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[363]:</div>
+<div class="prompt input_prompt">In&nbsp;[154]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">seq</span><span class="p">(</span><span class="m">12</span><span class="p">,</span><span class="m">3</span><span class="p">,</span> by <span class="o">=</span> <span class="m">-3</span><span class="p">)</span>  <span class="p">)</span>               <span class="c1"># integer</span>
@@ -19242,7 +19219,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[364]:</div>
+<div class="prompt input_prompt">In&nbsp;[155]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">seq</span><span class="p">(</span><span class="m">12.50</span><span class="p">,</span> <span class="m">3.25</span><span class="p">,</span> length.out<span class="o">=</span><span class="m">6</span><span class="p">)</span> <span class="p">)</span>    <span class="c1"># double</span>
@@ -19289,7 +19266,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[365]:</div>
+<div class="prompt input_prompt">In&nbsp;[156]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> rnorm<span class="p">(</span><span class="m">8</span><span class="p">,</span> mean<span class="o">=</span><span class="m">3</span><span class="p">,</span>sd<span class="o">=</span><span class="m">1.25</span><span class="p">)</span> <span class="p">)</span>
@@ -19309,8 +19286,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[1] 0.1049548 3.7030897 2.0202811 2.7174325 1.0161213 3.6844053 5.3640338
-[8] 1.9024036
+<pre>[1] 4.066427 1.331006 1.781140 2.090655 4.166384 2.308078 3.850474 3.394100
 </pre>
 </div>
 </div>
@@ -19329,7 +19305,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[366]:</div>
+<div class="prompt input_prompt">In&nbsp;[157]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>print <span class="p">(</span>runif<span class="p">(</span><span class="m">8</span><span class="p">,</span>min <span class="o">=</span> <span class="m">3</span><span class="p">,</span> max<span class="o">=</span><span class="m">10</span><span class="p">))</span>
@@ -19349,7 +19325,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[1] 6.186331 4.427298 9.820346 3.695859 8.773605 3.707184 9.804908 3.037540
+<pre>[1] 9.331664 6.041927 7.487916 4.912300 6.885841 7.930064 3.265641 4.484366
 </pre>
 </div>
 </div>
@@ -19376,7 +19352,7 @@ Use <strong>apply</strong> with <strong>MARGIN=1</strong> for column</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[367]:</div>
+<div class="prompt input_prompt">In&nbsp;[158]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>rf2 <span class="o">=</span> <span class="kp">gl</span><span class="p">(</span>n<span class="o">=</span><span class="m">2</span><span class="p">,</span> k<span class="o">=</span><span class="m">3</span><span class="p">,</span> length <span class="o">=</span> <span class="m">12</span><span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;Aaa&#39;</span><span class="p">,</span><span class="s">&#39;Bbb&#39;</span><span class="p">,</span><span class="s">&#39;Ccc&#39;</span><span class="p">,</span><span class="s">&#39;Ddd&#39;</span><span class="p">))</span>
@@ -19417,7 +19393,7 @@ Levels: Aaa Bbb Ccc Ddd
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[368]:</div>
+<div class="prompt input_prompt">In&nbsp;[159]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>rf1 <span class="o">=</span> <span class="kp">gl</span><span class="p">(</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;Aaa&#39;</span><span class="p">,</span><span class="s">&#39;Bbb&#39;</span><span class="p">,</span><span class="s">&#39;Ccc&#39;</span><span class="p">),</span> ordered<span class="o">=</span><span class="kc">TRUE</span> <span class="p">)</span>
@@ -19475,7 +19451,7 @@ Levels: Aaa &lt; Bbb &lt; Ccc
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[369]:</div>
+<div class="prompt input_prompt">In&nbsp;[160]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">)</span>
@@ -19496,7 +19472,7 @@ Levels: Aaa &lt; Bbb &lt; Ccc
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[1] 4 7 3 2 5
+<pre>[1] 3 6 8 2 5
 </pre>
 </div>
 </div>
@@ -19515,7 +19491,7 @@ Levels: Aaa &lt; Bbb &lt; Ccc
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[370]:</div>
+<div class="prompt input_prompt">In&nbsp;[161]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">sample</span><span class="p">(</span>X<span class="p">,</span>size <span class="o">=</span> <span class="m">8</span><span class="p">,</span> replace<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="p">)</span>
@@ -19535,7 +19511,7 @@ Levels: Aaa &lt; Bbb &lt; Ccc
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[1] 8 8 1 1 5 5 7 4
+<pre>[1] 6 4 7 4 4 5 5 8
 </pre>
 </div>
 </div>
@@ -19562,7 +19538,7 @@ Levels: Aaa &lt; Bbb &lt; Ccc
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[372]:</div>
+<div class="prompt input_prompt">In&nbsp;[162]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">set.seed</span><span class="p">(</span><span class="m">1234</span><span class="p">)</span>
@@ -19583,7 +19559,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[373]:</div>
+<div class="prompt input_prompt">In&nbsp;[163]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">head</span><span class="p">(</span>my.df<span class="p">)</span> <span class="p">)</span>
@@ -19620,7 +19596,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[374]:</div>
+<div class="prompt input_prompt">In&nbsp;[164]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>my.df<span class="p">)</span>
@@ -19673,7 +19649,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[375]:</div>
+<div class="prompt input_prompt">In&nbsp;[165]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">mean</span><span class="p">(</span> my.df<span class="o">$</span>x1<span class="p">,</span> na.rm<span class="o">=</span><span class="bp">T</span><span class="p">)</span> <span class="p">)</span>
@@ -19713,7 +19689,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[376]:</div>
+<div class="prompt input_prompt">In&nbsp;[166]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">colMeans</span><span class="p">(</span>my.df<span class="p">[,</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;x1&#39;</span><span class="p">,</span><span class="s">&#39;x2&#39;</span><span class="p">,</span><span class="s">&#39;x3&#39;</span><span class="p">)])</span> <span class="p">)</span>
@@ -19754,7 +19730,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[377]:</div>
+<div class="prompt input_prompt">In&nbsp;[167]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">sum</span><span class="p">(</span>my.df<span class="p">[,</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;x1&#39;</span><span class="p">,</span><span class="s">&#39;x2&#39;</span><span class="p">,</span><span class="s">&#39;x3&#39;</span><span class="p">)])</span>
@@ -19794,7 +19770,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[378]:</div>
+<div class="prompt input_prompt">In&nbsp;[168]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">colSums</span><span class="p">(</span>my.df<span class="p">[,</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;x1&#39;</span><span class="p">,</span><span class="s">&#39;x2&#39;</span><span class="p">,</span><span class="s">&#39;x3&#39;</span><span class="p">)],</span> na.rm<span class="o">=</span><span class="bp">T</span><span class="p">)</span> <span class="p">)</span>
@@ -19850,7 +19826,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[379]:</div>
+<div class="prompt input_prompt">In&nbsp;[169]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>t1 <span class="o">=</span> <span class="kp">table</span><span class="p">(</span>my.df<span class="o">$</span>com<span class="p">)</span>
@@ -19884,7 +19860,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[380]:</div>
+<div class="prompt input_prompt">In&nbsp;[170]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">class</span><span class="p">(</span>t1<span class="p">)</span>  <span class="p">)</span>
@@ -19925,7 +19901,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[381]:</div>
+<div class="prompt input_prompt">In&nbsp;[171]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> count<span class="p">(</span>com<span class="p">)</span>
@@ -19974,7 +19950,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[382]:</div>
+<div class="prompt input_prompt">In&nbsp;[172]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> group_by<span class="p">(</span>com<span class="p">)</span> <span class="o">%&gt;%</span> 
@@ -20023,7 +19999,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[383]:</div>
+<div class="prompt input_prompt">In&nbsp;[173]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">table</span><span class="p">(</span>my.df<span class="o">$</span>com<span class="p">,</span> my.df<span class="o">$</span>dep<span class="p">)</span>
@@ -20068,7 +20044,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[384]:</div>
+<div class="prompt input_prompt">In&nbsp;[174]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> count<span class="p">(</span>com<span class="p">,</span>dept<span class="p">)</span> <span class="o">%&gt;%</span>
@@ -20117,7 +20093,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[385]:</div>
+<div class="prompt input_prompt">In&nbsp;[175]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>t1 <span class="o">=</span> <span class="kp">table</span><span class="p">(</span>my.df<span class="o">$</span>com<span class="p">)</span>
@@ -20161,7 +20137,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[386]:</div>
+<div class="prompt input_prompt">In&nbsp;[176]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> count<span class="p">(</span>com<span class="p">)</span> <span class="o">%&gt;%</span>
@@ -20219,7 +20195,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[387]:</div>
+<div class="prompt input_prompt">In&nbsp;[177]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>t2 <span class="o">=</span> <span class="kp">table</span><span class="p">(</span>my.df<span class="o">$</span>com<span class="p">,</span> my.df<span class="o">$</span>dep<span class="p">)</span>
@@ -20266,7 +20242,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[388]:</div>
+<div class="prompt input_prompt">In&nbsp;[178]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>t2 <span class="o">=</span> <span class="kp">table</span><span class="p">(</span>my.df<span class="o">$</span>com<span class="p">,</span> my.df<span class="o">$</span>dep<span class="p">)</span>
@@ -20313,7 +20289,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[389]:</div>
+<div class="prompt input_prompt">In&nbsp;[179]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>t2 <span class="o">=</span> <span class="kp">table</span><span class="p">(</span>my.df<span class="o">$</span>com<span class="p">,</span> my.df<span class="o">$</span>dep<span class="p">)</span>
@@ -20360,7 +20336,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[390]:</div>
+<div class="prompt input_prompt">In&nbsp;[180]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> count<span class="p">(</span>com<span class="p">,</span>dept<span class="p">)</span> <span class="o">%&gt;%</span>
@@ -20412,7 +20388,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[391]:</div>
+<div class="prompt input_prompt">In&nbsp;[181]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> group_by<span class="p">(</span>com<span class="p">,</span> dept<span class="p">)</span> <span class="o">%&gt;%</span>
@@ -20465,7 +20441,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[392]:</div>
+<div class="prompt input_prompt">In&nbsp;[182]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> group_by<span class="p">(</span>dept<span class="p">,</span>com<span class="p">)</span> <span class="o">%&gt;%</span>
@@ -20525,7 +20501,7 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>tidyverse<span class="p">)</span>
@@ -20571,7 +20547,7 @@ x dplyr::lag()    masks stats::lag()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">set.seed</span><span class="p">(</span><span class="m">1234</span><span class="p">)</span>
@@ -20650,7 +20626,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
@@ -20697,7 +20673,7 @@ x <span class="p">[</span> x<span class="o">&gt;</span><span class="m">3</span> 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">subset</span><span class="p">(</span>my.df<span class="p">,</span> com <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;C2&#39;</span><span class="p">,</span><span class="s">&#39;C3&#39;</span><span class="p">)</span> <span class="o">&amp;</span> team <span class="o">==</span><span class="s">&quot;T2&quot;</span><span class="p">)</span>
@@ -20748,7 +20724,7 @@ x <span class="p">[</span> x<span class="o">&gt;</span><span class="m">3</span> 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>selector <span class="o">=</span> <span class="kp">with</span><span class="p">(</span>my.df<span class="p">,</span> com <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;C2&#39;</span><span class="p">,</span><span class="s">&#39;C3&#39;</span><span class="p">)</span> <span class="o">&amp;</span> team<span class="o">==</span><span class="s">&#39;T2&#39;</span><span class="p">)</span>
@@ -20808,7 +20784,7 @@ my.df<span class="p">[</span>selector<span class="p">,]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
@@ -20862,7 +20838,7 @@ my.df<span class="p">[</span>selector<span class="p">,]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>p <span class="o">=</span> <span class="kp">order</span><span class="p">(</span>x<span class="p">,</span> decreasing <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
@@ -20918,7 +20894,7 @@ x<span class="p">[</span>p<span class="p">]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df<span class="p">[</span> <span class="kp">with</span><span class="p">(</span>my.df<span class="p">,</span> <span class="kp">order</span><span class="p">(</span>com<span class="p">,</span> dept<span class="p">)),]</span> <span class="o">%&gt;%</span> <span class="kp">head</span><span class="p">(</span><span class="m">8</span><span class="p">)</span>
@@ -20979,7 +20955,7 @@ x<span class="p">[</span>p<span class="p">]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> filter <span class="p">(</span>com <span class="o">==</span> <span class="s">&#39;C2&#39;</span> <span class="o">&amp;</span> dept <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;D1&#39;</span><span class="p">,</span><span class="s">&#39;D2&#39;</span><span class="p">))</span>
@@ -21043,7 +21019,7 @@ x<span class="p">[</span>p<span class="p">]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select<span class="p">(</span> com<span class="p">,</span> team<span class="o">:</span>x2<span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
@@ -21094,7 +21070,7 @@ x<span class="p">[</span>p<span class="p">]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select<span class="p">(</span> <span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="o">:</span><span class="m">5</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
@@ -21146,7 +21122,7 @@ x<span class="p">[</span>p<span class="p">]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select<span class="p">(</span>contains<span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
@@ -21198,7 +21174,7 @@ x<span class="p">[</span>p<span class="p">]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select<span class="p">(</span>starts_with<span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
@@ -21250,7 +21226,7 @@ x<span class="p">[</span>p<span class="p">]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select<span class="p">(</span>ends_with<span class="p">(</span><span class="s">&#39;1&#39;</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
@@ -21301,7 +21277,7 @@ x<span class="p">[</span>p<span class="p">]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select_if<span class="p">(</span><span class="kp">is.numeric</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
@@ -21353,7 +21329,7 @@ x<span class="p">[</span>p<span class="p">]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> arrange<span class="p">(</span>com<span class="p">,</span>team<span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
@@ -21413,7 +21389,7 @@ x<span class="p">[</span>p<span class="p">]</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>superheroes <span class="o">&lt;-</span> <span class="s">&quot;</span>
@@ -21444,7 +21420,7 @@ publishers <span class="o">&lt;-</span> read_csv<span class="p">(</span>publishe
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>superheroes
@@ -21488,7 +21464,7 @@ publishers <span class="o">&lt;-</span> read_csv<span class="p">(</span>publishe
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>publishers
@@ -21540,7 +21516,7 @@ publishers <span class="o">&lt;-</span> read_csv<span class="p">(</span>publishe
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>left_join<span class="p">(</span>superheroes<span class="p">,</span>publishers<span class="p">)</span>
@@ -21607,7 +21583,7 @@ publishers <span class="o">&lt;-</span> read_csv<span class="p">(</span>publishe
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>right_join<span class="p">(</span>superheroes<span class="p">,</span> publishers<span class="p">)</span>
@@ -21671,7 +21647,7 @@ publishers <span class="o">&lt;-</span> read_csv<span class="p">(</span>publishe
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>inner_join<span class="p">(</span>superheroes<span class="p">,</span> publishers<span class="p">)</span>
@@ -21736,7 +21712,7 @@ publishers <span class="o">&lt;-</span> read_csv<span class="p">(</span>publishe
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>semi_join<span class="p">(</span> superheroes<span class="p">,</span> publishers<span class="p">)</span>
@@ -21803,7 +21779,7 @@ publishers <span class="o">&lt;-</span> read_csv<span class="p">(</span>publishe
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>anti_join<span class="p">(</span> superheroes<span class="p">,</span> publishers<span class="p">)</span>
@@ -21861,7 +21837,7 @@ publishers <span class="o">&lt;-</span> read_csv<span class="p">(</span>publishe
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>full_join<span class="p">(</span>superheroes<span class="p">,</span> publishers<span class="p">)</span>
@@ -21927,7 +21903,7 @@ Observe that the result has <strong>no group</strong></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>csummary <span class="o">=</span> count<span class="p">(</span>my.df<span class="p">,</span> com<span class="p">,</span> dept<span class="p">)</span>
@@ -21951,18 +21927,18 @@ Observe that the result has <strong>no group</strong></p>
 <pre># A tibble: 12 x 3
    com   dept      n
    &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
- 1 C1    D1       10
- 2 C1    D2        8
- 3 C1    D3       13
- 4 C2    D1        6
- 5 C2    D2       10
- 6 C2    D3        8
- 7 C3    D1       11
- 8 C3    D2        8
- 9 C3    D3        7
-10 C4    D1        4
-11 C4    D2       10
-12 C4    D3        5
+ 1 C1    D1        6
+ 2 C1    D2        3
+ 3 C1    D3        3
+ 4 C2    D1        9
+ 5 C2    D2        2
+ 6 C2    D3        2
+ 7 C3    D1        6
+ 8 C3    D2        5
+ 9 C3    D3        4
+10 C4    D1        5
+11 C4    D2        1
+12 C4    D3        4
 </pre>
 </div>
 </div>
@@ -21986,7 +21962,7 @@ Observe that the result has <strong>no group</strong></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>csummary <span class="o">=</span> group_by<span class="p">(</span>my.df<span class="p">,</span> com<span class="p">,</span> dept<span class="p">)</span> <span class="o">%&gt;%</span> summarise<span class="p">(</span>n<span class="o">=</span>n<span class="p">())</span>
@@ -22011,18 +21987,18 @@ Observe that the result has <strong>no group</strong></p>
 # Groups:   com [?]
    com   dept      n
    &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
- 1 C1    D1       10
- 2 C1    D2        8
- 3 C1    D3       13
- 4 C2    D1        6
- 5 C2    D2       10
- 6 C2    D3        8
- 7 C3    D1       11
- 8 C3    D2        8
- 9 C3    D3        7
-10 C4    D1        4
-11 C4    D2       10
-12 C4    D3        5
+ 1 C1    D1        6
+ 2 C1    D2        3
+ 3 C1    D3        3
+ 4 C2    D1        9
+ 5 C2    D2        2
+ 6 C2    D3        2
+ 7 C3    D1        6
+ 8 C3    D2        5
+ 9 C3    D3        4
+10 C4    D1        5
+11 C4    D2        1
+12 C4    D3        4
 </pre>
 </div>
 </div>
@@ -22042,7 +22018,7 @@ Observe that the result has <strong>no group</strong></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> 
@@ -22068,7 +22044,7 @@ summarize <span class="p">(</span>x1_mean <span class="o">=</span> <span class="
 <table>
 <thead><tr><th scope=col>x1_mean</th><th scope=col>x2_sum</th></tr></thead>
 <tbody>
-	<tr><td>50.68288</td><td>2015.825</td></tr>
+	<tr><td>50.3094</td><td>1006.33</td></tr>
 </tbody>
 </table>
 
@@ -22092,7 +22068,7 @@ Notice that summarize <strong>reduce group</strong> level by 1</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>gsummary <span class="o">=</span> 
@@ -22122,18 +22098,18 @@ Notice that summarize <strong>reduce group</strong> level by 1</p>
 # Groups:   com [?]
    com   dept  x1_mean x2_sum
    &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;
- 1 C1    D1       47.6  205. 
- 2 C1    D2       51.0  160. 
- 3 C1    D3       52.5  257. 
- 4 C2    D1       50.4  111. 
- 5 C2    D2       53.1  212. 
- 6 C2    D3       49.2  157. 
- 7 C3    D1       50.4  227. 
- 8 C3    D2       50.5  175. 
- 9 C3    D3       48.6  142. 
-10 C4    D1       47.5   65.9
-11 C4    D2       52.4  203. 
-12 C4    D3       52.5  102. 
+ 1 C1    D1       53.8  115. 
+ 2 C1    D2       47.8   61.5
+ 3 C1    D3       48.0   58.4
+ 4 C2    D1       50.2  176. 
+ 5 C2    D2       52.0   41.2
+ 6 C2    D3       47.6   49.1
+ 7 C3    D1       49.8  120. 
+ 8 C3    D2       49.8  104. 
+ 9 C3    D3       49.5   74.4
+10 C4    D1       49.9  105. 
+11 C4    D2       52.1   18.9
+12 C4    D3       52.0   81.9
 </pre>
 </div>
 </div>
@@ -22152,7 +22128,7 @@ Notice that summarize <strong>reduce group</strong> level by 1</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>gsummary <span class="o">=</span> 
@@ -22212,7 +22188,7 @@ Notice that summarize <strong>reduce group</strong> level by 1</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> 
@@ -22266,7 +22242,7 @@ Notice that summarize <strong>reduce group</strong> level by 1</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> 
@@ -22320,7 +22296,7 @@ Notice that summarize <strong>reduce group</strong> level by 1</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> 
@@ -22365,7 +22341,7 @@ Notice that summarize <strong>reduce group</strong> level by 1</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> 
