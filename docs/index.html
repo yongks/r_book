@@ -11714,6 +11714,19 @@ ul.typeahead-list > li > a {
 .ansi-bold { font-weight: bold; }
 
     </style>
+<style type="text/css">
+    /*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+    </style>
 
 
 <style type="text/css">
@@ -13262,47 +13275,6 @@ use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Class-and-Typeof">Class and Typeof<a class="anchor-link" href="#Class-and-Typeof">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[270]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">typeof</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">)</span> <span class="p">)</span>
-<span class="kp">print</span><span class="p">(</span> <span class="kp">class</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">)</span> <span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[1] &#34;logical&#34;
-[1] &#34;logical&#34;
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Logical-Comparison">Logical Comparison<a class="anchor-link" href="#Logical-Comparison">&#182;</a></h3><p>Take note, R will coerce different data type before comparing</p>
 
 </div>
@@ -13325,7 +13297,7 @@ use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p
 <span class="kp">print</span><span class="p">(</span> <span class="m">3L</span> <span class="o">==</span> <span class="m">3.0</span> <span class="p">)</span>       <span class="c1"># compare integer and double</span>
 <span class="kp">print</span><span class="p">(</span> <span class="s">&#39;abc&#39;</span> <span class="o">==</span> <span class="s">&#39;abc&#39;</span> <span class="p">)</span>  <span class="c1"># compare two char</span>
 <span class="kp">print</span><span class="p">(</span> <span class="m">3.0</span> <span class="o">==</span> <span class="s">&#39;3&#39;</span> <span class="p">)</span>      <span class="c1"># compare integer and character</span>
-<span class="kp">print</span><span class="p">(</span> <span class="m">3.0</span> <span class="o">==</span> <span class="s">&#39;three&#39;</span> <span class="p">)</span>      <span class="c1"># compare integer and character</span>
+<span class="kp">print</span><span class="p">(</span> <span class="m">3.0</span> <span class="o">==</span> <span class="s">&#39;three&#39;</span> <span class="p">)</span>  <span class="c1"># compare integer and character</span>
 </pre></div>
 
 </div>
@@ -13365,10 +13337,14 @@ use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[272]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">3</span> <span class="o">!=</span> <span class="m">2</span> <span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="m">3</span>     <span class="o">!=</span> <span class="m">3</span> <span class="p">)</span>        <span class="c1"># compare two integers</span>
+<span class="kp">print</span><span class="p">(</span> <span class="m">3L</span>    <span class="o">!=</span> <span class="m">3.0</span> <span class="p">)</span>      <span class="c1"># compare integer and double</span>
+<span class="kp">print</span><span class="p">(</span> <span class="s">&#39;abc&#39;</span> <span class="o">!=</span> <span class="s">&#39;a&#39;</span> <span class="p">)</span>      <span class="c1"># compare two char</span>
+<span class="kp">print</span><span class="p">(</span> <span class="m">3.0</span>   <span class="o">!=</span> <span class="s">&#39;33&#39;</span> <span class="p">)</span>     <span class="c1"># compare integer and character</span>
+<span class="kp">print</span><span class="p">(</span> <span class="m">3.0</span>   <span class="o">!=</span> <span class="s">&#39;three&#39;</span> <span class="p">)</span>  <span class="c1"># compare integer and character</span>
 </pre></div>
 
 </div>
@@ -13385,7 +13361,11 @@ use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[1] TRUE
+<pre>[1] FALSE
+[1] FALSE
+[1] TRUE
+[1] TRUE
+[1] TRUE
 </pre>
 </div>
 </div>
@@ -13393,6 +13373,14 @@ use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Logical-Operator">Logical Operator<a class="anchor-link" href="#Logical-Operator">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -13428,6 +13416,284 @@ use <strong>pattern=fixed( , ignore_case=TRUE)</strong> for case insensitive.</p
 FALSE
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="AND-(-&amp;-and-&amp;&amp;)">AND ( &amp; and &amp;&amp;)<a class="anchor-link" href="#AND-(-&amp;-and-&amp;&amp;)">&#182;</a></h4><p>DONT'T Fall into trop of &amp;&amp;<br>
+<strong>Select numbers between 2 and 6</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>z <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">8</span>
+<span class="kp">print</span><span class="p">(</span> z<span class="o">&gt;</span><span class="m">2</span> <span class="o">&amp;</span> z<span class="o">&lt;</span><span class="m">6</span>    <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> z<span class="p">[</span>z<span class="o">&gt;</span><span class="m">2</span> <span class="o">&amp;</span> z<span class="o">&lt;</span><span class="m">6</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] FALSE FALSE  TRUE  TRUE  TRUE FALSE FALSE FALSE
+[1] 3 4 5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>However &amp;&amp; only evaluate the first elemnt)</strong><br>
+When will you use it ? No idea</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> z<span class="o">&gt;</span><span class="m">2</span>    <span class="o">&amp;&amp;</span> z<span class="o">&lt;</span><span class="m">6</span>     <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> z<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">&gt;</span><span class="m">2</span> <span class="o">&amp;&amp;</span> z<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">&lt;</span><span class="m">6</span>  <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] FALSE
+[1] FALSE
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="OR-(-|-and-||)">OR ( | and ||)<a class="anchor-link" href="#OR-(-|-and-||)">&#182;</a></h4><p><strong>DONT'T Fall into trop of ||  </strong>
+<strong>Select odd numbers or &gt;5</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>z <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span>
+<span class="kp">print</span><span class="p">(</span> z<span class="p">[</span> z<span class="o">%%</span><span class="m">2</span><span class="o">==</span><span class="m">1</span> <span class="o">|</span> z<span class="o">&gt;</span><span class="m">5</span> <span class="p">]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1]  1  3  5  6  7  8  9 10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>However || only evaluate the first elemnt)</strong><br>
+When will you use it ? No idea</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> z<span class="o">%%</span><span class="m">2</span><span class="o">==</span><span class="m">1</span> <span class="o">||</span> z<span class="o">&gt;</span><span class="m">5</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> z<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">%%</span><span class="m">2</span><span class="o">==</span><span class="m">1</span> <span class="o">||</span> z<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">&gt;</span><span class="m">5</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] TRUE
+[1] TRUE
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Evaluation-using-IF">Evaluation using IF<a class="anchor-link" href="#Evaluation-using-IF">&#182;</a></h3><h4 id="Evaluating-String">Evaluating String<a class="anchor-link" href="#Evaluating-String">&#182;</a></h4><p><strong>String Has no relevance in logic</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>x <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;ali&#39;</span><span class="p">,</span><span class="s">&#39;abu&#39;</span><span class="p">,</span><span class="s">&#39;ah kow&#39;</span><span class="p">,</span> <span class="kc">NULL</span><span class="p">,</span> <span class="kc">NA</span><span class="p">)</span>
+<span class="kp">ifelse</span><span class="p">(</span>x<span class="p">,</span> <span class="s">&#39;Human&#39;</span><span class="p">,</span><span class="s">&#39;Unknown&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>&lt;NA&gt;</li>
+	<li>&lt;NA&gt;</li>
+	<li>&lt;NA&gt;</li>
+	<li>&lt;NA&gt;</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Evaluating-Numbers">Evaluating Numbers<a class="anchor-link" href="#Evaluating-Numbers">&#182;</a></h4><ul>
+<li>General behaviour of <strong>IF</strong> is to evaluate actual FALSE, any other condition is considered TRUE</li>
+<li>Zero evaluates to FASE, other numbers considered TRUE</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>x<span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">3</span><span class="p">,</span><span class="kc">NULL</span><span class="p">,</span><span class="kc">NA</span><span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span>x<span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> x <span class="o">==</span><span class="kc">TRUE</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> x <span class="o">==</span><span class="kc">FALSE</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="o">!</span>x<span class="o">==</span><span class="kc">FALSE</span> <span class="p">)</span>
+
+<span class="kp">print</span><span class="p">(</span> <span class="kp">ifelse</span><span class="p">(</span>x<span class="p">,</span> <span class="s">&#39;Not Zero&#39;</span><span class="p">,</span><span class="s">&#39;Zero&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">ifelse</span><span class="p">(</span><span class="o">!</span>x<span class="o">==</span><span class="kc">FALSE</span><span class="p">,</span> <span class="s">&#39;Not Zero&#39;</span><span class="p">,</span><span class="s">&#39;Zero&#39;</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="kr">if</span> <span class="p">(</span><span class="m">2.2</span><span class="p">)</span> <span class="kp">print</span><span class="p">(</span><span class="s">&#39;Not Zero&#39;</span><span class="p">)</span> <span class="c1"># same applies to double</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1]  0  1  2  3 NA
+[1] FALSE  TRUE FALSE FALSE    NA
+[1]  TRUE FALSE FALSE FALSE    NA
+[1] FALSE  TRUE  TRUE  TRUE    NA
+[1] &#34;Zero&#34;     &#34;Not Zero&#34; &#34;Not Zero&#34; &#34;Not Zero&#34; NA        
+[1] &#34;Zero&#34;     &#34;Not Zero&#34; &#34;Not Zero&#34; &#34;Not Zero&#34; NA        
+[1] &#34;Not Zero&#34;
+</pre>
+</div>
 </div>
 
 </div>
@@ -14876,7 +15142,7 @@ str<span class="p">(</span>date2<span class="o">-</span>date1<span class="p">)</
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[307]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">class</span><span class="p">(</span><span class="m">2L</span><span class="p">)</span> <span class="p">)</span>
@@ -14884,6 +15150,7 @@ str<span class="p">(</span>date2<span class="o">-</span>date1<span class="p">)</
 <span class="kp">print</span><span class="p">(</span> <span class="kp">class</span><span class="p">(</span><span class="s">&#39;abc&#39;</span><span class="p">)</span> <span class="p">)</span>
 <span class="kp">print</span><span class="p">(</span> <span class="kp">class</span><span class="p">(</span><span class="kp">factor</span><span class="p">(</span><span class="s">&#39;abc&#39;</span><span class="p">)</span> <span class="p">))</span>
 <span class="kp">print</span><span class="p">(</span> <span class="kp">class</span><span class="p">(</span><span class="kp">as.Date</span><span class="p">(</span><span class="s">&#39;2018-03-31&#39;</span><span class="p">)))</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">class</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">)</span> <span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14905,6 +15172,7 @@ str<span class="p">(</span>date2<span class="o">-</span>date1<span class="p">)</
 [1] &#34;character&#34;
 [1] &#34;factor&#34;
 [1] &#34;Date&#34;
+[1] &#34;logical&#34;
 </pre>
 </div>
 </div>
@@ -14923,7 +15191,7 @@ str<span class="p">(</span>date2<span class="o">-</span>date1<span class="p">)</
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[308]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">typeof</span><span class="p">(</span><span class="m">2L</span><span class="p">)</span> <span class="p">)</span>
@@ -14931,6 +15199,7 @@ str<span class="p">(</span>date2<span class="o">-</span>date1<span class="p">)</
 <span class="kp">print</span><span class="p">(</span> <span class="kp">typeof</span><span class="p">(</span><span class="s">&#39;abc&#39;</span><span class="p">)</span> <span class="p">)</span>
 <span class="kp">print</span><span class="p">(</span> <span class="kp">typeof</span><span class="p">(</span><span class="kp">factor</span><span class="p">(</span><span class="s">&#39;abc&#39;</span><span class="p">)</span> <span class="p">))</span>
 <span class="kp">print</span><span class="p">(</span> <span class="kp">typeof</span><span class="p">(</span><span class="kp">as.Date</span><span class="p">(</span><span class="s">&#39;2018-03-31&#39;</span><span class="p">)))</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">typeof</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">)</span> <span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14952,6 +15221,7 @@ str<span class="p">(</span>date2<span class="o">-</span>date1<span class="p">)</
 [1] &#34;character&#34;
 [1] &#34;integer&#34;
 [1] &#34;double&#34;
+[1] &#34;logical&#34;
 </pre>
 </div>
 </div>
@@ -16948,13 +17218,14 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="if..then..else">if..then..else<a class="anchor-link" href="#if..then..else">&#182;</a></h2>
+<h2 id="if..then..else">if..then..else<a class="anchor-link" href="#if..then..else">&#182;</a></h2><p>If else is <strong>not vectorized</strong>. It doesn't support multiple elements input</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[344]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>X <span class="o">=</span> <span class="m">1</span>
@@ -17026,6 +17297,73 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Looped-ifelse">Looped ifelse<a class="anchor-link" href="#Looped-ifelse">&#182;</a></h2><p>ifelse loop through all elements, and return value for True and False match</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>V <span class="o">=</span> <span class="m">0</span><span class="o">:</span><span class="m">5</span>
+<span class="kp">print</span><span class="p">(</span> V <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">ifelse</span><span class="p">(</span>V<span class="o">%%</span><span class="m">2</span><span class="p">,</span> <span class="s">&quot;Odd&quot;</span><span class="p">,</span> <span class="s">&quot;Even&quot;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 0 1 2 3 4 5
+[1] &#34;Even&#34; &#34;Odd&#34;  &#34;Even&#34; &#34;Odd&#34;  &#34;Even&#34; &#34;Odd&#34; 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since it is <strong>vectorized</strong>, the input can be <strong>passed to function</strong> to calculate return value</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>V <span class="o">=</span> <span class="m">-2</span><span class="o">:</span><span class="m">4</span>
+<span class="kp">print</span><span class="p">(</span> V <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> <span class="kp">ifelse</span><span class="p">(</span>V<span class="o">&gt;</span><span class="m">0</span><span class="p">,</span> <span class="kp">sqrt</span><span class="p">(</span>V<span class="p">),</span> <span class="kp">sqrt</span><span class="p">(</span>V<span class="o">*</span><span class="m">-1</span><span class="p">)</span> <span class="p">))</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
@@ -19752,7 +20090,7 @@ barplot<span class="p">(</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_367_0.png"
+<img src="index_files/index_382_0.png"
 >
 </div>
 
@@ -19795,7 +20133,7 @@ barplot<span class="p">(</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_369_0.png"
+<img src="index_files/index_384_0.png"
 >
 </div>
 
@@ -19859,7 +20197,7 @@ barplot<span class="p">(</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_371_1.png"
+<img src="index_files/index_386_1.png"
 >
 </div>
 
@@ -19939,7 +20277,7 @@ abline<span class="p">(</span>fit<span class="p">,</span> col<span class="o">=</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_374_0.png"
+<img src="index_files/index_389_0.png"
 >
 </div>
 
@@ -19981,7 +20319,7 @@ abline<span class="p">(</span>fit<span class="p">,</span> col<span class="o">=</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_376_0.png"
+<img src="index_files/index_391_0.png"
 >
 </div>
 
@@ -20037,7 +20375,7 @@ text<span class="p">(</span> x <span class="o">=</span> chart<span class="o">$</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_378_0.png"
+<img src="index_files/index_393_0.png"
 >
 </div>
 
@@ -20149,7 +20487,7 @@ boxplot <span class="p">(</span>mtcars<span class="o">$</span>hp<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_382_0.png"
+<img src="index_files/index_397_0.png"
 >
 </div>
 
@@ -20269,7 +20607,7 @@ boxplot <span class="p">(</span>formula<span class="o">=</span>mpg<span class="o
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_386_0.png"
+<img src="index_files/index_401_0.png"
 >
 </div>
 
@@ -20355,7 +20693,7 @@ text <span class="p">(</span> <span class="kp">t</span><span class="m">-0.3</spa
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_389_0.png"
+<img src="index_files/index_404_0.png"
 >
 </div>
 
@@ -20465,7 +20803,7 @@ cyl  3  4  5
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_393_1.png"
+<img src="index_files/index_408_1.png"
 >
 </div>
 
@@ -20533,7 +20871,7 @@ lines<span class="p">(</span> x<span class="p">,</span> gauss2<span class="p">,<
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_397_0.png"
+<img src="index_files/index_412_0.png"
 >
 </div>
 
@@ -20591,7 +20929,7 @@ title<span class="p">(</span><span class="s">&quot;An R Plot&quot;</span><span c
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_399_0.png"
+<img src="index_files/index_414_0.png"
 >
 </div>
 
@@ -20647,7 +20985,7 @@ plot<span class="p">(</span>x<span class="p">,</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_401_0.png"
+<img src="index_files/index_416_0.png"
 >
 </div>
 
@@ -20727,7 +21065,7 @@ legend<span class="p">(</span><span class="s">&quot;topleft&quot;</span><span cl
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_403_0.png"
+<img src="index_files/index_418_0.png"
 >
 </div>
 
@@ -20833,7 +21171,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_409_0.png"
+<img src="index_files/index_424_0.png"
 >
 </div>
 
@@ -20891,7 +21229,7 @@ mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span clas
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_411_1.png"
+<img src="index_files/index_426_1.png"
 >
 </div>
 
@@ -20945,7 +21283,7 @@ mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span clas
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_413_1.png"
+<img src="index_files/index_428_1.png"
 >
 </div>
 
@@ -20995,7 +21333,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_415_0.png"
+<img src="index_files/index_430_0.png"
 >
 </div>
 
@@ -21048,7 +21386,7 @@ mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span clas
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_417_1.png"
+<img src="index_files/index_432_1.png"
 >
 </div>
 
@@ -21116,7 +21454,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_420_1.png"
+<img src="index_files/index_435_1.png"
 >
 </div>
 
@@ -21172,7 +21510,7 @@ ggplot<span class="p">(</span>aes<span class="p">(</span>x<span class="o">=</spa
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_422_1.png"
+<img src="index_files/index_437_1.png"
 >
 </div>
 
@@ -21229,7 +21567,7 @@ mtcars <span class="o">%&gt;%</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_424_1.png"
+<img src="index_files/index_439_1.png"
 >
 </div>
 
@@ -21293,7 +21631,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_427_0.png"
+<img src="index_files/index_442_0.png"
 >
 </div>
 
@@ -21347,7 +21685,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_429_0.png"
+<img src="index_files/index_444_0.png"
 >
 </div>
 
@@ -21404,7 +21742,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_431_0.png"
+<img src="index_files/index_446_0.png"
 >
 </div>
 
@@ -21774,7 +22112,7 @@ abline<span class="p">(</span>fit2<span class="p">,</span> lty<span class="o">=<
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_450_1.png"
+<img src="index_files/index_465_1.png"
 >
 </div>
 
@@ -22014,7 +22352,7 @@ text<span class="p">(</span> fit<span class="p">,</span> cex <span class="o">=</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_459_0.png"
+<img src="index_files/index_474_0.png"
 >
 </div>
 
