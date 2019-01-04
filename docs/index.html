@@ -11714,19 +11714,6 @@ ul.typeahead-list > li > a {
 .ansi-bold { font-weight: bold; }
 
     </style>
-<style type="text/css">
-    /*This file contains any manual css for this page that needs to override the global styles.
-This is only required when different pages style the same element differently. This is just
-a hack to deal with our current css styles and no new styling should be added in this file.*/
-
-#ipython-main-app {
-    position: relative;
-}
-#jupyter-main-app {
-    position: relative;
-}
-
-    </style>
 
 
 <style type="text/css">
@@ -12605,7 +12592,7 @@ cars_string   <span class="o">=</span> <span class="s">&#39;nissan, toyota, bmw&
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Test-Data">Test Data<a class="anchor-link" href="#Test-Data">&#182;</a></h4>
+<h4 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -17355,7 +17342,7 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>V <span class="o">=</span> <span class="m">-2</span><span class="o">:</span><span class="m">4</span>
@@ -17364,6 +17351,47 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] -2 -1  0  1  2  3  4
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Warning message in sqrt(V):
+&#34;NaNs produced&#34;Warning message in sqrt(V * -1):
+&#34;NaNs produced&#34;</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] 1.414214 1.000000 0.000000 1.000000 1.414214 1.732051 2.000000
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -18922,7 +18950,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Non-Vectorized-Mean">Non-Vectorized Mean<a class="anchor-link" href="#Non-Vectorized-Mean">&#182;</a></h4><p>Input <strong>MUST be numeric vector</strong>, otherwise error</p>
+<h4 id="Singlve-Vector-Mean">Singlve Vector Mean<a class="anchor-link" href="#Singlve-Vector-Mean">&#182;</a></h4><p>Input <strong>MUST be numeric vector</strong>, otherwise error</p>
 
 </div>
 </div>
@@ -18962,7 +18990,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Vectorized-Means">Vectorized Means<a class="anchor-link" href="#Vectorized-Means">&#182;</a></h4><p>Input <strong>MUST be matrix or numeric dataframe</strong>, otherwise error</p>
+<h4 id="Columns-Means">Columns Means<a class="anchor-link" href="#Columns-Means">&#182;</a></h4><p>Input <strong>MUST be matrix or numeric dataframe</strong>, otherwise error</p>
 
 </div>
 </div>
@@ -19003,7 +19031,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Column-Summation">Column Summation<a class="anchor-link" href="#Column-Summation">&#182;</a></h3><h4 id="Non-Vectorized-Sum">Non-Vectorized Sum<a class="anchor-link" href="#Non-Vectorized-Sum">&#182;</a></h4><p>Supply matrix or multiple columns of numeric data will sum all accross all columns</p>
+<h3 id="Summation">Summation<a class="anchor-link" href="#Summation">&#182;</a></h3><h4 id="Single-Vector-Sum">Single Vector Sum<a class="anchor-link" href="#Single-Vector-Sum">&#182;</a></h4><p>Supply matrix or multiple columns of numeric data will sum all accross all columns</p>
 
 </div>
 </div>
@@ -19044,7 +19072,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Vectorized-Sum">Vectorized Sum<a class="anchor-link" href="#Vectorized-Sum">&#182;</a></h4>
+<h4 id="Columns-Sum">Columns Sum<a class="anchor-link" href="#Columns-Sum">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -19175,7 +19203,7 @@ C1 C2 C3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="tidyverse::-count">tidyverse:: count<a class="anchor-link" href="#tidyverse::-count">&#182;</a></h4>
+<h4 id="tidyverse">tidyverse<a class="anchor-link" href="#tidyverse">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -19318,7 +19346,7 @@ C1 C2 C3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="tidyverse::-count,-spread">tidyverse:: count, spread<a class="anchor-link" href="#tidyverse::-count,-spread">&#182;</a></h4>
+<h4 id="tidyverse">tidyverse<a class="anchor-link" href="#tidyverse">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -19411,7 +19439,7 @@ C1 C2 C3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="tidyverse::-count,-mutate">tidyverse:: count, mutate<a class="anchor-link" href="#tidyverse::-count,-mutate">&#182;</a></h4>
+<h4 id="tidyverse">tidyverse<a class="anchor-link" href="#tidyverse">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -19609,7 +19637,7 @@ C1 C2 C3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="dplyr">dplyr<a class="anchor-link" href="#dplyr">&#182;</a></h4><p><strong>Table-Wise Proportion</strong></p>
+<h4 id="tidyverse">tidyverse<a class="anchor-link" href="#tidyverse">&#182;</a></h4><p><strong>Table-Wise Proportion</strong></p>
 
 </div>
 </div>
@@ -19767,22 +19795,6 @@ C1 C2 C3
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Preprocessing">Preprocessing<a class="anchor-link" href="#Preprocessing">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Splitting">Splitting<a class="anchor-link" href="#Splitting">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Wrangling">Wrangling<a class="anchor-link" href="#Wrangling">&#182;</a></h1>
 </div>
 </div>
@@ -19797,13 +19809,38 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>tidyverse<span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>-- Attaching packages --------------------------------------- tidyverse 1.2.1 --
+v ggplot2 3.1.0     v purrr   0.2.5
+v tibble  1.4.2     v dplyr   0.7.8
+v tidyr   0.8.2     v stringr 1.3.1
+v readr   1.1.1     v forcats 0.3.0
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -19818,17 +19855,18 @@ C1 C2 C3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">set.seed</span><span class="p">(</span><span class="m">1234</span><span class="p">)</span>
+n <span class="o">=</span> <span class="m">50</span>
 my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p">(</span>
-  com  <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
-  dept <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;D&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
-  team <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">15</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
-  x1 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span> mean <span class="o">=</span> <span class="m">50</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">5</span><span class="p">),</span>
-  x2 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span> mean <span class="o">=</span> <span class="m">20</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">3</span><span class="p">),</span>
-  x3 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span> mean <span class="o">=</span>  <span class="m">5</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">1</span><span class="p">),</span>
+  com  <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> n<span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+  dept <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;D&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> n<span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+  team <span class="o">=</span> <span class="kp">paste</span><span class="p">(</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="kp">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="p">,</span> n<span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">),</span>sep<span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+  x1 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span>n<span class="p">,</span> mean <span class="o">=</span> <span class="m">50</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">5</span><span class="p">),</span>
+  x2 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span>n<span class="p">,</span> mean <span class="o">=</span> <span class="m">20</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">3</span><span class="p">),</span>
+  x3 <span class="o">=</span> rnorm<span class="p">(</span><span class="m">1</span><span class="o">:</span>n<span class="p">,</span> mean <span class="o">=</span>  <span class="m">5</span><span class="p">,</span> sd <span class="o">=</span> <span class="m">1</span><span class="p">),</span>
   stringsAsFactors <span class="o">=</span> <span class="bp">F</span>
 <span class="p">)</span>
 <span class="kp">head</span><span class="p">(</span>my.df<span class="p">)</span>
@@ -19852,12 +19890,537 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 <table>
 <thead><tr><th scope=col>com</th><th scope=col>dept</th><th scope=col>team</th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
 <tbody>
-	<tr><td>C1      </td><td>D1      </td><td>T10     </td><td>48.11381</td><td>21.31079</td><td>2.683964</td></tr>
-	<tr><td>C2      </td><td>D4      </td><td>T8      </td><td>50.48810</td><td>23.18037</td><td>5.562472</td></tr>
-	<tr><td>C2      </td><td>D2      </td><td>T5      </td><td>58.19372</td><td>21.35657</td><td>4.216225</td></tr>
-	<tr><td>C2      </td><td>D2      </td><td>T12     </td><td>45.62204</td><td>21.98960</td><td>4.773946</td></tr>
-	<tr><td>C3      </td><td>D1      </td><td>T8      </td><td>50.60880</td><td>16.59088</td><td>3.412897</td></tr>
-	<tr><td>C2      </td><td>D3      </td><td>T11     </td><td>56.81065</td><td>18.88851</td><td>5.547524</td></tr>
+	<tr><td>C1      </td><td>D1      </td><td>T1      </td><td>49.23301</td><td>20.24018</td><td>4.162418</td></tr>
+	<tr><td>C3      </td><td>D1      </td><td>T4      </td><td>43.04650</td><td>18.10577</td><td>3.876237</td></tr>
+	<tr><td>C3      </td><td>D3      </td><td>T2      </td><td>46.38209</td><td>15.46014</td><td>8.043766</td></tr>
+	<tr><td>C3      </td><td>D2      </td><td>T2      </td><td>51.29131</td><td>18.09170</td><td>5.235021</td></tr>
+	<tr><td>C4      </td><td>D1      </td><td>T1      </td><td>48.41470</td><td>20.67890</td><td>4.966741</td></tr>
+	<tr><td>C3      </td><td>D2      </td><td>T3      </td><td>49.11105</td><td>23.04107</td><td>2.267780</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dplyr">Dplyr<a class="anchor-link" href="#Dplyr">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Filter">Filter<a class="anchor-link" href="#Filter">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> filter <span class="p">(</span>com <span class="o">==</span> <span class="s">&#39;C2&#39;</span> <span class="o">&amp;</span> dept <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;D1&#39;</span><span class="p">,</span><span class="s">&#39;D2&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>com</th><th scope=col>dept</th><th scope=col>team</th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
+<tbody>
+	<tr><td>C2      </td><td>D1      </td><td>T7      </td><td>47.98634</td><td>14.15526</td><td>4.491263</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>T2      </td><td>44.02736</td><td>18.13139</td><td>4.801584</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>T7      </td><td>51.27598</td><td>24.18544</td><td>2.144241</td></tr>
+	<tr><td>C2      </td><td>D2      </td><td>T2      </td><td>58.52982</td><td>21.91002</td><td>4.210353</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>T6      </td><td>51.77775</td><td>21.19782</td><td>5.500695</td></tr>
+	<tr><td>C2      </td><td>D2      </td><td>T5      </td><td>45.51868</td><td>19.29614</td><td>6.842464</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>T1      </td><td>50.84093</td><td>16.83985</td><td>6.112363</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>T5      </td><td>44.45116</td><td>18.75674</td><td>6.493493</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>T3      </td><td>50.84513</td><td>19.79392</td><td>4.393849</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>T3      </td><td>49.86862</td><td>24.41302</td><td>5.629536</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>T4      </td><td>60.29081</td><td>19.00203</td><td>7.273484</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Select">Select<a class="anchor-link" href="#Select">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Columns-by-Name-Range">Columns by Name Range<a class="anchor-link" href="#Columns-by-Name-Range">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select<span class="p">(</span> com<span class="p">,</span> team<span class="o">:</span>x2<span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>com</th><th scope=col>team</th><th scope=col>x1</th><th scope=col>x2</th></tr></thead>
+<tbody>
+	<tr><td>C1      </td><td>T1      </td><td>49.23301</td><td>20.24018</td></tr>
+	<tr><td>C3      </td><td>T4      </td><td>43.04650</td><td>18.10577</td></tr>
+	<tr><td>C3      </td><td>T2      </td><td>46.38209</td><td>15.46014</td></tr>
+	<tr><td>C3      </td><td>T2      </td><td>51.29131</td><td>18.09170</td></tr>
+	<tr><td>C4      </td><td>T1      </td><td>48.41470</td><td>20.67890</td></tr>
+	<tr><td>C3      </td><td>T3      </td><td>49.11105</td><td>23.04107</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Columns-by-Number-Range">Columns by Number Range<a class="anchor-link" href="#Columns-by-Number-Range">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select<span class="p">(</span> <span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="o">:</span><span class="m">5</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>com</th><th scope=col>team</th><th scope=col>x1</th><th scope=col>x2</th></tr></thead>
+<tbody>
+	<tr><td>C1      </td><td>T1      </td><td>49.23301</td><td>20.24018</td></tr>
+	<tr><td>C3      </td><td>T4      </td><td>43.04650</td><td>18.10577</td></tr>
+	<tr><td>C3      </td><td>T2      </td><td>46.38209</td><td>15.46014</td></tr>
+	<tr><td>C3      </td><td>T2      </td><td>51.29131</td><td>18.09170</td></tr>
+	<tr><td>C4      </td><td>T1      </td><td>48.41470</td><td>20.67890</td></tr>
+	<tr><td>C3      </td><td>T3      </td><td>49.11105</td><td>23.04107</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Columns-by-Name-Matching">Columns by Name Matching<a class="anchor-link" href="#Columns-by-Name-Matching">&#182;</a></h4><p>Use <strong>contain</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select<span class="p">(</span>contains<span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
+<tbody>
+	<tr><td>49.23301</td><td>20.24018</td><td>4.162418</td></tr>
+	<tr><td>43.04650</td><td>18.10577</td><td>3.876237</td></tr>
+	<tr><td>46.38209</td><td>15.46014</td><td>8.043766</td></tr>
+	<tr><td>51.29131</td><td>18.09170</td><td>5.235021</td></tr>
+	<tr><td>48.41470</td><td>20.67890</td><td>4.966741</td></tr>
+	<tr><td>49.11105</td><td>23.04107</td><td>2.267780</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use <strong>start_with</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select<span class="p">(</span>starts_with<span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
+<tbody>
+	<tr><td>49.23301</td><td>20.24018</td><td>4.162418</td></tr>
+	<tr><td>43.04650</td><td>18.10577</td><td>3.876237</td></tr>
+	<tr><td>46.38209</td><td>15.46014</td><td>8.043766</td></tr>
+	<tr><td>51.29131</td><td>18.09170</td><td>5.235021</td></tr>
+	<tr><td>48.41470</td><td>20.67890</td><td>4.966741</td></tr>
+	<tr><td>49.11105</td><td>23.04107</td><td>2.267780</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use <strong>end_with</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select<span class="p">(</span>ends_with<span class="p">(</span><span class="s">&#39;1&#39;</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>x1</th></tr></thead>
+<tbody>
+	<tr><td>49.23301</td></tr>
+	<tr><td>43.04650</td></tr>
+	<tr><td>46.38209</td></tr>
+	<tr><td>51.29131</td></tr>
+	<tr><td>48.41470</td></tr>
+	<tr><td>49.11105</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Columns-by-Data-Type">Columns by Data Type<a class="anchor-link" href="#Columns-by-Data-Type">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> select_if<span class="p">(</span><span class="kp">is.numeric</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
+<tbody>
+	<tr><td>49.23301</td><td>20.24018</td><td>4.162418</td></tr>
+	<tr><td>43.04650</td><td>18.10577</td><td>3.876237</td></tr>
+	<tr><td>46.38209</td><td>15.46014</td><td>8.043766</td></tr>
+	<tr><td>51.29131</td><td>18.09170</td><td>5.235021</td></tr>
+	<tr><td>48.41470</td><td>20.67890</td><td>4.966741</td></tr>
+	<tr><td>49.11105</td><td>23.04107</td><td>2.267780</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Arrange">Arrange<a class="anchor-link" href="#Arrange">&#182;</a></h3><p><strong>Sort entire data frame</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> arrange<span class="p">(</span>com<span class="p">,</span>team<span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>com</th><th scope=col>dept</th><th scope=col>team</th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
+<tbody>
+	<tr><td>C1      </td><td>D1      </td><td>T1      </td><td>49.23301</td><td>20.24018</td><td>4.162418</td></tr>
+	<tr><td>C1      </td><td>D3      </td><td>T1      </td><td>43.13849</td><td>16.48416</td><td>5.976032</td></tr>
+	<tr><td>C1      </td><td>D1      </td><td>T1      </td><td>55.00757</td><td>19.67470</td><td>5.487815</td></tr>
+	<tr><td>C1      </td><td>D2      </td><td>T2      </td><td>49.15003</td><td>20.75825</td><td>4.900209</td></tr>
+	<tr><td>C1      </td><td>D3      </td><td>T3      </td><td>45.87001</td><td>20.36528</td><td>5.311681</td></tr>
+	<tr><td>C1      </td><td>D1      </td><td>T4      </td><td>60.60559</td><td>21.04266</td><td>2.921762</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Joins">Joins<a class="anchor-link" href="#Joins">&#182;</a></h3><p>Join will automatically pick the common column names from both sides to join by</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>superheroes <span class="o">&lt;-</span> <span class="s">&quot;</span>
+<span class="s">    name, alignment, gender,         publisher</span>
+<span class="s"> Magneto,       bad,   male,            Marvel</span>
+<span class="s">   Storm,      good, female,            Marvel</span>
+<span class="s">Mystique,       bad, female,            Marvel</span>
+<span class="s">  Batman,      good,   male,                DC</span>
+<span class="s">   Joker,       bad,   male,                DC</span>
+<span class="s">Catwoman,       bad, female,                DC</span>
+<span class="s"> Hellboy,      good,   male, Dark Horse Comics</span>
+<span class="s">&quot;</span>
+superheroes <span class="o">&lt;-</span> read_csv<span class="p">(</span>superheroes<span class="p">,</span> skip <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+
+publishers <span class="o">&lt;-</span> <span class="s">&quot;</span>
+<span class="s">  publisher, yr_founded</span>
+<span class="s">         DC,       1934</span>
+<span class="s">     Marvel,       1939</span>
+<span class="s">      Image,       1992</span>
+<span class="s">&quot;</span>
+publishers <span class="o">&lt;-</span> read_csv<span class="p">(</span>publishers<span class="p">,</span> skip <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>superheroes
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>name</th><th scope=col>alignment</th><th scope=col>gender</th><th scope=col>publisher</th></tr></thead>
+<tbody>
+	<tr><td>Magneto          </td><td>bad              </td><td>male             </td><td>Marvel           </td></tr>
+	<tr><td>Storm            </td><td>good             </td><td>female           </td><td>Marvel           </td></tr>
+	<tr><td>Mystique         </td><td>bad              </td><td>female           </td><td>Marvel           </td></tr>
+	<tr><td>Batman           </td><td>good             </td><td>male             </td><td>DC               </td></tr>
+	<tr><td>Joker            </td><td>bad              </td><td>male             </td><td>DC               </td></tr>
+	<tr><td>Catwoman         </td><td>bad              </td><td>female           </td><td>DC               </td></tr>
+	<tr><td>Hellboy          </td><td>good             </td><td>male             </td><td>Dark Horse Comics</td></tr>
 </tbody>
 </table>
 
@@ -19871,10 +20434,450 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>glimpse<span class="p">(</span>my.df<span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span>publishers
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>publisher</th><th scope=col>yr_founded</th></tr></thead>
+<tbody>
+	<tr><td>DC    </td><td>1934  </td></tr>
+	<tr><td>Marvel</td><td>1939  </td></tr>
+	<tr><td>Image </td><td>1992  </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="left_join">left_join<a class="anchor-link" href="#left_join">&#182;</a></h4><ul>
+<li>Everthing from the left side, matching from right.  </li>
+<li>If no matching from right, result in NA</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>left_join<span class="p">(</span>superheroes<span class="p">,</span>publishers<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Joining, by = &#34;publisher&#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>name</th><th scope=col>alignment</th><th scope=col>gender</th><th scope=col>publisher</th><th scope=col>yr_founded</th></tr></thead>
+<tbody>
+	<tr><td>Magneto          </td><td>bad              </td><td>male             </td><td>Marvel           </td><td>1939             </td></tr>
+	<tr><td>Storm            </td><td>good             </td><td>female           </td><td>Marvel           </td><td>1939             </td></tr>
+	<tr><td>Mystique         </td><td>bad              </td><td>female           </td><td>Marvel           </td><td>1939             </td></tr>
+	<tr><td>Batman           </td><td>good             </td><td>male             </td><td>DC               </td><td>1934             </td></tr>
+	<tr><td>Joker            </td><td>bad              </td><td>male             </td><td>DC               </td><td>1934             </td></tr>
+	<tr><td>Catwoman         </td><td>bad              </td><td>female           </td><td>DC               </td><td>1934             </td></tr>
+	<tr><td>Hellboy          </td><td>good             </td><td>male             </td><td>Dark Horse Comics</td><td>  NA             </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="right_join">right_join<a class="anchor-link" href="#right_join">&#182;</a></h4><ul>
+<li>Everything from <strong>right</strong>, matching from <strong>left</strong></li>
+<li>If no matching from left, NA is produced</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>right_join<span class="p">(</span>superheroes<span class="p">,</span> publishers<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Joining, by = &#34;publisher&#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>name</th><th scope=col>alignment</th><th scope=col>gender</th><th scope=col>publisher</th><th scope=col>yr_founded</th></tr></thead>
+<tbody>
+	<tr><td>Batman  </td><td>good    </td><td>male    </td><td>DC      </td><td>1934    </td></tr>
+	<tr><td>Joker   </td><td>bad     </td><td>male    </td><td>DC      </td><td>1934    </td></tr>
+	<tr><td>Catwoman</td><td>bad     </td><td>female  </td><td>DC      </td><td>1934    </td></tr>
+	<tr><td>Magneto </td><td>bad     </td><td>male    </td><td>Marvel  </td><td>1939    </td></tr>
+	<tr><td>Storm   </td><td>good    </td><td>female  </td><td>Marvel  </td><td>1939    </td></tr>
+	<tr><td>Mystique</td><td>bad     </td><td>female  </td><td>Marvel  </td><td>1939    </td></tr>
+	<tr><td>NA      </td><td>NA      </td><td>NA      </td><td>Image   </td><td>1992    </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="inner_join">inner_join<a class="anchor-link" href="#inner_join">&#182;</a></h4><p>Only return <strong>matching from both</strong> left and right</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>inner_join<span class="p">(</span>superheroes<span class="p">,</span> publishers<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Joining, by = &#34;publisher&#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>name</th><th scope=col>alignment</th><th scope=col>gender</th><th scope=col>publisher</th><th scope=col>yr_founded</th></tr></thead>
+<tbody>
+	<tr><td>Magneto </td><td>bad     </td><td>male    </td><td>Marvel  </td><td>1939    </td></tr>
+	<tr><td>Storm   </td><td>good    </td><td>female  </td><td>Marvel  </td><td>1939    </td></tr>
+	<tr><td>Mystique</td><td>bad     </td><td>female  </td><td>Marvel  </td><td>1939    </td></tr>
+	<tr><td>Batman  </td><td>good    </td><td>male    </td><td>DC      </td><td>1934    </td></tr>
+	<tr><td>Joker   </td><td>bad     </td><td>male    </td><td>DC      </td><td>1934    </td></tr>
+	<tr><td>Catwoman</td><td>bad     </td><td>female  </td><td>DC      </td><td>1934    </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="semi_join">semi_join<a class="anchor-link" href="#semi_join">&#182;</a></h4><ul>
+<li>Similar to inner_join, but <strong>only left columns are kept</strong></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>semi_join<span class="p">(</span> superheroes<span class="p">,</span> publishers<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Joining, by = &#34;publisher&#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>name</th><th scope=col>alignment</th><th scope=col>gender</th><th scope=col>publisher</th></tr></thead>
+<tbody>
+	<tr><td>Magneto </td><td>bad     </td><td>male    </td><td>Marvel  </td></tr>
+	<tr><td>Storm   </td><td>good    </td><td>female  </td><td>Marvel  </td></tr>
+	<tr><td>Mystique</td><td>bad     </td><td>female  </td><td>Marvel  </td></tr>
+	<tr><td>Batman  </td><td>good    </td><td>male    </td><td>DC      </td></tr>
+	<tr><td>Joker   </td><td>bad     </td><td>male    </td><td>DC      </td></tr>
+	<tr><td>Catwoman</td><td>bad     </td><td>female  </td><td>DC      </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="anti_join">anti_join<a class="anchor-link" href="#anti_join">&#182;</a></h4><ul>
+<li>Return all rows from left where there is <strong>no matching</strong> from right</li>
+<li>Keep only <strong>left columns</strong></li>
+<li>This is <strong>filtering join</strong></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>anti_join<span class="p">(</span> superheroes<span class="p">,</span> publishers<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Joining, by = &#34;publisher&#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>name</th><th scope=col>alignment</th><th scope=col>gender</th><th scope=col>publisher</th></tr></thead>
+<tbody>
+	<tr><td>Hellboy          </td><td>good             </td><td>male             </td><td>Dark Horse Comics</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="full_join">full_join<a class="anchor-link" href="#full_join">&#182;</a></h4><p>Join everything from left and right, produce NA if there is non matching at left or right</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>full_join<span class="p">(</span>superheroes<span class="p">,</span> publishers<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Joining, by = &#34;publisher&#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>name</th><th scope=col>alignment</th><th scope=col>gender</th><th scope=col>publisher</th><th scope=col>yr_founded</th></tr></thead>
+<tbody>
+	<tr><td>Magneto          </td><td>bad              </td><td>male             </td><td>Marvel           </td><td>1939             </td></tr>
+	<tr><td>Storm            </td><td>good             </td><td>female           </td><td>Marvel           </td><td>1939             </td></tr>
+	<tr><td>Mystique         </td><td>bad              </td><td>female           </td><td>Marvel           </td><td>1939             </td></tr>
+	<tr><td>Batman           </td><td>good             </td><td>male             </td><td>DC               </td><td>1934             </td></tr>
+	<tr><td>Joker            </td><td>bad              </td><td>male             </td><td>DC               </td><td>1934             </td></tr>
+	<tr><td>Catwoman         </td><td>bad              </td><td>female           </td><td>DC               </td><td>1934             </td></tr>
+	<tr><td>Hellboy          </td><td>good             </td><td>male             </td><td>Dark Horse Comics</td><td>  NA             </td></tr>
+	<tr><td>NA               </td><td>NA               </td><td>NA               </td><td>Image            </td><td>1992             </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Count">Count<a class="anchor-link" href="#Count">&#182;</a></h3><p>Count product <strong>frequency table</strong> for underlying groups.<br>
+Observe that the result has <strong>no group</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>csummary <span class="o">=</span> count<span class="p">(</span>my.df<span class="p">,</span> com<span class="p">,</span> dept<span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> csummary <span class="p">)</span>
 </pre></div>
 
 </div>
@@ -19891,14 +20894,21 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Observations: 100
-Variables: 6
-$ com  &lt;chr&gt; &#34;C1&#34;, &#34;C2&#34;, &#34;C2&#34;, &#34;C2&#34;, &#34;C3&#34;, &#34;C2&#34;, &#34;C1&#34;, &#34;C1&#34;, &#34;C2&#34;, &#34;C2&#34;, &#34;C...
-$ dept &lt;chr&gt; &#34;D1&#34;, &#34;D4&#34;, &#34;D2&#34;, &#34;D2&#34;, &#34;D1&#34;, &#34;D3&#34;, &#34;D2&#34;, &#34;D1&#34;, &#34;D4&#34;, &#34;D1&#34;, &#34;D...
-$ team &lt;chr&gt; &#34;T10&#34;, &#34;T8&#34;, &#34;T5&#34;, &#34;T12&#34;, &#34;T8&#34;, &#34;T11&#34;, &#34;T5&#34;, &#34;T7&#34;, &#34;T4&#34;, &#34;T15&#34;...
-$ x1   &lt;dbl&gt; 48.11381, 50.48810, 58.19372, 45.62204, 50.60880, 56.81065, 48...
-$ x2   &lt;dbl&gt; 21.31079, 23.18037, 21.35657, 21.98960, 16.59088, 18.88851, 24...
-$ x3   &lt;dbl&gt; 2.683964, 5.562472, 4.216225, 4.773946, 3.412897, 5.547524, 6....
+<pre># A tibble: 12 x 3
+   com   dept      n
+   &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
+ 1 C1    D1       10
+ 2 C1    D2        8
+ 3 C1    D3       13
+ 4 C2    D1        6
+ 5 C2    D2       10
+ 6 C2    D3        8
+ 7 C3    D1       11
+ 8 C3    D2        8
+ 9 C3    D3        7
+10 C4    D1        4
+11 C4    D2       10
+12 C4    D3        5
 </pre>
 </div>
 </div>
@@ -19911,33 +20921,438 @@ $ x3   &lt;dbl&gt; 2.683964, 5.562472, 4.216225, 4.773946, 3.412897, 5.547524, 6
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Frequency-Table">Frequency Table<a class="anchor-link" href="#Frequency-Table">&#182;</a></h1>
+<p>Notice that cound is essentially a <strong>shortcut for group_by and summarize</strong>.</p>
+<ul>
+<li>See below reproduce the result as count. </li>
+<li>However, unlike <strong>count</strong>, this method reduce by 1 instead of completely ungroup the entire tibble</li>
+</ul>
+
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>csummary <span class="o">=</span> group_by<span class="p">(</span>my.df<span class="p">,</span> com<span class="p">,</span> dept<span class="p">)</span> <span class="o">%&gt;%</span> summarise<span class="p">(</span>n<span class="o">=</span>n<span class="p">())</span>
+<span class="kp">print</span><span class="p">(</span> csummary <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre># A tibble: 12 x 3
+# Groups:   com [?]
+   com   dept      n
+   &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
+ 1 C1    D1       10
+ 2 C1    D2        8
+ 3 C1    D3       13
+ 4 C2    D1        6
+ 5 C2    D2       10
+ 6 C2    D3        8
+ 7 C3    D1       11
+ 8 C3    D2        8
+ 9 C3    D3        7
+10 C4    D1        4
+11 C4    D2       10
+12 C4    D3        5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="dplyr">dplyr<a class="anchor-link" href="#dplyr">&#182;</a></h2>
+<h3 id="Summarize">Summarize<a class="anchor-link" href="#Summarize">&#182;</a></h3><h4 id="summarize">summarize<a class="anchor-link" href="#summarize">&#182;</a></h4><p><strong>Summarize over entire tibble</strong></p>
+
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> 
+summarize <span class="p">(</span>x1_mean <span class="o">=</span> <span class="kp">mean</span><span class="p">(</span>x1<span class="p">),</span>
+           x2_sum <span class="o">=</span> <span class="kp">sum</span><span class="p">(</span>x2<span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>x1_mean</th><th scope=col>x2_sum</th></tr></thead>
+<tbody>
+	<tr><td>50.68288</td><td>2015.825</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Filter">Filter<a class="anchor-link" href="#Filter">&#182;</a></h3>
+<p><strong>Summarize per Group</strong><br>
+Notice that summarize <strong>reduce group</strong> level by 1</p>
+
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>gsummary <span class="o">=</span> 
+  my.df <span class="o">%&gt;%</span> 
+    group_by<span class="p">(</span>com<span class="p">,</span>dept<span class="p">)</span> <span class="o">%&gt;%</span> 
+    summarize <span class="p">(</span>x1_mean <span class="o">=</span> <span class="kp">mean</span><span class="p">(</span>x1<span class="p">),</span>
+               x2_sum  <span class="o">=</span> <span class="kp">sum</span><span class="p">(</span>x2<span class="p">))</span>
+
+<span class="kp">print</span><span class="p">(</span> gsummary <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre># A tibble: 12 x 4
+# Groups:   com [?]
+   com   dept  x1_mean x2_sum
+   &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+ 1 C1    D1       47.6  205. 
+ 2 C1    D2       51.0  160. 
+ 3 C1    D3       52.5  257. 
+ 4 C2    D1       50.4  111. 
+ 5 C2    D2       53.1  212. 
+ 6 C2    D3       49.2  157. 
+ 7 C3    D1       50.4  227. 
+ 8 C3    D2       50.5  175. 
+ 9 C3    D3       48.6  142. 
+10 C4    D1       47.5   65.9
+11 C4    D2       52.4  203. 
+12 C4    D3       52.5  102. 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sorting">Sorting<a class="anchor-link" href="#Sorting">&#182;</a></h3>
+<h4 id="Multiple-Columns-(Conditional)">Multiple Columns (Conditional)<a class="anchor-link" href="#Multiple-Columns-(Conditional)">&#182;</a></h4>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>gsummary <span class="o">=</span> 
+  my.df <span class="o">%&gt;%</span> 
+    group_by<span class="p">(</span>com<span class="p">,</span>dept<span class="p">)</span> <span class="o">%&gt;%</span> 
+    summarize_if <span class="p">(</span><span class="kp">is.numeric</span><span class="p">,</span> <span class="kp">mean</span><span class="p">)</span>
+
+<span class="kp">print</span><span class="p">(</span> gsummary <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre># A tibble: 12 x 5
+# Groups:   com [?]
+   com   dept     x1    x2    x3
+   &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 C1    D1     53.8  19.2  4.44
+ 2 C1    D2     47.8  20.5  5.56
+ 3 C1    D3     48.0  19.5  5.48
+ 4 C2    D1     50.2  19.6  5.20
+ 5 C2    D2     52.0  20.6  5.53
+ 6 C2    D3     47.6  24.5  5.69
+ 7 C3    D1     49.8  20.0  5.21
+ 8 C3    D2     49.8  20.8  4.83
+ 9 C3    D3     49.5  18.6  6.45
+10 C4    D1     49.9  21.0  4.99
+11 C4    D2     52.1  18.9  5.49
+12 C4    D3     52.0  20.5  4.94
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Multiple-Columns-(Names-and-Position)">Multiple Columns (Names and Position)<a class="anchor-link" href="#Multiple-Columns-(Names-and-Position)">&#182;</a></h4><p><strong>Specific column names</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> 
+    group_by<span class="p">(</span>com<span class="p">,</span>dept<span class="p">)</span> <span class="o">%&gt;%</span> 
+    summarize_at <span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;x1&#39;</span><span class="p">,</span><span class="s">&#39;x2&#39;</span><span class="p">,</span><span class="s">&#39;x3&#39;</span><span class="p">),</span> <span class="kp">mean</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>com</th><th scope=col>dept</th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
+<tbody>
+	<tr><td>C1      </td><td>D1      </td><td>53.78819</td><td>19.19136</td><td>4.444190</td></tr>
+	<tr><td>C1      </td><td>D2      </td><td>47.80892</td><td>20.50587</td><td>5.556002</td></tr>
+	<tr><td>C1      </td><td>D3      </td><td>47.95769</td><td>19.45608</td><td>5.483456</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>50.15156</td><td>19.60838</td><td>5.204501</td></tr>
+	<tr><td>C2      </td><td>D2      </td><td>52.02425</td><td>20.60308</td><td>5.526408</td></tr>
+	<tr><td>C2      </td><td>D3      </td><td>47.58095</td><td>24.53748</td><td>5.690336</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Specific Column Names Pattern Matching</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> 
+    group_by<span class="p">(</span>com<span class="p">,</span>dept<span class="p">)</span> <span class="o">%&gt;%</span> 
+    summarize_at<span class="p">(</span>vars<span class="p">(</span>matches<span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">)),</span> <span class="kp">mean</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>com</th><th scope=col>dept</th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
+<tbody>
+	<tr><td>C1      </td><td>D1      </td><td>53.78819</td><td>19.19136</td><td>4.444190</td></tr>
+	<tr><td>C1      </td><td>D2      </td><td>47.80892</td><td>20.50587</td><td>5.556002</td></tr>
+	<tr><td>C1      </td><td>D3      </td><td>47.95769</td><td>19.45608</td><td>5.483456</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>50.15156</td><td>19.60838</td><td>5.204501</td></tr>
+	<tr><td>C2      </td><td>D2      </td><td>52.02425</td><td>20.60308</td><td>5.526408</td></tr>
+	<tr><td>C2      </td><td>D3      </td><td>47.58095</td><td>24.53748</td><td>5.690336</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Column Names and Number Range</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> 
+    group_by<span class="p">(</span>com<span class="p">,</span>dept<span class="p">)</span> <span class="o">%&gt;%</span> 
+    summarize_at<span class="p">(</span>vars<span class="p">(</span>x1<span class="o">:</span>x3<span class="p">),</span> <span class="kp">mean</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>com</th><th scope=col>dept</th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
+<tbody>
+	<tr><td>C1      </td><td>D1      </td><td>53.78819</td><td>19.19136</td><td>4.444190</td></tr>
+	<tr><td>C1      </td><td>D2      </td><td>47.80892</td><td>20.50587</td><td>5.556002</td></tr>
+	<tr><td>C1      </td><td>D3      </td><td>47.95769</td><td>19.45608</td><td>5.483456</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>50.15156</td><td>19.60838</td><td>5.204501</td></tr>
+	<tr><td>C2      </td><td>D2      </td><td>52.02425</td><td>20.60308</td><td>5.526408</td></tr>
+	<tr><td>C2      </td><td>D3      </td><td>47.58095</td><td>24.53748</td><td>5.690336</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>my.df <span class="o">%&gt;%</span> 
+    group_by<span class="p">(</span>com<span class="p">,</span>dept<span class="p">)</span> <span class="o">%&gt;%</span> 
+    summarize_at<span class="p">(</span>vars<span class="p">(</span><span class="m">4</span><span class="o">:</span><span class="m">6</span><span class="p">),</span> <span class="kp">mean</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="kp">head</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th scope=col>com</th><th scope=col>dept</th><th scope=col>x1</th><th scope=col>x2</th><th scope=col>x3</th></tr></thead>
+<tbody>
+	<tr><td>C1      </td><td>D1      </td><td>53.78819</td><td>19.19136</td><td>4.444190</td></tr>
+	<tr><td>C1      </td><td>D2      </td><td>47.80892</td><td>20.50587</td><td>5.556002</td></tr>
+	<tr><td>C1      </td><td>D3      </td><td>47.95769</td><td>19.45608</td><td>5.483456</td></tr>
+	<tr><td>C2      </td><td>D1      </td><td>50.15156</td><td>19.60838</td><td>5.204501</td></tr>
+	<tr><td>C2      </td><td>D2      </td><td>52.02425</td><td>20.60308</td><td>5.526408</td></tr>
+	<tr><td>C2      </td><td>D3      </td><td>47.58095</td><td>24.53748</td><td>5.690336</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -20090,7 +21505,7 @@ barplot<span class="p">(</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_382_0.png"
+<img src="index_files/index_427_0.png"
 >
 </div>
 
@@ -20133,7 +21548,7 @@ barplot<span class="p">(</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_384_0.png"
+<img src="index_files/index_429_0.png"
 >
 </div>
 
@@ -20197,7 +21612,7 @@ barplot<span class="p">(</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_386_1.png"
+<img src="index_files/index_431_1.png"
 >
 </div>
 
@@ -20277,7 +21692,7 @@ abline<span class="p">(</span>fit<span class="p">,</span> col<span class="o">=</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_389_0.png"
+<img src="index_files/index_434_0.png"
 >
 </div>
 
@@ -20319,7 +21734,7 @@ abline<span class="p">(</span>fit<span class="p">,</span> col<span class="o">=</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_391_0.png"
+<img src="index_files/index_436_0.png"
 >
 </div>
 
@@ -20375,7 +21790,7 @@ text<span class="p">(</span> x <span class="o">=</span> chart<span class="o">$</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_393_0.png"
+<img src="index_files/index_438_0.png"
 >
 </div>
 
@@ -20487,7 +21902,7 @@ boxplot <span class="p">(</span>mtcars<span class="o">$</span>hp<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_397_0.png"
+<img src="index_files/index_442_0.png"
 >
 </div>
 
@@ -20607,7 +22022,7 @@ boxplot <span class="p">(</span>formula<span class="o">=</span>mpg<span class="o
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_401_0.png"
+<img src="index_files/index_446_0.png"
 >
 </div>
 
@@ -20693,7 +22108,7 @@ text <span class="p">(</span> <span class="kp">t</span><span class="m">-0.3</spa
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_404_0.png"
+<img src="index_files/index_449_0.png"
 >
 </div>
 
@@ -20803,7 +22218,7 @@ cyl  3  4  5
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_408_1.png"
+<img src="index_files/index_453_1.png"
 >
 </div>
 
@@ -20871,7 +22286,7 @@ lines<span class="p">(</span> x<span class="p">,</span> gauss2<span class="p">,<
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_412_0.png"
+<img src="index_files/index_457_0.png"
 >
 </div>
 
@@ -20929,7 +22344,7 @@ title<span class="p">(</span><span class="s">&quot;An R Plot&quot;</span><span c
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_414_0.png"
+<img src="index_files/index_459_0.png"
 >
 </div>
 
@@ -20985,7 +22400,7 @@ plot<span class="p">(</span>x<span class="p">,</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_416_0.png"
+<img src="index_files/index_461_0.png"
 >
 </div>
 
@@ -21065,7 +22480,7 @@ legend<span class="p">(</span><span class="s">&quot;topleft&quot;</span><span cl
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_418_0.png"
+<img src="index_files/index_463_0.png"
 >
 </div>
 
@@ -21171,7 +22586,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_424_0.png"
+<img src="index_files/index_469_0.png"
 >
 </div>
 
@@ -21229,7 +22644,7 @@ mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span clas
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_426_1.png"
+<img src="index_files/index_471_1.png"
 >
 </div>
 
@@ -21283,7 +22698,7 @@ mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span clas
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_428_1.png"
+<img src="index_files/index_473_1.png"
 >
 </div>
 
@@ -21333,7 +22748,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_430_0.png"
+<img src="index_files/index_475_0.png"
 >
 </div>
 
@@ -21386,7 +22801,7 @@ mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span clas
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_432_1.png"
+<img src="index_files/index_477_1.png"
 >
 </div>
 
@@ -21454,7 +22869,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_435_1.png"
+<img src="index_files/index_480_1.png"
 >
 </div>
 
@@ -21510,7 +22925,7 @@ ggplot<span class="p">(</span>aes<span class="p">(</span>x<span class="o">=</spa
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_437_1.png"
+<img src="index_files/index_482_1.png"
 >
 </div>
 
@@ -21567,7 +22982,7 @@ mtcars <span class="o">%&gt;%</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_439_1.png"
+<img src="index_files/index_484_1.png"
 >
 </div>
 
@@ -21631,7 +23046,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_442_0.png"
+<img src="index_files/index_487_0.png"
 >
 </div>
 
@@ -21685,7 +23100,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_444_0.png"
+<img src="index_files/index_489_0.png"
 >
 </div>
 
@@ -21742,7 +23157,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_446_0.png"
+<img src="index_files/index_491_0.png"
 >
 </div>
 
@@ -21787,7 +23202,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span> rpart <span class="p">)</span>  <span class="c1"># decision tree</span>
@@ -21848,7 +23263,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>mtcars<span class="p">)</span>
@@ -21900,11 +23315,12 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>fit1 <span class="o">=</span> lm<span class="p">(</span>formula <span class="o">=</span> mpg <span class="o">~</span> hp<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span> 
 fit2 <span class="o">=</span> lm<span class="p">(</span>formula <span class="o">=</span> mpg <span class="o">~</span> hp <span class="o">+</span> disp<span class="p">,</span> data<span class="o">=</span>mtcars<span class="p">)</span>
+fit3 <span class="o">=</span> lm<span class="p">(</span>formula <span class="o">=</span> mpg <span class="o">~</span> <span class="m">.</span><span class="p">,</span> data<span class="o">=</span>mtcars<span class="p">)</span>
 </pre></div>
 
 </div>
@@ -21922,10 +23338,10 @@ fit2 <span class="o">=</span> lm<span class="p">(</span>formula <span class="o">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit3<span class="p">)</span>
 </pre></div>
 
 </div>
@@ -21946,22 +23362,31 @@ fit2 <span class="o">=</span> lm<span class="p">(</span>formula <span class="o">
 <div class="output_text output_subarea ">
 <pre>
 Call:
-lm(formula = mpg ~ hp, data = mtcars)
+lm(formula = mpg ~ ., data = mtcars)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--5.7121 -2.1122 -0.8854  1.5819  8.2360 
+-3.4506 -1.6044 -0.1196  1.2193  4.6271 
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) 30.09886    1.63392  18.421  &lt; 2e-16 ***
-hp          -0.06823    0.01012  -6.742 1.79e-07 ***
+            Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept) 12.30337   18.71788   0.657   0.5181  
+cyl         -0.11144    1.04502  -0.107   0.9161  
+disp         0.01334    0.01786   0.747   0.4635  
+hp          -0.02148    0.02177  -0.987   0.3350  
+drat         0.78711    1.63537   0.481   0.6353  
+wt          -3.71530    1.89441  -1.961   0.0633 .
+qsec         0.82104    0.73084   1.123   0.2739  
+vs           0.31776    2.10451   0.151   0.8814  
+am           2.52023    2.05665   1.225   0.2340  
+gear         0.65541    1.49326   0.439   0.6652  
+carb        -0.19942    0.82875  -0.241   0.8122  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
-Residual standard error: 3.863 on 30 degrees of freedom
-Multiple R-squared:  0.6024,	Adjusted R-squared:  0.5892 
-F-statistic: 45.46 on 1 and 30 DF,  p-value: 1.788e-07
+Residual standard error: 2.65 on 21 degrees of freedom
+Multiple R-squared:  0.869,	Adjusted R-squared:  0.8066 
+F-statistic: 13.93 on 10 and 21 DF,  p-value: 3.793e-07
 </pre>
 </div>
 
@@ -21973,7 +23398,7 @@ F-statistic: 45.46 on 1 and 30 DF,  p-value: 1.788e-07
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>fit<span class="p">)</span>
@@ -21992,65 +23417,12 @@ F-statistic: 45.46 on 1 and 30 DF,  p-value: 1.788e-07
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>List of 12
- $ coefficients : Named num [1:2] 30.0989 -0.0682
-  ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;(Intercept)&#34; &#34;hp&#34;
- $ residuals    : Named num [1:32] -1.594 -1.594 -0.954 -1.194 0.541 ...
-  ..- attr(*, &#34;names&#34;)= chr [1:32] &#34;Mazda RX4&#34; &#34;Mazda RX4 Wag&#34; &#34;Datsun 710&#34; &#34;Hornet 4 Drive&#34; ...
- $ effects      : Named num [1:32] -113.65 -26.046 -0.556 -0.852 0.67 ...
-  ..- attr(*, &#34;names&#34;)= chr [1:32] &#34;(Intercept)&#34; &#34;hp&#34; &#34;&#34; &#34;&#34; ...
- $ rank         : int 2
- $ fitted.values: Named num [1:32] 22.6 22.6 23.8 22.6 18.2 ...
-  ..- attr(*, &#34;names&#34;)= chr [1:32] &#34;Mazda RX4&#34; &#34;Mazda RX4 Wag&#34; &#34;Datsun 710&#34; &#34;Hornet 4 Drive&#34; ...
- $ assign       : int [1:2] 0 1
- $ qr           :List of 5
-  ..$ qr   : num [1:32, 1:2] -5.657 0.177 0.177 0.177 0.177 ...
-  .. ..- attr(*, &#34;dimnames&#34;)=List of 2
-  .. .. ..$ : chr [1:32] &#34;Mazda RX4&#34; &#34;Mazda RX4 Wag&#34; &#34;Datsun 710&#34; &#34;Hornet 4 Drive&#34; ...
-  .. .. ..$ : chr [1:2] &#34;(Intercept)&#34; &#34;hp&#34;
-  .. ..- attr(*, &#34;assign&#34;)= int [1:2] 0 1
-  ..$ qraux: num [1:2] 1.18 1.08
-  ..$ pivot: int [1:2] 1 2
-  ..$ tol  : num 1e-07
-  ..$ rank : int 2
-  ..- attr(*, &#34;class&#34;)= chr &#34;qr&#34;
- $ df.residual  : int 30
- $ xlevels      : Named list()
- $ call         : language lm(formula = mpg ~ hp, data = mtcars)
- $ terms        :Classes &#39;terms&#39;, &#39;formula&#39;  language mpg ~ hp
-  .. ..- attr(*, &#34;variables&#34;)= language list(mpg, hp)
-  .. ..- attr(*, &#34;factors&#34;)= int [1:2, 1] 0 1
-  .. .. ..- attr(*, &#34;dimnames&#34;)=List of 2
-  .. .. .. ..$ : chr [1:2] &#34;mpg&#34; &#34;hp&#34;
-  .. .. .. ..$ : chr &#34;hp&#34;
-  .. ..- attr(*, &#34;term.labels&#34;)= chr &#34;hp&#34;
-  .. ..- attr(*, &#34;order&#34;)= int 1
-  .. ..- attr(*, &#34;intercept&#34;)= int 1
-  .. ..- attr(*, &#34;response&#34;)= int 1
-  .. ..- attr(*, &#34;.Environment&#34;)=&lt;environment: R_GlobalEnv&gt; 
-  .. ..- attr(*, &#34;predvars&#34;)= language list(mpg, hp)
-  .. ..- attr(*, &#34;dataClasses&#34;)= Named chr [1:2] &#34;numeric&#34; &#34;numeric&#34;
-  .. .. ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;mpg&#34; &#34;hp&#34;
- $ model        :&#39;data.frame&#39;:	32 obs. of  2 variables:
-  ..$ mpg: num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
-  ..$ hp : num [1:32] 110 110 93 110 175 105 245 62 95 123 ...
-  ..- attr(*, &#34;terms&#34;)=Classes &#39;terms&#39;, &#39;formula&#39;  language mpg ~ hp
-  .. .. ..- attr(*, &#34;variables&#34;)= language list(mpg, hp)
-  .. .. ..- attr(*, &#34;factors&#34;)= int [1:2, 1] 0 1
-  .. .. .. ..- attr(*, &#34;dimnames&#34;)=List of 2
-  .. .. .. .. ..$ : chr [1:2] &#34;mpg&#34; &#34;hp&#34;
-  .. .. .. .. ..$ : chr &#34;hp&#34;
-  .. .. ..- attr(*, &#34;term.labels&#34;)= chr &#34;hp&#34;
-  .. .. ..- attr(*, &#34;order&#34;)= int 1
-  .. .. ..- attr(*, &#34;intercept&#34;)= int 1
-  .. .. ..- attr(*, &#34;response&#34;)= int 1
-  .. .. ..- attr(*, &#34;.Environment&#34;)=&lt;environment: R_GlobalEnv&gt; 
-  .. .. ..- attr(*, &#34;predvars&#34;)= language list(mpg, hp)
-  .. .. ..- attr(*, &#34;dataClasses&#34;)= Named chr [1:2] &#34;numeric&#34; &#34;numeric&#34;
-  .. .. .. ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;mpg&#34; &#34;hp&#34;
- - attr(*, &#34;class&#34;)= chr &#34;lm&#34;
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+Error in str(fit): object &#39;fit&#39; not found
+Traceback:
+
+1. str(fit)</pre>
 </div>
 </div>
 
@@ -22068,56 +23440,17 @@ F-statistic: 45.46 on 1 and 30 DF,  p-value: 1.788e-07
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">options</span><span class="p">(</span>repr.plot.width <span class="o">=</span><span class="m">8</span> <span class="p">,</span> repr.plot.height <span class="o">=</span> <span class="m">6</span><span class="p">,</span> repr.plot.res <span class="o">=</span> <span class="m">300</span><span class="p">)</span>
 par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
 
 plot<span class="p">(</span>mtcars<span class="o">$</span>hp<span class="p">,</span> mtcars<span class="o">$</span>mpg<span class="p">)</span>
-abline<span class="p">(</span>fit<span class="p">,</span> lty<span class="o">=</span><span class="m">2</span><span class="p">)</span>
-
-plot<span class="p">(</span>mtcars<span class="o">$</span>hp<span class="p">,</span> mtcars<span class="o">$</span>mpg<span class="p">)</span>
-abline<span class="p">(</span>fit2<span class="p">,</span> lty<span class="o">=</span><span class="m">2</span><span class="p">)</span>
-
-plot<span class="p">(</span>mtcars<span class="o">$</span>disp<span class="p">,</span> mtcars<span class="o">$</span>mpg<span class="p">)</span>
-abline<span class="p">(</span>fit2<span class="p">,</span> lty<span class="o">=</span><span class="m">2</span><span class="p">)</span>
+abline<span class="p">(</span>fit1<span class="p">,</span> lty<span class="o">=</span><span class="m">2</span><span class="p">)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Warning message in abline(fit2, lty = 2):
-&#34;only using the first two of 3 regression coefficients&#34;Warning message in abline(fit2, lty = 2):
-&#34;only using the first two of 3 regression coefficients&#34;</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
-<img src="index_files/index_465_1.png"
->
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -22140,10 +23473,10 @@ abline<span class="p">(</span>fit2<span class="p">,</span> lty<span class="o">=<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>rprat<span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>rpart<span class="p">)</span>
 </pre></div>
 
 </div>
@@ -22153,7 +23486,7 @@ abline<span class="p">(</span>fit2<span class="p">,</span> lty<span class="o">=<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>fit <span class="o">=</span> rpart<span class="p">(</span> formula <span class="o">=</span> mpg <span class="o">~</span> hp <span class="o">+</span> disp<span class="p">,</span> data<span class="o">=</span>mtcars<span class="p">)</span>
@@ -22174,7 +23507,7 @@ abline<span class="p">(</span>fit2<span class="p">,</span> lty<span class="o">=<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span> fit <span class="p">)</span>
@@ -22199,8 +23532,8 @@ rpart(formula = mpg ~ hp + disp, data = mtcars)
   n= 32 
 
          CP nsplit rel error    xerror      xstd
-1 0.6130502      0 1.0000000 1.0679940 0.2545378
-2 0.0100000      1 0.3869498 0.6501914 0.1434307
+1 0.6130502      0 1.0000000 1.0848488 0.2556221
+2 0.0100000      1 0.3869498 0.5690072 0.1030710
 
 Variable importance
 disp   hp 
@@ -22231,7 +23564,7 @@ Node number 3: 14 observations
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span> fit <span class="p">)</span>
@@ -22328,12 +23661,12 @@ Node number 3: 14 observations
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="kp">options</span><span class="p">(</span>repr.plot.width <span class="o">=</span><span class="m">8</span> <span class="p">,</span> repr.plot.height <span class="o">=</span> <span class="m">4</span><span class="p">,</span> repr.plot.res <span class="o">=</span> <span class="m">300</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="kp">options</span><span class="p">(</span>repr.plot.width <span class="o">=</span><span class="m">8</span> <span class="p">,</span> repr.plot.height <span class="o">=</span> <span class="m">4.5</span><span class="p">,</span> repr.plot.res <span class="o">=</span> <span class="m">300</span><span class="p">)</span>
 plot<span class="p">(</span> fit <span class="p">)</span>
-text<span class="p">(</span> fit<span class="p">,</span> cex <span class="o">=</span> <span class="m">.7</span><span class="p">)</span>
+text<span class="p">(</span> fit<span class="p">,</span> cex <span class="o">=</span> <span class="m">.9</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -22352,7 +23685,7 @@ text<span class="p">(</span> fit<span class="p">,</span> cex <span class="o">=</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_474_0.png"
+<img src="index_files/index_519_0.png"
 >
 </div>
 
@@ -22364,7 +23697,7 @@ text<span class="p">(</span> fit<span class="p">,</span> cex <span class="o">=</
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span><span class="kp">as.vector</span><span class="p">(</span>fit<span class="p">))</span>
@@ -22450,38 +23783,6 @@ text<span class="p">(</span> fit<span class="p">,</span> cex <span class="o">=</
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Classification">Classification<a class="anchor-link" href="#Classification">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Decision-Tree">Decision Tree<a class="anchor-link" href="#Decision-Tree">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Naive-Bayes">Naive Bayes<a class="anchor-link" href="#Naive-Bayes">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h3>
-</div>
-</div>
 </div>
     </div>
   </div>
