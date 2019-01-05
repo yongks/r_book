@@ -17941,6 +17941,433 @@ It may not be intuitive, however, length() on dataframe return number of columns
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating-List">Creating List<a class="anchor-link" href="#Creating-List">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Create-Without-Name">Create Without Name<a class="anchor-link" href="#Create-Without-Name">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>n <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">)</span> 
+s <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;aa&quot;</span><span class="p">,</span> <span class="s">&quot;bb&quot;</span><span class="p">,</span> <span class="s">&quot;cc&quot;</span><span class="p">,</span> <span class="s">&quot;dd&quot;</span><span class="p">,</span> <span class="s">&quot;ee&quot;</span><span class="p">)</span> 
+b <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">)</span> 
+x <span class="o">=</span> <span class="kt">list</span><span class="p">(</span>n<span class="p">,</span> s<span class="p">,</span> b<span class="p">,</span> <span class="m">3</span><span class="p">)</span>   <span class="c1"># x contains copies of n, s, b</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> x <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[1]]
+[1] 2 3 5
+
+[[2]]
+[1] &#34;aa&#34; &#34;bb&#34; &#34;cc&#34; &#34;dd&#34; &#34;ee&#34;
+
+[[3]]
+[1]  TRUE FALSE  TRUE FALSE FALSE
+
+[[4]]
+[1] 3
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Create-With-Name">Create With Name<a class="anchor-link" href="#Create-With-Name">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>v <span class="o">=</span> <span class="kt">list</span><span class="p">(</span>bob<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">),</span> john<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;aa&quot;</span><span class="p">,</span> <span class="s">&quot;bb&quot;</span><span class="p">))</span> 
+<span class="kp">print</span><span class="p">(</span> v <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>$bob
+[1] 2 3 5
+
+$john
+[1] &#34;aa&#34; &#34;bb&#34;
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Member-Selection">Member Selection<a class="anchor-link" href="#Member-Selection">&#182;</a></h3><h4 id="Select-Single-Member">Select Single Member<a class="anchor-link" href="#Select-Single-Member">&#182;</a></h4><p><strong>By Number</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> x<span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> x<span class="p">[[</span><span class="m">2</span><span class="p">]]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[1]]
+[1] &#34;Ta&#34; &#34;bb&#34; &#34;cc&#34; &#34;dd&#34; &#34;ee&#34;
+
+[1] &#34;Ta&#34; &#34;bb&#34; &#34;cc&#34; &#34;dd&#34; &#34;ee&#34;
+[1] &#34;aa&#34; &#34;bb&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>By Name</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> v<span class="p">[</span><span class="s">&#39;john&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> v<span class="p">[[</span><span class="s">&#39;john&#39;</span><span class="p">]]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>$john
+[1] &#34;aa&#34; &#34;bb&#34;
+
+[1] &#34;aa&#34; &#34;bb&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Select-Multiple-Members">Select Multiple Members<a class="anchor-link" href="#Select-Multiple-Members">&#182;</a></h4><p><strong>By Number</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> x<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[1]]
+[1] &#34;Ta&#34; &#34;bb&#34; &#34;cc&#34; &#34;dd&#34; &#34;ee&#34;
+
+[[2]]
+[1]  TRUE FALSE  TRUE FALSE FALSE
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>By Name Not Available</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Select-Member-Component">Select Member Component<a class="anchor-link" href="#Select-Member-Component">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> x<span class="p">[[</span><span class="m">2</span><span class="p">]][</span><span class="m">3</span><span class="p">])</span>    <span class="c1"># chain method</span>
+<span class="kp">print</span><span class="p">(</span> x<span class="p">[[</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">)]]</span> <span class="p">)</span> <span class="c1"># alternative method</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;cc&#34;
+[1] &#34;cc&#34;
+[[1]]
+NULL
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Select-by-Name">Select by Name<a class="anchor-link" href="#Select-by-Name">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> v<span class="p">[</span><span class="s">&#39;bob&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> v<span class="p">[[</span><span class="s">&#39;bob&#39;</span><span class="p">]]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>$bob
+[1] 2 3 5
+
+[1] 2 3 5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> v<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;bob&#39;</span><span class="p">,</span><span class="s">&#39;john&#39;</span><span class="p">)]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>$bob
+[1] 2 3 5
+
+$john
+[1] &#34;aa&#34; &#34;bb&#34;
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Updating-Content">Updating Content<a class="anchor-link" href="#Updating-Content">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>x<span class="p">[[</span><span class="m">2</span><span class="p">]][</span><span class="m">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;Ta&#39;</span>
+<span class="kp">print</span><span class="p">(</span> x<span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[1]]
+[1] &#34;Ta&#34; &#34;bb&#34; &#34;cc&#34; &#34;dd&#34; &#34;ee&#34;
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Control-Structure">Control Structure<a class="anchor-link" href="#Control-Structure">&#182;</a></h1>
 </div>
 </div>
@@ -19838,6 +20265,455 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 5039.877 2040.973  505.275 
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Correlation">Correlation<a class="anchor-link" href="#Correlation">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Correlation-Matrix">Correlation Matrix<a class="anchor-link" href="#Correlation-Matrix">&#182;</a></h3><p>Available methods are: 'pearson (default)', 'kendall' and '7spearman'</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>cor<span class="p">(</span> mtcars<span class="p">,</span> method <span class="o">=</span> <span class="s">&#39;pearson&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope=col>mpg</th><th scope=col>cyl</th><th scope=col>disp</th><th scope=col>hp</th><th scope=col>drat</th><th scope=col>wt</th><th scope=col>qsec</th><th scope=col>vs</th><th scope=col>am</th><th scope=col>gear</th><th scope=col>carb</th></tr></thead>
+<tbody>
+	<tr><th scope=row>mpg</th><td> 1.0000000 </td><td>-0.8521620 </td><td>-0.8475514 </td><td>-0.7761684 </td><td> 0.68117191</td><td>-0.8676594 </td><td> 0.41868403</td><td> 0.6640389 </td><td> 0.59983243</td><td> 0.4802848 </td><td>-0.55092507</td></tr>
+	<tr><th scope=row>cyl</th><td>-0.8521620 </td><td> 1.0000000 </td><td> 0.9020329 </td><td> 0.8324475 </td><td>-0.69993811</td><td> 0.7824958 </td><td>-0.59124207</td><td>-0.8108118 </td><td>-0.52260705</td><td>-0.4926866 </td><td> 0.52698829</td></tr>
+	<tr><th scope=row>disp</th><td>-0.8475514 </td><td> 0.9020329 </td><td> 1.0000000 </td><td> 0.7909486 </td><td>-0.71021393</td><td> 0.8879799 </td><td>-0.43369788</td><td>-0.7104159 </td><td>-0.59122704</td><td>-0.5555692 </td><td> 0.39497686</td></tr>
+	<tr><th scope=row>hp</th><td>-0.7761684 </td><td> 0.8324475 </td><td> 0.7909486 </td><td> 1.0000000 </td><td>-0.44875912</td><td> 0.6587479 </td><td>-0.70822339</td><td>-0.7230967 </td><td>-0.24320426</td><td>-0.1257043 </td><td> 0.74981247</td></tr>
+	<tr><th scope=row>drat</th><td> 0.6811719 </td><td>-0.6999381 </td><td>-0.7102139 </td><td>-0.4487591 </td><td> 1.00000000</td><td>-0.7124406 </td><td> 0.09120476</td><td> 0.4402785 </td><td> 0.71271113</td><td> 0.6996101 </td><td>-0.09078980</td></tr>
+	<tr><th scope=row>wt</th><td>-0.8676594 </td><td> 0.7824958 </td><td> 0.8879799 </td><td> 0.6587479 </td><td>-0.71244065</td><td> 1.0000000 </td><td>-0.17471588</td><td>-0.5549157 </td><td>-0.69249526</td><td>-0.5832870 </td><td> 0.42760594</td></tr>
+	<tr><th scope=row>qsec</th><td> 0.4186840 </td><td>-0.5912421 </td><td>-0.4336979 </td><td>-0.7082234 </td><td> 0.09120476</td><td>-0.1747159 </td><td> 1.00000000</td><td> 0.7445354 </td><td>-0.22986086</td><td>-0.2126822 </td><td>-0.65624923</td></tr>
+	<tr><th scope=row>vs</th><td> 0.6640389 </td><td>-0.8108118 </td><td>-0.7104159 </td><td>-0.7230967 </td><td> 0.44027846</td><td>-0.5549157 </td><td> 0.74453544</td><td> 1.0000000 </td><td> 0.16834512</td><td> 0.2060233 </td><td>-0.56960714</td></tr>
+	<tr><th scope=row>am</th><td> 0.5998324 </td><td>-0.5226070 </td><td>-0.5912270 </td><td>-0.2432043 </td><td> 0.71271113</td><td>-0.6924953 </td><td>-0.22986086</td><td> 0.1683451 </td><td> 1.00000000</td><td> 0.7940588 </td><td> 0.05753435</td></tr>
+	<tr><th scope=row>gear</th><td> 0.4802848 </td><td>-0.4926866 </td><td>-0.5555692 </td><td>-0.1257043 </td><td> 0.69961013</td><td>-0.5832870 </td><td>-0.21268223</td><td> 0.2060233 </td><td> 0.79405876</td><td> 1.0000000 </td><td> 0.27407284</td></tr>
+	<tr><th scope=row>carb</th><td>-0.5509251 </td><td> 0.5269883 </td><td> 0.3949769 </td><td> 0.7498125 </td><td>-0.09078980</td><td> 0.4276059 </td><td>-0.65624923</td><td>-0.5696071 </td><td> 0.05753435</td><td> 0.2740728 </td><td> 1.00000000</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Visualize-Correlation">Visualize Correlation<a class="anchor-link" href="#Visualize-Correlation">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="car">car<a class="anchor-link" href="#car">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>car<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">options</span><span class="p">(</span>repr.plot.width <span class="o">=</span> <span class="m">5</span> <span class="p">,</span> repr.plot.height <span class="o">=</span> <span class="m">4</span><span class="p">,</span> repr.plot.res <span class="o">=</span> <span class="m">100</span><span class="p">)</span>
+scatterplot<span class="p">(</span>wt <span class="o">~</span> mpg<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span>
+
+scatterplot<span class="p">(</span>wt <span class="o">~</span> mpg <span class="o">|</span> cyl<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">,</span> 
+            smooth <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> grid <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> frame <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_388_0.png"
+>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_388_1.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>scatterplot<span class="p">(</span>wt <span class="o">~</span> mpg<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">,</span>
+            smooth <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> grid <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> frame <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span>
+            cex <span class="o">=</span> <span class="m">0.7</span><span class="p">,</span> col <span class="o">=</span> <span class="s">&quot;steelblue&quot;</span><span class="p">,</span>
+            ellipse <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> boxplots<span class="o">=</span><span class="s">&#39;y&#39;</span><span class="p">,)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_389_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">options</span><span class="p">(</span>repr.plot.width <span class="o">=</span> <span class="m">10</span><span class="p">,</span> repr.plot.height <span class="o">=</span> <span class="m">8</span><span class="p">,</span> repr.plot.res <span class="o">=</span> <span class="m">100</span><span class="p">)</span>
+scatterplotMatrix<span class="p">(</span>mtcars<span class="p">,</span> smooth <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_390_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="corrplot">corrplot<a class="anchor-link" href="#corrplot">&#182;</a></h4><ul>
+<li>Positive correlations are displayed in blue and negative correlations in red color.   </li>
+<li>Color intensity and the size of the circle are proportional to the correlation coefficients.   </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>corrplot<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>RColorBrewer<span class="p">)</span>
+corrplot<span class="p">(</span>M<span class="p">,</span> type<span class="o">=</span><span class="s">&quot;upper&quot;</span><span class="p">,</span> order<span class="o">=</span><span class="s">&quot;hclust&quot;</span><span class="p">,</span>
+         col<span class="o">=</span>brewer.pal<span class="p">(</span>n<span class="o">=</span><span class="m">8</span><span class="p">,</span> name<span class="o">=</span><span class="s">&quot;RdYlBu&quot;</span><span class="p">))</span>
+M
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope=col>mpg</th><th scope=col>cyl</th><th scope=col>disp</th><th scope=col>hp</th><th scope=col>drat</th><th scope=col>wt</th><th scope=col>qsec</th><th scope=col>vs</th><th scope=col>am</th><th scope=col>gear</th><th scope=col>carb</th></tr></thead>
+<tbody>
+	<tr><th scope=row>mpg</th><td> 1.0000000 </td><td>-0.8521620 </td><td>-0.8475514 </td><td>-0.7761684 </td><td> 0.68117191</td><td>-0.8676594 </td><td> 0.41868403</td><td> 0.6640389 </td><td> 0.59983243</td><td> 0.4802848 </td><td>-0.55092507</td></tr>
+	<tr><th scope=row>cyl</th><td>-0.8521620 </td><td> 1.0000000 </td><td> 0.9020329 </td><td> 0.8324475 </td><td>-0.69993811</td><td> 0.7824958 </td><td>-0.59124207</td><td>-0.8108118 </td><td>-0.52260705</td><td>-0.4926866 </td><td> 0.52698829</td></tr>
+	<tr><th scope=row>disp</th><td>-0.8475514 </td><td> 0.9020329 </td><td> 1.0000000 </td><td> 0.7909486 </td><td>-0.71021393</td><td> 0.8879799 </td><td>-0.43369788</td><td>-0.7104159 </td><td>-0.59122704</td><td>-0.5555692 </td><td> 0.39497686</td></tr>
+	<tr><th scope=row>hp</th><td>-0.7761684 </td><td> 0.8324475 </td><td> 0.7909486 </td><td> 1.0000000 </td><td>-0.44875912</td><td> 0.6587479 </td><td>-0.70822339</td><td>-0.7230967 </td><td>-0.24320426</td><td>-0.1257043 </td><td> 0.74981247</td></tr>
+	<tr><th scope=row>drat</th><td> 0.6811719 </td><td>-0.6999381 </td><td>-0.7102139 </td><td>-0.4487591 </td><td> 1.00000000</td><td>-0.7124406 </td><td> 0.09120476</td><td> 0.4402785 </td><td> 0.71271113</td><td> 0.6996101 </td><td>-0.09078980</td></tr>
+	<tr><th scope=row>wt</th><td>-0.8676594 </td><td> 0.7824958 </td><td> 0.8879799 </td><td> 0.6587479 </td><td>-0.71244065</td><td> 1.0000000 </td><td>-0.17471588</td><td>-0.5549157 </td><td>-0.69249526</td><td>-0.5832870 </td><td> 0.42760594</td></tr>
+	<tr><th scope=row>qsec</th><td> 0.4186840 </td><td>-0.5912421 </td><td>-0.4336979 </td><td>-0.7082234 </td><td> 0.09120476</td><td>-0.1747159 </td><td> 1.00000000</td><td> 0.7445354 </td><td>-0.22986086</td><td>-0.2126822 </td><td>-0.65624923</td></tr>
+	<tr><th scope=row>vs</th><td> 0.6640389 </td><td>-0.8108118 </td><td>-0.7104159 </td><td>-0.7230967 </td><td> 0.44027846</td><td>-0.5549157 </td><td> 0.74453544</td><td> 1.0000000 </td><td> 0.16834512</td><td> 0.2060233 </td><td>-0.56960714</td></tr>
+	<tr><th scope=row>am</th><td> 0.5998324 </td><td>-0.5226070 </td><td>-0.5912270 </td><td>-0.2432043 </td><td> 0.71271113</td><td>-0.6924953 </td><td>-0.22986086</td><td> 0.1683451 </td><td> 1.00000000</td><td> 0.7940588 </td><td> 0.05753435</td></tr>
+	<tr><th scope=row>gear</th><td> 0.4802848 </td><td>-0.4926866 </td><td>-0.5555692 </td><td>-0.1257043 </td><td> 0.69961013</td><td>-0.5832870 </td><td>-0.21268223</td><td> 0.2060233 </td><td> 0.79405876</td><td> 1.0000000 </td><td> 0.27407284</td></tr>
+	<tr><th scope=row>carb</th><td>-0.5509251 </td><td> 0.5269883 </td><td> 0.3949769 </td><td> 0.7498125 </td><td>-0.09078980</td><td> 0.4276059 </td><td>-0.65624923</td><td>-0.5696071 </td><td> 0.05753435</td><td> 0.2740728 </td><td> 1.00000000</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_392_1.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Correlation-Test">Correlation Test<a class="anchor-link" href="#Correlation-Test">&#182;</a></h3><ul>
+<li>Use the function cor.test(x,y) to analyze the correlation coefficient <strong>between two variables</strong> and to get significance level of the correlation.</li>
+<li>Available methods are: <strong>'pearson (default)', 'kendall' and 'spearman'</strong></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>ct <span class="o">=</span> cor.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">,</span> mtcars<span class="o">$</span>cyl<span class="p">,</span> method <span class="o">=</span> <span class="s">&#39;pearson&#39;</span><span class="p">)</span>
+<span class="kp">print</span><span class="p">(</span> ct <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+	Pearson&#39;s product-moment correlation
+
+data:  mtcars$mpg and mtcars$cyl
+t = -8.9197, df = 30, p-value = 6.113e-10
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.9257694 -0.7163171
+sample estimates:
+      cor 
+-0.852162 
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>ct<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>List of 9
+ $ statistic  : Named num -8.92
+  ..- attr(*, &#34;names&#34;)= chr &#34;t&#34;
+ $ parameter  : Named int 30
+  ..- attr(*, &#34;names&#34;)= chr &#34;df&#34;
+ $ p.value    : num 6.11e-10
+ $ estimate   : Named num -0.852
+  ..- attr(*, &#34;names&#34;)= chr &#34;cor&#34;
+ $ null.value : Named num 0
+  ..- attr(*, &#34;names&#34;)= chr &#34;correlation&#34;
+ $ alternative: chr &#34;two.sided&#34;
+ $ method     : chr &#34;Pearson&#39;s product-moment correlation&#34;
+ $ data.name  : chr &#34;mtcars$mpg and mtcars$cyl&#34;
+ $ conf.int   : num [1:2] -0.926 -0.716
+  ..- attr(*, &#34;conf.level&#34;)= num 0.95
+ - attr(*, &#34;class&#34;)= chr &#34;htest&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Stastistical-Test">Stastistical Test<a class="anchor-link" href="#Stastistical-Test">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>cor.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">,</span> mtcars<span class="o">$</span>cyl<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>
+	Pearson&#39;s product-moment correlation
+
+data:  mtcars$mpg and mtcars$cyl
+t = -8.9197, df = 30, p-value = 6.113e-10
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.9257694 -0.7163171
+sample estimates:
+      cor 
+-0.852162 
+</pre>
+</div>
+
 </div>
 
 </div>
@@ -22461,7 +23337,7 @@ Notice that summarize <strong>reduce group</strong> level by 1</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## jupyter set plot size</span>
@@ -22579,7 +23455,7 @@ barplot<span class="p">(</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_472_0.png"
+<img src="index_files/index_508_0.png"
 >
 </div>
 
@@ -22622,7 +23498,7 @@ barplot<span class="p">(</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_474_0.png"
+<img src="index_files/index_510_0.png"
 >
 </div>
 
@@ -22686,7 +23562,7 @@ barplot<span class="p">(</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_476_1.png"
+<img src="index_files/index_512_1.png"
 >
 </div>
 
@@ -22766,7 +23642,7 @@ abline<span class="p">(</span>fit<span class="p">,</span> col<span class="o">=</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_479_0.png"
+<img src="index_files/index_515_0.png"
 >
 </div>
 
@@ -22808,7 +23684,7 @@ abline<span class="p">(</span>fit<span class="p">,</span> col<span class="o">=</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_481_0.png"
+<img src="index_files/index_517_0.png"
 >
 </div>
 
@@ -22864,7 +23740,7 @@ text<span class="p">(</span> x <span class="o">=</span> chart<span class="o">$</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_483_0.png"
+<img src="index_files/index_519_0.png"
 >
 </div>
 
@@ -22976,7 +23852,7 @@ boxplot <span class="p">(</span>mtcars<span class="o">$</span>hp<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_487_0.png"
+<img src="index_files/index_523_0.png"
 >
 </div>
 
@@ -23096,7 +23972,7 @@ boxplot <span class="p">(</span>formula<span class="o">=</span>mpg<span class="o
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_491_0.png"
+<img src="index_files/index_527_0.png"
 >
 </div>
 
@@ -23182,7 +24058,7 @@ text <span class="p">(</span> <span class="kp">t</span><span class="m">-0.3</spa
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_494_0.png"
+<img src="index_files/index_530_0.png"
 >
 </div>
 
@@ -23292,7 +24168,7 @@ cyl  3  4  5
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_498_1.png"
+<img src="index_files/index_534_1.png"
 >
 </div>
 
@@ -23360,7 +24236,7 @@ lines<span class="p">(</span> x<span class="p">,</span> gauss2<span class="p">,<
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_502_0.png"
+<img src="index_files/index_538_0.png"
 >
 </div>
 
@@ -23418,7 +24294,7 @@ title<span class="p">(</span><span class="s">&quot;An R Plot&quot;</span><span c
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_504_0.png"
+<img src="index_files/index_540_0.png"
 >
 </div>
 
@@ -23474,7 +24350,7 @@ plot<span class="p">(</span>x<span class="p">,</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_506_0.png"
+<img src="index_files/index_542_0.png"
 >
 </div>
 
@@ -23554,7 +24430,7 @@ legend<span class="p">(</span><span class="s">&quot;topleft&quot;</span><span cl
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_508_0.png"
+<img src="index_files/index_544_0.png"
 >
 </div>
 
@@ -23660,7 +24536,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_514_0.png"
+<img src="index_files/index_550_0.png"
 >
 </div>
 
@@ -23718,7 +24594,7 @@ mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span clas
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_516_1.png"
+<img src="index_files/index_552_1.png"
 >
 </div>
 
@@ -23772,7 +24648,7 @@ mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span clas
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_518_1.png"
+<img src="index_files/index_554_1.png"
 >
 </div>
 
@@ -23822,7 +24698,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_520_0.png"
+<img src="index_files/index_556_0.png"
 >
 </div>
 
@@ -23875,7 +24751,7 @@ mtcars <span class="o">%&gt;%</span> ggplot<span class="p">(</span>aes<span clas
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_522_1.png"
+<img src="index_files/index_558_1.png"
 >
 </div>
 
@@ -23943,7 +24819,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_525_1.png"
+<img src="index_files/index_561_1.png"
 >
 </div>
 
@@ -23999,7 +24875,7 @@ ggplot<span class="p">(</span>aes<span class="p">(</span>x<span class="o">=</spa
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_527_1.png"
+<img src="index_files/index_563_1.png"
 >
 </div>
 
@@ -24056,7 +24932,7 @@ mtcars <span class="o">%&gt;%</span>
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_529_1.png"
+<img src="index_files/index_565_1.png"
 >
 </div>
 
@@ -24120,7 +24996,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_532_0.png"
+<img src="index_files/index_568_0.png"
 >
 </div>
 
@@ -24174,7 +25050,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_534_0.png"
+<img src="index_files/index_570_0.png"
 >
 </div>
 
@@ -24231,7 +25107,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_536_0.png"
+<img src="index_files/index_572_0.png"
 >
 </div>
 
@@ -25238,7 +26114,7 @@ abline<span class="p">(</span>fit1<span class="p">,</span> lty<span class="o">=<
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_584_0.png"
+<img src="index_files/index_620_0.png"
 >
 </div>
 
@@ -25540,7 +26416,7 @@ text<span class="p">(</span> fit<span class="p">,</span> cex <span class="o">=</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_595_0.png"
+<img src="index_files/index_631_0.png"
 >
 </div>
 
