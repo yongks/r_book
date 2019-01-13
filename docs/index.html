@@ -25894,7 +25894,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="prompt input_prompt">In&nbsp;[175]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span> rpart <span class="p">)</span>    <span class="c1"># decision tree</span>
@@ -25935,7 +25935,7 @@ grid.arrange<span class="p">(</span>p1<span class="p">,</span>p2<span class="p">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="prompt input_prompt">In&nbsp;[176]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x1 <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="kc">NA</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="kc">NA</span><span class="p">,</span><span class="m">8</span><span class="p">)</span>
@@ -25959,7 +25959,7 @@ my.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="prompt input_prompt">In&nbsp;[177]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">is.na</span><span class="p">(</span>x1<span class="p">)</span> <span class="p">)</span>     <span class="c1"># logical vector, NA elements will be TRUE</span>
@@ -26002,7 +26002,7 @@ We <strong>can't directly tell diretly</strong> which rows contain NAs</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[178]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">is.na</span><span class="p">(</span>my.df<span class="p">)</span> <span class="p">)</span>     <span class="c1"># logical vector, NA elements will be TRUE</span>
@@ -26051,7 +26051,7 @@ TO detect rows with NAs, use <strong>! not</strong></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="prompt input_prompt">In&nbsp;[179]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df<span class="p">[</span><span class="o">!</span>complete.cases<span class="p">(</span>my.df<span class="p">),</span> <span class="p">]</span>m
@@ -26095,7 +26095,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[180]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>my.df<span class="p">[</span>complete.cases<span class="p">(</span>my.df<span class="p">),</span> <span class="p">]</span>
@@ -26145,7 +26145,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[181]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>na.omit<span class="p">(</span> my.df <span class="p">)</span>
@@ -26197,7 +26197,7 @@ The result is a number vector with positions. Use <strong>negate -</strong> to r
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[182]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">set.seed</span><span class="p">(</span><span class="m">1234</span><span class="p">)</span>
@@ -26224,7 +26224,7 @@ test  <span class="o">=</span> mtcars<span class="p">[</span> <span class="o">-<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="prompt input_prompt">In&nbsp;[183]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">nrow</span><span class="p">(</span>train<span class="p">)</span> <span class="p">)</span>
@@ -26267,7 +26267,7 @@ The result is a logical vector. Therefore, use <strong>not !</strong> to reverse
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[184]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>split <span class="o">=</span> sample.split<span class="p">(</span>Y<span class="o">=</span>titanic_train<span class="o">$</span>Survived<span class="p">,</span> SplitRatio <span class="o">=</span> <span class="m">0.7</span><span class="p">)</span>  <span class="c1"># randomly 0.7 set to TRUE, remaining FALSE</span>
@@ -26282,7 +26282,7 @@ test  <span class="o">=</span> titanic_train<span class="p">[</span><span class=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="prompt input_prompt">In&nbsp;[185]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span> <span class="kp">nrow</span><span class="p">(</span>train<span class="p">)</span> <span class="p">)</span>
@@ -26363,7 +26363,7 @@ test  <span class="o">=</span> titanic_train<span class="p">[</span><span class=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="prompt input_prompt">In&nbsp;[186]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x1 <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">5</span>
@@ -26378,7 +26378,7 @@ num.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[187]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span>num.df<span class="p">)</span>
@@ -26423,7 +26423,7 @@ num.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="prompt input_prompt">In&nbsp;[188]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">apply</span><span class="p">(</span> num.df<span class="p">,</span> MARGIN<span class="o">=</span><span class="m">2</span><span class="p">,</span>
@@ -26475,7 +26475,7 @@ num.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[189]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">scale</span><span class="p">(</span> num.df <span class="p">)</span>
@@ -26525,7 +26525,7 @@ num.df <span class="o">=</span> <span class="kt">data.frame</span><span class="p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[190]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">set.seed</span><span class="p">(</span><span class="m">1234</span><span class="p">)</span>
@@ -26589,7 +26589,7 @@ my.cluster.df <span class="o">=</span> <span class="kt">data.frame</span><span c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[191]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span>my.df<span class="o">$</span>value1<span class="p">,</span> my.df<span class="o">$</span>value2<span class="p">)</span>
@@ -26662,7 +26662,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="prompt input_prompt">In&nbsp;[192]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>d <span class="o">=</span> dist<span class="p">(</span>my.cluster.df<span class="p">[,</span> <span class="m">3</span><span class="o">:</span><span class="m">4</span><span class="p">],</span> method <span class="o">=</span> <span class="s">&#39;euclidean&#39;</span><span class="p">)</span> <span class="c1">## default &#39;euclidean&#39;</span>
@@ -26675,7 +26675,7 @@ Traceback:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[193]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">print</span><span class="p">(</span>d<span class="p">)</span>
@@ -26767,7 +26767,7 @@ ID_18  6.324555  3.605551  1.414214
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="prompt input_prompt">In&nbsp;[194]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>dendogram <span class="o">=</span> hclust<span class="p">(</span>d<span class="p">,</span> method <span class="o">=</span> <span class="s">&#39;average&#39;</span><span class="p">)</span>  <span class="c1">## method can also be &#39;complete&#39;,&#39;single&#39;,&#39;centroid&#39;</span>
@@ -26780,7 +26780,7 @@ ID_18  6.324555  3.605551  1.414214
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[195]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span> dendogram<span class="p">,</span> main<span class="o">=</span><span class="s">&#39;Dendogram&#39;</span><span class="p">,</span> xlab<span class="o">=</span><span class="s">&#39;Customers&#39;</span><span class="p">,</span> ylab<span class="o">=</span><span class="s">&#39;Distance&#39;</span> <span class="p">)</span>
@@ -26815,7 +26815,7 @@ rect.hclust<span class="p">(</span> dendogram<span class="p">,</span> k<span cla
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[196]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>clusters <span class="o">=</span> cutree<span class="p">(</span>dendogram<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
@@ -26850,7 +26850,7 @@ ID_14 ID_15 ID_16 ID_17 ID_18
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="prompt input_prompt">In&nbsp;[197]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>barplot<span class="p">(</span> <span class="kp">table</span><span class="p">(</span>clusters<span class="p">))</span>
@@ -26884,7 +26884,7 @@ ID_14 ID_15 ID_16 ID_17 ID_18
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="prompt input_prompt">In&nbsp;[198]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>cluster<span class="p">)</span>
@@ -26921,13 +26921,13 @@ clusplot<span class="p">(</span>my.cluster.df<span class="p">[,</span><span clas
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Kmeans">Kmeans<a class="anchor-link" href="#Kmeans">&#182;</a></h3>
+<h3 id="Kmeans">Kmeans<a class="anchor-link" href="#Kmeans">&#182;</a></h3><h4 id="Built-Model">Built Model<a class="anchor-link" href="#Built-Model">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="prompt input_prompt">In&nbsp;[199]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>km.fit <span class="o">=</span> kmeans<span class="p">(</span>my.cluster.df<span class="p">[,</span><span class="m">3</span><span class="o">:</span><span class="m">4</span><span class="p">],</span> centers <span class="o">=</span> <span class="m">3</span><span class="p">,</span> nstart <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
@@ -26938,9 +26938,62 @@ clusplot<span class="p">(</span>my.cluster.df<span class="p">[,</span><span clas
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Understanding-Model">Understanding Model<a class="anchor-link" href="#Understanding-Model">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="prompt input_prompt">In&nbsp;[200]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>km.fit<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>List of 9
+ $ cluster     : Named int [1:18] 1 3 1 1 1 1 3 3 3 3 ...
+  ..- attr(*, &#34;names&#34;)= chr [1:18] &#34;ID_1&#34; &#34;ID_2&#34; &#34;ID_3&#34; &#34;ID_4&#34; ...
+ $ centers     : num [1:3, 1:2] 9 29.33 8.29 9.2 18.17 ...
+  ..- attr(*, &#34;dimnames&#34;)=List of 2
+  .. ..$ : chr [1:3] &#34;1&#34; &#34;2&#34; &#34;3&#34;
+  .. ..$ : chr [1:2] &#34;value1&#34; &#34;value2&#34;
+ $ totss       : num 2196
+ $ withinss    : num [1:3] 82.8 62.2 38.3
+ $ tot.withinss: num 183
+ $ betweenss   : num 2013
+ $ size        : int [1:3] 5 6 7
+ $ iter        : int 2
+ $ ifault      : int 0
+ - attr(*, &#34;class&#34;)= chr &#34;kmeans&#34;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[201]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>clusters <span class="o">=</span> km.fit<span class="o">$</span>cluster
@@ -26973,9 +27026,17 @@ ID_14 ID_15 ID_16 ID_17 ID_18
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Visualize">Visualize<a class="anchor-link" href="#Visualize">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="prompt input_prompt">In&nbsp;[202]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>cluster<span class="p">)</span>
@@ -26998,7 +27059,87 @@ clusplot<span class="p">(</span>my.cluster.df<span class="p">[,</span><span clas
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_654_0.png"
+<img src="index_files/index_657_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Optimize">Optimize<a class="anchor-link" href="#Optimize">&#182;</a></h4><p>Making use of tot.withinss variable in the fit model, we can discover the cluster numbers associated to the minimum tot.withinss.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[203]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>tot.withinss <span class="o">=</span> <span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="m">0</span><span class="p">)</span>
+<span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span> <span class="p">{</span>
+    temp.fit <span class="o">=</span> kmeans<span class="p">(</span>my.cluster.df<span class="p">[,</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;value1&#39;</span><span class="p">,</span><span class="s">&#39;value2&#39;</span><span class="p">)],</span> centers <span class="o">=</span> i<span class="p">)</span>
+    tot.withinss<span class="p">[</span>i<span class="p">]</span> <span class="o">=</span> temp.fit<span class="o">$</span>tot.withinss
+<span class="p">}</span>
+<span class="kp">print</span><span class="p">(</span>tot.withinss<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> [1] 2196.50000  418.00000  183.25238  160.26667  128.75238   56.45238
+ [7]   46.75000   98.60000   17.50000   41.08333
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[204]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">,</span>tot.withinss<span class="p">,</span>type<span class="o">=</span><span class="s">&#39;l&#39;</span><span class="p">,</span> xlab<span class="o">=</span><span class="s">&#39;Number of Clusters&#39;</span><span class="p">,</span> ylab<span class="o">=</span><span class="s">&#39;Total Withinss&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_660_0.png"
 >
 </div>
 
@@ -27034,7 +27175,7 @@ clusplot<span class="p">(</span>my.cluster.df<span class="p">[,</span><span clas
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="prompt input_prompt">In&nbsp;[205]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">head</span><span class="p">(</span>train<span class="p">)</span>
@@ -27090,7 +27231,7 @@ test  <span class="o">=</span> mtcars<span class="p">[</span><span class="o">-</
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[126]:</div>
+<div class="prompt input_prompt">In&nbsp;[206]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>fit1 <span class="o">=</span> lm<span class="p">(</span>formula <span class="o">=</span> mpg <span class="o">~</span> hp<span class="p">,</span>        data <span class="o">=</span> train<span class="p">)</span> 
@@ -27113,7 +27254,7 @@ fit3 <span class="o">=</span> lm<span class="p">(</span>formula <span class="o">
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[127]:</div>
+<div class="prompt input_prompt">In&nbsp;[207]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit3<span class="p">)</span>
@@ -27141,27 +27282,27 @@ lm(formula = mpg ~ ., data = train)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--4.2903 -0.8220  0.0531  0.9885  3.3759 
+-2.5960 -1.2876 -0.3228  1.2783  3.5948 
 
 Coefficients:
-              Estimate Std. Error t value Pr(&gt;|t|)  
-(Intercept) -30.889069  27.833828  -1.110   0.2908  
-cyl           2.781860   1.554408   1.790   0.1010  
-disp          0.004888   0.017722   0.276   0.7878  
-hp            0.019064   0.031178   0.611   0.5533  
-drat          1.108272   2.423880   0.457   0.6564  
-wt           -5.366986   2.763897  -1.942   0.0782 .
-qsec          1.968399   1.063203   1.851   0.0911 .
-vs            4.432352   3.590414   1.234   0.2427  
-am            7.133851   3.782968   1.886   0.0860 .
-gear          1.272574   2.507704   0.507   0.6218  
-carb         -0.552846   1.369391  -0.404   0.6942  
+             Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept) -44.89663   31.34804  -1.432   0.1799  
+cyl          -4.35412    2.26598  -1.922   0.0809 .
+disp          0.00673    0.02090   0.322   0.7535  
+hp            0.07145    0.04053   1.763   0.1057  
+drat          3.68633    1.95669   1.884   0.0863 .
+wt           -6.46964    2.46297  -2.627   0.0235 *
+qsec          4.72964    1.66225   2.845   0.0159 *
+vs          -17.26047    7.20284  -2.396   0.0355 *
+am          -10.06142    5.91106  -1.702   0.1168  
+gear          5.39295    2.95567   1.825   0.0953 .
+carb         -1.11394    1.02531  -1.086   0.3005  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
-Residual standard error: 2.359 on 11 degrees of freedom
-Multiple R-squared:  0.9287,	Adjusted R-squared:  0.8639 
-F-statistic: 14.33 on 10 and 11 DF,  p-value: 6.296e-05
+Residual standard error: 2.548 on 11 degrees of freedom
+Multiple R-squared:  0.9292,	Adjusted R-squared:  0.8649 
+F-statistic: 14.45 on 10 and 11 DF,  p-value: 6.045e-05
 </pre>
 </div>
 
@@ -27173,7 +27314,7 @@ F-statistic: 14.33 on 10 and 11 DF,  p-value: 6.296e-05
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[128]:</div>
+<div class="prompt input_prompt">In&nbsp;[208]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span>fit1<span class="p">)</span>
@@ -27194,23 +27335,23 @@ F-statistic: 14.33 on 10 and 11 DF,  p-value: 6.296e-05
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>List of 12
- $ coefficients : Named num [1:2] 33.8314 -0.0953
+ $ coefficients : Named num [1:2] 30.9652 -0.0707
   ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;(Intercept)&#34; &#34;hp&#34;
- $ residuals    : Named num [1:22] -1.98 3.82 1.55 -2.91 2.55 ...
-  ..- attr(*, &#34;names&#34;)= chr [1:22] &#34;Merc 230&#34; &#34;Duster 360&#34; &#34;Hornet Sportabout&#34; &#34;Merc 280&#34; ...
- $ effects      : Named num [1:22] -98.58 24.73 1.37 -2.51 2.37 ...
+ $ residuals    : Named num [1:22] -1.8624 -1.8449 -0.0115 -0.9449 1.1017 ...
+  ..- attr(*, &#34;names&#34;)= chr [1:22] &#34;Volvo 142E&#34; &#34;Merc 450SE&#34; &#34;Chrysler Imperial&#34; &#34;Merc 450SL&#34; ...
+ $ effects      : Named num [1:22] -93.275 24.75 0.64 -0.492 1.535 ...
   ..- attr(*, &#34;names&#34;)= chr [1:22] &#34;(Intercept)&#34; &#34;hp&#34; &#34;&#34; &#34;&#34; ...
  $ rank         : int 2
- $ fitted.values: Named num [1:22] 24.8 10.5 17.2 22.1 17.2 ...
-  ..- attr(*, &#34;names&#34;)= chr [1:22] &#34;Merc 230&#34; &#34;Duster 360&#34; &#34;Hornet Sportabout&#34; &#34;Merc 280&#34; ...
+ $ fitted.values: Named num [1:22] 23.3 18.2 14.7 18.2 18.6 ...
+  ..- attr(*, &#34;names&#34;)= chr [1:22] &#34;Volvo 142E&#34; &#34;Merc 450SE&#34; &#34;Chrysler Imperial&#34; &#34;Merc 450SL&#34; ...
  $ assign       : int [1:2] 0 1
  $ qr           :List of 5
   ..$ qr   : num [1:22, 1:2] -4.69 0.213 0.213 0.213 0.213 ...
   .. ..- attr(*, &#34;dimnames&#34;)=List of 2
-  .. .. ..$ : chr [1:22] &#34;Merc 230&#34; &#34;Duster 360&#34; &#34;Hornet Sportabout&#34; &#34;Merc 280&#34; ...
+  .. .. ..$ : chr [1:22] &#34;Volvo 142E&#34; &#34;Merc 450SE&#34; &#34;Chrysler Imperial&#34; &#34;Merc 450SL&#34; ...
   .. .. ..$ : chr [1:2] &#34;(Intercept)&#34; &#34;hp&#34;
   .. ..- attr(*, &#34;assign&#34;)= int [1:2] 0 1
-  ..$ qraux: num [1:2] 1.21 1.45
+  ..$ qraux: num [1:2] 1.21 1.09
   ..$ pivot: int [1:2] 1 2
   ..$ tol  : num 1e-07
   ..$ rank : int 2
@@ -27233,8 +27374,8 @@ F-statistic: 14.33 on 10 and 11 DF,  p-value: 6.296e-05
   .. ..- attr(*, &#34;dataClasses&#34;)= Named chr [1:2] &#34;numeric&#34; &#34;numeric&#34;
   .. .. ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;mpg&#34; &#34;hp&#34;
  $ model        :&#39;data.frame&#39;:	22 obs. of  2 variables:
-  ..$ mpg: num [1:22] 22.8 14.3 18.7 19.2 19.7 21.4 16.4 21 32.4 22.8 ...
-  ..$ hp : num [1:22] 95 245 175 123 175 110 180 110 66 93 ...
+  ..$ mpg: num [1:22] 21.4 16.4 14.7 17.3 19.7 15 18.1 22.8 10.4 19.2 ...
+  ..$ hp : num [1:22] 109 180 230 180 175 335 105 93 215 123 ...
   ..- attr(*, &#34;terms&#34;)=Classes &#39;terms&#39;, &#39;formula&#39;  language mpg ~ hp
   .. .. ..- attr(*, &#34;variables&#34;)= language list(mpg, hp)
   .. .. ..- attr(*, &#34;factors&#34;)= int [1:2, 1] 0 1
@@ -27268,7 +27409,7 @@ F-statistic: 14.33 on 10 and 11 DF,  p-value: 6.296e-05
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="prompt input_prompt">In&nbsp;[209]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">options</span><span class="p">(</span>repr.plot.width <span class="o">=</span><span class="m">8</span> <span class="p">,</span> repr.plot.height <span class="o">=</span> <span class="m">6</span><span class="p">,</span> repr.plot.res <span class="o">=</span> <span class="m">300</span><span class="p">)</span>
@@ -27294,7 +27435,7 @@ abline<span class="p">(</span>fit1<span class="p">,</span> lty<span class="o">=<
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_665_0.png"
+<img src="index_files/index_671_0.png"
 >
 </div>
 
@@ -27314,7 +27455,7 @@ abline<span class="p">(</span>fit1<span class="p">,</span> lty<span class="o">=<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[130]:</div>
+<div class="prompt input_prompt">In&nbsp;[210]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>predict<span class="p">(</span>fit3<span class="p">,</span> newdata <span class="o">=</span> test<span class="p">)</span>
@@ -27336,26 +27477,26 @@ abline<span class="p">(</span>fit1<span class="p">,</span> lty<span class="o">=<
 
 <div class="output_html rendered_html output_subarea ">
 <dl class=dl-horizontal>
-	<dt>Valiant</dt>
-		<dd>20.8910146145264</dd>
+	<dt>Mazda RX4</dt>
+		<dd>20.2456802537695</dd>
+	<dt>Hornet 4 Drive</dt>
+		<dd>18.8771034718967</dd>
+	<dt>Hornet Sportabout</dt>
+		<dd>19.0027662547855</dd>
 	<dt>Merc 240D</dt>
-		<dd>16.8912396253276</dd>
-	<dt>Lincoln Continental</dt>
-		<dd>8.61073002692555</dd>
-	<dt>Chrysler Imperial</dt>
-		<dd>8.69045674451024</dd>
-	<dt>Dodge Challenger</dt>
-		<dd>15.8658838270809</dd>
+		<dd>32.7447098634884</dd>
+	<dt>Merc 230</dt>
+		<dd>49.8854749288719</dd>
+	<dt>Merc 450SLC</dt>
+		<dd>19.8199001295037</dd>
+	<dt>Toyota Corona</dt>
+		<dd>35.5621116402412</dd>
+	<dt>AMC Javelin</dt>
+		<dd>18.1962788111992</dd>
 	<dt>Pontiac Firebird</dt>
-		<dd>15.7080231122251</dd>
+		<dd>16.5355971215802</dd>
 	<dt>Porsche 914-2</dt>
-		<dd>21.2488557657</dd>
-	<dt>Ford Pantera L</dt>
-		<dd>25.605223770476</dd>
-	<dt>Maserati Bora</dt>
-		<dd>21.7993821311546</dd>
-	<dt>Volvo 142E</dt>
-		<dd>24.7056469343751</dd>
+		<dd>41.144324999184</dd>
 </dl>
 
 </div>
@@ -27384,7 +27525,7 @@ abline<span class="p">(</span>fit1<span class="p">,</span> lty<span class="o">=<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[131]:</div>
+<div class="prompt input_prompt">In&nbsp;[211]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span>rpart<span class="p">)</span>
@@ -27397,7 +27538,7 @@ abline<span class="p">(</span>fit1<span class="p">,</span> lty<span class="o">=<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[132]:</div>
+<div class="prompt input_prompt">In&nbsp;[212]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>fit <span class="o">=</span> rpart<span class="p">(</span> formula <span class="o">=</span> mpg <span class="o">~</span> hp <span class="o">+</span> disp<span class="p">,</span> data<span class="o">=</span>mtcars<span class="p">)</span>
@@ -27418,7 +27559,7 @@ abline<span class="p">(</span>fit1<span class="p">,</span> lty<span class="o">=<
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[213]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">summary</span><span class="p">(</span> fit <span class="p">)</span>
@@ -27443,8 +27584,8 @@ rpart(formula = mpg ~ hp + disp, data = mtcars)
   n= 32 
 
          CP nsplit rel error    xerror      xstd
-1 0.6130502      0 1.0000000 1.0870538 0.2614005
-2 0.0100000      1 0.3869498 0.6601878 0.1321663
+1 0.6130502      0 1.0000000 1.0296909 0.2449305
+2 0.0100000      1 0.3869498 0.5905776 0.1316344
 
 Variable importance
 disp   hp 
@@ -27475,7 +27616,7 @@ Node number 3: 14 observations
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[214]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span> fit <span class="p">)</span>
@@ -27572,7 +27713,7 @@ Node number 3: 14 observations
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[215]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">options</span><span class="p">(</span>repr.plot.width <span class="o">=</span><span class="m">8</span> <span class="p">,</span> repr.plot.height <span class="o">=</span> <span class="m">4.5</span><span class="p">,</span> repr.plot.res <span class="o">=</span> <span class="m">300</span><span class="p">)</span>
@@ -27596,7 +27737,7 @@ text<span class="p">(</span> fit<span class="p">,</span> cex <span class="o">=</
 
 
 <div class="output_png output_subarea ">
-<img src="index_files/index_676_0.png"
+<img src="index_files/index_682_0.png"
 >
 </div>
 
@@ -27608,7 +27749,7 @@ text<span class="p">(</span> fit<span class="p">,</span> cex <span class="o">=</
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
+<div class="prompt input_prompt">In&nbsp;[216]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span><span class="kp">as.vector</span><span class="p">(</span>fit<span class="p">))</span>
@@ -27713,7 +27854,7 @@ text<span class="p">(</span> fit<span class="p">,</span> cex <span class="o">=</
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[137]:</div>
+<div class="prompt input_prompt">In&nbsp;[217]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">set.seed</span><span class="p">(</span><span class="m">1234</span><span class="p">)</span>
@@ -27733,7 +27874,7 @@ test.data  <span class="o">=</span> <span class="kp">raw</span><span class="p">[
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[138]:</div>
+<div class="prompt input_prompt">In&nbsp;[218]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>glimpse<span class="p">(</span>train.data<span class="p">)</span>
@@ -27780,7 +27921,7 @@ $ left    &lt;fct&gt; 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[139]:</div>
+<div class="prompt input_prompt">In&nbsp;[219]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>fit <span class="o">=</span> glm<span class="p">(</span> left <span class="o">~</span> <span class="m">.</span><span class="p">,</span> family <span class="o">=</span> binomial<span class="p">,</span> data<span class="o">=</span>train.data <span class="p">)</span>
@@ -27793,7 +27934,7 @@ $ left    &lt;fct&gt; 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[140]:</div>
+<div class="prompt input_prompt">In&nbsp;[220]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span> fit <span class="p">)</span>
@@ -27933,7 +28074,7 @@ $ left    &lt;fct&gt; 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[141]:</div>
+<div class="prompt input_prompt">In&nbsp;[221]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>pred <span class="o">=</span> predict<span class="p">(</span> fit<span class="p">,</span> newdata<span class="o">=</span>test.data<span class="p">,</span> type<span class="o">=</span><span class="s">&#39;response&#39;</span><span class="p">)</span>
@@ -27958,6 +28099,562 @@ $ left    &lt;fct&gt; 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 <div class="output_text output_subarea ">
 <pre>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
 0.001732 0.046016 0.103603 0.168153 0.237257 0.891413 </pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Text-Analysis">Text Analysis<a class="anchor-link" href="#Text-Analysis">&#182;</a></h2><h3 id="Library">Library<a class="anchor-link" href="#Library">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[240]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kn">library</span><span class="p">(</span> tm <span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span> wordcloud <span class="p">)</span>
+<span class="c1">#library(SnowballC)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Loading required package: RColorBrewer
+Warning message:
+&#34;package &#39;RColorBrewer&#39; was built under R version 3.5.2&#34;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sample-Data">Sample Data<a class="anchor-link" href="#Sample-Data">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[223]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>text.df <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&#39;data/tweets.csv&#39;</span><span class="p">,</span> stringsAsFactors<span class="o">=</span><span class="kc">FALSE</span> <span class="p">)</span>
+corpus1 <span class="o">=</span> text.df<span class="o">$</span>Tweet
+<span class="kp">print</span><span class="p">(</span> <span class="kp">head</span><span class="p">(</span>corpus1<span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] &#34;I have to say, Apple has by far the best customer care service I have ever received! @Apple @AppStore&#34;
+[2] &#34;iOS 7 is so fricking smooth &amp; beautiful!! #ThanxApple @Apple&#34;                                         
+[3] &#34;LOVE U @APPLE&#34;                                                                                        
+[4] &#34;Thank you @apple, loving my new iPhone 5S!!!!!  #apple #iphone5S pic.twitter.com/XmHJCU4pcb&#34;          
+[5] &#34;.@apple has the best customer service. In and out with a new phone in under 10min!&#34;                   
+[6] &#34;@apple ear pods are AMAZING! Best sound from in-ear headphones I&#39;ve ever had!&#34;                        
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[224]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>str<span class="p">(</span> corpus1 <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> chr [1:1181] &#34;I have to say, Apple has by far the best customer care service I have ever received! @Apple @AppStore&#34; ...
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Preprocessing">Preprocessing<a class="anchor-link" href="#Preprocessing">&#182;</a></h3><h4 id="Convert-To-Lowercase">Convert To Lowercase<a class="anchor-link" href="#Convert-To-Lowercase">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[225]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>corpus2 <span class="o">=</span> <span class="kp">tolower</span><span class="p">(</span> corpus1 <span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span> corpus2 <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>'i have to say, apple has by far the best customer care service i have ever received! @apple @appstore'</li>
+	<li>'ios 7 is so fricking smooth &amp; beautiful!! #thanxapple @apple'</li>
+	<li>'love u @apple'</li>
+	<li><span style=white-space:pre-wrap>'thank you @apple, loving my new iphone 5s!!!!!  #apple #iphone5s pic.twitter.com/xmhjcu4pcb'</span></li>
+	<li>'.@apple has the best customer service. in and out with a new phone in under 10min!'</li>
+	<li>'@apple ear pods are amazing! best sound from in-ear headphones i\'ve ever had!'</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Remove-Punctuation">Remove Punctuation<a class="anchor-link" href="#Remove-Punctuation">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[226]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>corpus3 <span class="o">=</span> removePunctuation<span class="p">(</span>corpus2<span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span> corpus3 <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>'i have to say apple has by far the best customer care service i have ever received apple appstore'</li>
+	<li><span style=white-space:pre-wrap>'ios 7 is so fricking smooth  beautiful thanxapple apple'</span></li>
+	<li>'love u apple'</li>
+	<li><span style=white-space:pre-wrap>'thank you apple loving my new iphone 5s  apple iphone5s pictwittercomxmhjcu4pcb'</span></li>
+	<li>'apple has the best customer service in and out with a new phone in under 10min'</li>
+	<li>'apple ear pods are amazing best sound from inear headphones ive ever had'</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Strip-Whitespace">Strip Whitespace<a class="anchor-link" href="#Strip-Whitespace">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[227]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>corpus4 <span class="o">=</span> stripWhitespace<span class="p">(</span>corpus3<span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span> corpus4 <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>'i have to say apple has by far the best customer care service i have ever received apple appstore'</li>
+	<li>'ios 7 is so fricking smooth beautiful thanxapple apple'</li>
+	<li>'love u apple'</li>
+	<li>'thank you apple loving my new iphone 5s apple iphone5s pictwittercomxmhjcu4pcb'</li>
+	<li>'apple has the best customer service in and out with a new phone in under 10min'</li>
+	<li>'apple ear pods are amazing best sound from inear headphones ive ever had'</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Remove-Stopwords">Remove Stopwords<a class="anchor-link" href="#Remove-Stopwords">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[244]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>corpus5 <span class="o">=</span> removeWords<span class="p">(</span> corpus4<span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;apple&#39;</span><span class="p">,</span>stopwords<span class="p">(</span><span class="s">&#39;english&#39;</span><span class="p">)))</span>
+<span class="kp">head</span><span class="p">(</span> corpus5 <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li><span style=white-space:pre-wrap>'   say    far  best customer care service   ever received  appstore'</span></li>
+	<li><span style=white-space:pre-wrap>'ios 7   fricking smooth beautiful thanxapple '</span></li>
+	<li>'love u '</li>
+	<li><span style=white-space:pre-wrap>'thank   loving  new iphone 5s  iphone5s pictwittercomxmhjcu4pcb'</span></li>
+	<li><span style=white-space:pre-wrap>'   best customer service      new phone   10min'</span></li>
+	<li><span style=white-space:pre-wrap>' ear pods  amazing best sound  inear headphones ive ever '</span></li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Stemming">Stemming<a class="anchor-link" href="#Stemming">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[245]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>corpus6 <span class="o">=</span> stemDocument<span class="p">(</span>corpus5<span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span> corpus6 <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>'say far best custom care servic ever receiv appstor'</li>
+	<li>'io 7 frick smooth beauti thanxappl'</li>
+	<li>'love u'</li>
+	<li>'thank love new iphon 5s iphone5 pictwittercomxmhjcu4pcb'</li>
+	<li>'best custom servic new phone 10min'</li>
+	<li>'ear pod amaz best sound inear headphon ive ever'</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Visualize">Visualize<a class="anchor-link" href="#Visualize">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[254]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>wordcloud<span class="p">(</span>corpus6<span class="p">,</span> color<span class="o">=</span>rainbow<span class="p">(</span><span class="m">3</span><span class="p">),</span>  min.freq <span class="o">=</span> <span class="m">6</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Warning message in tm_map.SimpleCorpus(corpus, tm::removePunctuation):
+&#34;transformation drops documents&#34;Warning message in tm_map.SimpleCorpus(corpus, function(x) tm::removeWords(x, tm::stopwords())):
+&#34;transformation drops documents&#34;</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="index_files/index_708_1.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Analysis">Analysis<a class="anchor-link" href="#Analysis">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Document-Term-Matrix">Document Term Matrix<a class="anchor-link" href="#Document-Term-Matrix">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[266]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>tm.corpus <span class="o">=</span> Corpus<span class="p">(</span>VectorSource<span class="p">(</span>corpus6<span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[261]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>tdm <span class="o">=</span> TermDocumentMatrix<span class="p">(</span> tm.corpus <span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span> <span class="kp">as.matrix</span><span class="p">(</span>tdm<span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope=col>1</th><th scope=col>2</th><th scope=col>3</th><th scope=col>4</th><th scope=col>5</th><th scope=col>6</th><th scope=col>7</th><th scope=col>8</th><th scope=col>9</th><th scope=col>10</th><th scope=col>...</th><th scope=col>1172</th><th scope=col>1173</th><th scope=col>1174</th><th scope=col>1175</th><th scope=col>1176</th><th scope=col>1177</th><th scope=col>1178</th><th scope=col>1179</th><th scope=col>1180</th><th scope=col>1181</th></tr></thead>
+<tbody>
+	<tr><th scope=row>appstor</th><td>1  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+	<tr><th scope=row>best</th><td>1  </td><td>0  </td><td>0  </td><td>0  </td><td>1  </td><td>1  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+	<tr><th scope=row>care</th><td>1  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+	<tr><th scope=row>custom</th><td>1  </td><td>0  </td><td>0  </td><td>0  </td><td>1  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+	<tr><th scope=row>ever</th><td>1  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>1  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+	<tr><th scope=row>far</th><td>1  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Term-Document-Matrix">Term Document Matrix<a class="anchor-link" href="#Term-Document-Matrix">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>tm.corpus <span class="o">=</span> Corpus<span class="p">(</span>VectorSource<span class="p">(</span>corpus6<span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[262]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>dtm <span class="o">=</span> DocumentTermMatrix<span class="p">(</span> tm.corpus <span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span> <span class="kp">as.matrix</span><span class="p">(</span> dtm<span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope=col>appstor</th><th scope=col>best</th><th scope=col>care</th><th scope=col>custom</th><th scope=col>ever</th><th scope=col>far</th><th scope=col>receiv</th><th scope=col>say</th><th scope=col>servic</th><th scope=col>beauti</th><th scope=col>...</th><th scope=col>cheep</th><th scope=col>loos</th><th scope=col>nut</th><th scope=col>testicular</th><th scope=col>flame</th><th scope=col>freakappl</th><th scope=col>stabl</th><th scope=col>plz</th><th scope=col>telstra</th><th scope=col>agounalaki</th></tr></thead>
+<tbody>
+	<tr><th scope=row>1</th><td>1  </td><td>1  </td><td>1  </td><td>1  </td><td>1  </td><td>1  </td><td>1  </td><td>1  </td><td>1  </td><td>0  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+	<tr><th scope=row>2</th><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>1  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+	<tr><th scope=row>3</th><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+	<tr><th scope=row>4</th><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+	<tr><th scope=row>5</th><td>0  </td><td>1  </td><td>0  </td><td>1  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>1  </td><td>0  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+	<tr><th scope=row>6</th><td>0  </td><td>1  </td><td>0  </td><td>0  </td><td>1  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>...</td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td><td>0  </td></tr>
+</tbody>
+</table>
+
 </div>
 
 </div>
